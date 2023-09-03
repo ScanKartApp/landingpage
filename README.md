@@ -97,7 +97,6 @@ Alternatively you may use `yarn`:
 yarn add react-router
 ```
 
-## License
 
 MIT License
 
