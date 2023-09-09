@@ -60,7 +60,7 @@ const DesktopOnePage = () => {
                 <ul className="flex sm:flex-1 sm:flex-col flex-row gap-[42px] sm:hidden items-center justify-end md:ml-[0] ml-[596px] pl-2.5 w-[561px] sm:w-full common-row-list">
                   <li>
                     <a
-                      href="javascript:"
+                      href="#store"
                       className="text-center text-gray-400 text-lg"
                     >
                       <Text size="txtInterMedium18">Store App</Text>
@@ -68,7 +68,7 @@ const DesktopOnePage = () => {
                   </li>
                   <li>
                     <a
-                      href="javascript:"
+                      href="#consumer"
                       className="text-center text-gray-400 text-lg"
                     >
                       <Text size="txtInterMedium18">Consumer App</Text>
@@ -76,7 +76,7 @@ const DesktopOnePage = () => {
                   </li>
                   <li>
                     <a
-                      href="javascript:"
+                      href="#pricing"
                       className="text-center text-gray-400 text-lg"
                     >
                       <Text size="txtInterMedium18">Pricing</Text>
@@ -84,7 +84,7 @@ const DesktopOnePage = () => {
                   </li>
                   <li>
                     -py-[5px] px-[23px] rounded-[36px]
-                    <a href="javascript:">
+                    <a href="#contact">
                       <Button className="bg-red-800 cursor-pointer font-medium px-[13px] py-[13px] rounded-[36px] text-center text-gray-100 text-xl">
                         Contact Us
                       </Button>
@@ -145,7 +145,7 @@ const DesktopOnePage = () => {
             </div>
           </div>
           {/* Inventory Management */}
-          <div className="container-snap flex flex-col items-center justify-start overflow-y-scroll transform -rotate-90 h-[1250px] w-full">
+          <div id="store" className="container-snap flex flex-col items-center justify-start overflow-y-scroll transform -rotate-90 h-[1250px] w-full">
             <div className="flex-none w-[1270px] h-[1270px] md:w-full md:h-full transform rotate-90">
               <div className="w-full h-full p-5 relative">
                 <div className="h-[1170px] m-auto w-full">
@@ -1589,7 +1589,7 @@ const DesktopOnePage = () => {
             </div>
           </div>
 
-          <div className="flex flex-col h-full items-center justify-start w-full">
+          <div id="consumer" className="flex flex-col h-full items-center justify-start w-full">
             <div className="h-[1170px] md:px-5 relative w-full">
               <div className="h-fit m-auto w-full">
                 <div className="absolute bg-red-800 h-[1170px] inset-y-[0] my-auto right-[0] w-[22%]"></div>
@@ -2185,7 +2185,7 @@ const DesktopOnePage = () => {
           </div>
         </div>
         {/* Payment */}
-        <div className="flex flex-col items-start justify-start max-w-[1951px] mt-[103px] mx-auto md:px-5 w-full">
+        <div id="pricing" className="flex flex-col items-start justify-start max-w-[1951px] mt-[103px] mx-auto md:px-5 w-full">
           <div className="flex flex-col items-center justify-start w-full md:w-full">
             <Text
               className="md:text-5xl text-6xl text-center text-gray-100_02"
@@ -2376,7 +2376,7 @@ const DesktopOnePage = () => {
             </div>
           </div>
         </div>
-        <div className="h-[678px] md:h-[717px] mt-[77px] md:px-5 relative w-full">
+        <div id="contact" className="h-[678px] md:h-[717px] mt-[77px] md:px-5 relative w-full">
           <footer className="absolute bg-black-900 bottom-[0] flex inset-x-[0] items-center justify-center mx-auto shadow-bs w-full">
             <div className="flex flex-col items-center justify-center mb-[42px] mt-[72px] w-full">
               <div className="flex flex-col items-center justify-center w-full">
