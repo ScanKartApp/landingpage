@@ -55,6 +55,7 @@ module.exports = {
         blue: { 700: "#0575e6" },
         orange: { 600: "#ff8500" },
         indigo: { 500: "#3f37c9" },
+        
       },
       fontFamily: { inter: "Inter", archivo: "Archivo" },
       backgroundImage: {
@@ -63,6 +64,8 @@ module.exports = {
         gradient2: "linear-gradient(123deg ,#c82625,#c82625b5)",
         gradient3: "linear-gradient(270deg ,#ed213a7f,#ed213a7f)",
         gradient4: "linear-gradient(180deg ,#ffffff90,#ffffff90)",
+        // gradient4: "linear-gradient(180deg, transparent 50%, white 50%)",
+        
       },
       boxShadow: { bs: "0px -96px  240px 48px #ed213a19" },
     },

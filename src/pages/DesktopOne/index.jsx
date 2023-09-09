@@ -2440,7 +2440,7 @@ const DesktopOnePage = () => {
                       </a>
                     </div>
                     <Text
-                      className="bg-clip-text bg-gradient4  leading-[64.00px] md:text-5xl text-[64px] text-transparent w-full"
+                      className="bg-clip-text bg-gradient4 leading-[64.00px] md:text-5xl text-[64px] text-transparent w-full"
                       size="txtInterSemiBold64"
                     >
                       <span className="text-white-A700 font-inter text-left font-semibold">
@@ -2454,7 +2454,7 @@ const DesktopOnePage = () => {
                           ️<br />
                         </>
                       </span>
-                      <span className="md:text-[44px] sm:text-[38px] text-white-A700 font-inter text-left text-5xl font-semibold">
+                      <span className="text-blue_gray-100_59 md:text-[44px] sm:text-[38px] font-inter text-left text-5xl bg-gradient-to-b font-semibold">
                         By Team Scankart
                       </span>
                     </Text>
