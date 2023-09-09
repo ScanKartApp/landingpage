@@ -23,6 +23,16 @@ select:focus {
   border-color: var(--primary-color);
 }
 
+.container-snap::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.container-snap {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
 .react-datepicker-wrapper .react-datepicker__input-container input{
   background-color: transparent;
   border: none;

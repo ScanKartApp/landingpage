@@ -6,10 +6,10 @@ const DesktopOnePage = () => {
   return (
     <>
       <div className="bg-black-900 flex flex-col font-inter items-center justify-start mx-auto overflow-auto w-full">
-        <div className="flex flex-col items-center justify-start w-full">
-          <div className="bg-black-900 flex flex-col items-center justify-start pt-12 w-full">
+        <div className="flex flex-col items-center justify-start w-full h-full">
+          <div className="bg-black-900 flex flex-col items-center justify-start pt-12 w-full h-full">
             <div className="flex flex-col items-center justify-start w-full">
-              <header className="flex md:flex-col flex-row md:gap-5 items-center justify-center md:px-5 w-full">
+              <header className="flex md:flex-col flex-row md:gap-5 items-center justify-center md:px-5 sm:-mt-400 w-full">
                 <div className="h-[59px] relative w-[13%] md:w-full">
                   <div className="h-[59px] m-auto w-full">
                     <Text
@@ -26,7 +26,7 @@ const DesktopOnePage = () => {
                         nkart
                       </span>
                     </Text>
-                    <div className="absolute flex flex-row gap-[34px] h-full inset-y-[0] items-end justify-between left-[17%] my-auto w-[59px]">
+                    <div className="absolute flex flex-row gap-[34px] h-full inset-y-[0] items-end justify-between left-[17%] md:left-[44%] sm:left-[38%] my-auto w-[59px]">
                       <Img
                         className="h-[13px] mt-[46px] w-3"
                         src="images/img_computer.svg"
@@ -47,12 +47,12 @@ const DesktopOnePage = () => {
                     </div>
                   </div>
                   <Img
-                    className="absolute h-[13px] left-[17%] top-[0] w-3"
+                    className="absolute h-[13px] left-[17%] md:left-[44%] sm:left-[38%] top-[0] w-3"
                     src="images/img_computer.svg"
                     alt="computer_One"
                   />
                   <Img
-                    className="absolute bottom-[14%] h-px left-[23%]"
+                    className="absolute bottom-[14%] h-px left-[23%] md:left-[46%] sm:left-[41%]"
                     src="images/img_vector86.svg"
                     alt="vectorEightySix"
                   />
@@ -103,7 +103,7 @@ const DesktopOnePage = () => {
                   src="images/img_ellipse61.png"
                   alt="ellipseSixtyOne"
                 />
-                <div className="flex flex-col items-center justify-start mb-[102px] md:px-5">
+                <div className="flex flex-col items-center justify-start sm:-mt-[600px] mb-[102px] md:px-5 sm:-mt-100">
                   <div className="flex flex-col items-center justify-start">
                     <Text
                       className="md:text-5xl text-[64px] text-center text-white-A700"
@@ -144,7 +144,7 @@ const DesktopOnePage = () => {
             </div>
           </div>
           {/* Inventory Management */}
-          <div className="flex flex-col items-center justify-start overflow-y-scroll transform -rotate-90 h-[1250px] w-full">
+          <div className="container-snap flex flex-col items-center justify-start overflow-y-scroll transform -rotate-90 h-[1250px] w-full">
             <div className="flex-none w-[1270px] h-[1270px] md:w-full md:h-full transform rotate-90">
               <div className="w-full h-full p-5 relative">
                 <div className="h-[1170px] m-auto w-full">
@@ -174,7 +174,7 @@ const DesktopOnePage = () => {
                                   nkart
                                 </span>
                               </Text>
-                              <div className="absolute flex flex-row gap-[34px] h-full inset-y-[0] items-end justify-between left-[17%] my-auto w-[59px]">
+                              <div className="absolute flex flex-row gap-[34px] h-full inset-y-[0] items-end justify-between left-[17%] md:left-[44%] sm:left-[38%] my-auto w-[59px]">
                                 <Img
                                   className="h-[13px] mt-[46px] w-3"
                                   src="images/img_computer.svg"
@@ -195,7 +195,7 @@ const DesktopOnePage = () => {
                               </div>
                             </div>
                             <Img
-                              className="absolute h-[13px] left-[17%] top-[0] w-3"
+                              className="absolute h-[13px] left-[17%] md:left-[44%] sm:left-[38%] top-[0] w-3"
                               src="images/img_computer.svg"
                               alt="computer_Three"
                             />
@@ -1590,7 +1590,7 @@ const DesktopOnePage = () => {
 
           <div className="flex flex-col h-full items-center justify-start w-full">
             <div className="h-[1170px] md:px-5 relative w-full">
-              <div className="h-[170px] m-auto w-full">
+              <div className="h-fit m-auto w-full">
                 <div className="absolute bg-red-800 h-[1170px] inset-y-[0] my-auto right-[0] w-[22%]"></div>
                 <div className="absolute h-[1170px] inset-y-[0] left-[0] my-auto w-[79%] md:w-full">
                   <Img
@@ -1617,7 +1617,7 @@ const DesktopOnePage = () => {
                                 nkart
                               </span>
                             </Text>
-                            <div className="absolute flex flex-row gap-[34px] h-full inset-y-[0] items-end justify-between left-[17%] my-auto w-[59px]">
+                            <div className="absolute flex flex-row gap-[34px] h-full inset-y-[0] items-end justify-between left-[17%] md:left-[44%] sm:left-[38%] my-auto w-[59px]">
                               <Img
                                 className="h-[13px] mt-[46px] w-3"
                                 src="images/img_computer.svg"
@@ -1638,7 +1638,7 @@ const DesktopOnePage = () => {
                             </div>
                           </div>
                           <Img
-                            className="absolute h-[13px] left-[17%] top-[0] w-3"
+                            className="absolute h-[13px] left-[17%] md:left-[44%] sm:left-[38%] top-[0] w-3"
                             src="images/img_computer.svg"
                             alt="computer_Five"
                           />
@@ -2398,7 +2398,7 @@ const DesktopOnePage = () => {
                               nkart
                             </span>
                           </Text>
-                          <div className="absolute flex flex-row gap-[34px] h-full inset-y-[0] items-end justify-between left-[17%] my-auto w-[59px]">
+                          <div className="absolute flex flex-row gap-[34px] h-full inset-y-[0] items-end justify-between left-[17%] md:left-[44%] sm:left-[38%] my-auto w-[59px]">
                             <Img
                               className="h-[13px] mt-[46px] w-3"
                               src="images/img_computer.svg"
@@ -2419,7 +2419,7 @@ const DesktopOnePage = () => {
                           </div>
                         </div>
                         <Img
-                          className="absolute h-[13px] left-[17%] top-[0] w-3"
+                          className="absolute h-[13px] left-[17%] md:left-[44%] sm:left-[38%] top-[0] w-3"
                           src="images/img_computer.svg"
                           alt="computer_Seven"
                         />
