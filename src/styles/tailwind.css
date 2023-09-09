@@ -33,6 +33,13 @@ select:focus {
   scrollbar-width: none; /* Firefox */
 }
 
+.img-invert {
+  -moz-transform: scaleY(-1);
+        -o-transform: scaleY(-1);
+        -webkit-transform: scaleY(-1);
+        transform: scaleY(-1);
+}
+
 .react-datepicker-wrapper .react-datepicker__input-container input{
   background-color: transparent;
   border: none;

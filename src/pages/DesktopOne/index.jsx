@@ -34,7 +34,7 @@ const DesktopOnePage = () => {
                       />
                       <div className="flex flex-col gap-[33px] items-center justify-start">
                         <Img
-                          className="h-[13px] w-3"
+                          className="img-invert h-[13px] w-3"
                           src="images/img_signal.svg"
                           alt="signal"
                         />
@@ -47,7 +47,7 @@ const DesktopOnePage = () => {
                     </div>
                   </div>
                   <Img
-                    className="absolute h-[13px] left-[17%] md:left-[44%] sm:left-[38%] top-[0] w-3"
+                    className="img-invert absolute h-[13px] left-[17%] md:left-[44%] sm:left-[38%] top-[0] w-3"
                     src="images/img_computer.svg"
                     alt="computer_One"
                   />
@@ -83,8 +83,9 @@ const DesktopOnePage = () => {
                     </a>
                   </li>
                   <li>
+                    -py-[5px] px-[23px] rounded-[36px]
                     <a href="javascript:">
-                      <Button className="bg-red-800 cursor-pointer font-medium py-[13px] rounded-[26px] text-center text-gray-100 text-xl">
+                      <Button className="bg-red-800 cursor-pointer font-medium px-[13px] py-[13px] rounded-[36px] text-center text-gray-100 text-xl">
                         Contact Us
                       </Button>
                     </a>
@@ -182,7 +183,7 @@ const DesktopOnePage = () => {
                                 />
                                 <div className="flex flex-col gap-[33px] items-center justify-start">
                                   <Img
-                                    className="h-[13px] w-3"
+                                    className="img-invert h-[13px] w-3"
                                     src="images/img_signal.svg"
                                     alt="signal_Two"
                                   />
@@ -195,7 +196,7 @@ const DesktopOnePage = () => {
                               </div>
                             </div>
                             <Img
-                              className="absolute h-[13px] left-[17%] md:left-[44%] sm:left-[38%] top-[0] w-3"
+                              className="img-invert absolute h-[13px] left-[17%] md:left-[44%] sm:left-[38%] top-[0] w-3"
                               src="images/img_computer.svg"
                               alt="computer_Three"
                             />
@@ -1625,7 +1626,7 @@ const DesktopOnePage = () => {
                               />
                               <div className="flex flex-col gap-[33px] items-center justify-start">
                                 <Img
-                                  className="h-[13px] w-3"
+                                  className="img-invert h-[13px] w-3"
                                   src="images/img_signal.svg"
                                   alt="signal_Four"
                                 />
@@ -1638,7 +1639,7 @@ const DesktopOnePage = () => {
                             </div>
                           </div>
                           <Img
-                            className="absolute h-[13px] left-[17%] md:left-[44%] sm:left-[38%] top-[0] w-3"
+                            className="img-invert absolute h-[13px] left-[17%] md:left-[44%] sm:left-[38%] top-[0] w-3"
                             src="images/img_computer.svg"
                             alt="computer_Five"
                           />
@@ -2406,7 +2407,7 @@ const DesktopOnePage = () => {
                             />
                             <div className="flex flex-col gap-[33px] items-center justify-start">
                               <Img
-                                className="h-[13px] w-3"
+                                className="img-invert h-[13px] w-3"
                                 src="images/img_signal.svg"
                                 alt="signal_Six"
                               />
@@ -2419,7 +2420,7 @@ const DesktopOnePage = () => {
                           </div>
                         </div>
                         <Img
-                          className="absolute h-[13px] left-[17%] md:left-[44%] sm:left-[38%] top-[0] w-3"
+                          className="img-invert absolute h-[13px] left-[17%] md:left-[44%] sm:left-[38%] top-[0] w-3"
                           src="images/img_computer.svg"
                           alt="computer_Seven"
                         />
@@ -2516,12 +2517,13 @@ const DesktopOnePage = () => {
                           GET IN TOUCH
                         </Text>
                         <div className="flex flex-col gap-[13px] items-start justify-start">
-                          <Text
+                          <a
                             className="text-white-A700 text-xl"
                             size="txtInterMedium20"
+                            href="mailto:ceo@scankart.ai"
                           >
                             ceo@scankart.ai
-                          </Text>
+                          </a>
                           <Text
                             className="text-white-A700 text-xl"
                             size="txtInterMedium20"
