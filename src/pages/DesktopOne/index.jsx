@@ -10,7 +10,7 @@ const DesktopOnePage = () => {
           <div className="bg-black-900 flex flex-col items-center justify-start pt-12 w-full h-full">
             <div className="flex flex-col items-center justify-start w-full">
               <header className="flex md:flex-col flex-row md:gap-5 items-center justify-center md:px-5 sm:-mt-400 w-full">
-                <div className="h-[59px] relative w-[13%] md:w-full">
+                {/* <div className="h-[59px] relative w-[13%] md:w-full">
                   <div className="h-[59px] m-auto w-full">
                     <Text
                       className="absolute inset-x-[0] mx-auto sm:text-[35.26px] md:text-[37.26px] text-[39.26px] text-white-A700 top-[3%] w-max"
@@ -34,7 +34,7 @@ const DesktopOnePage = () => {
                       />
                       <div className="flex flex-col gap-[33px] items-center justify-start">
                         <Img
-                          className="img-invert h-[13px] w-3"
+                          className="img-invert h-[13px] w-4 left-[17%]"
                           src="images/img_signal.svg"
                           alt="signal"
                         />
@@ -55,6 +55,12 @@ const DesktopOnePage = () => {
                     className="absolute bottom-[14%] h-px left-[23%] md:left-[46%] sm:left-[41%]"
                     src="images/img_vector86.svg"
                     alt="vectorEightySix"
+                  />
+                </div> */}
+                <div className="h-[59px] relative w-[13%] md:w-full">
+                  <Img
+                    className="absolute flex flex-row gap-[34px] h-full inset-y-[0] items-end justify-between left-[17%] md:left-[44%] sm:left-[38%] my-auto w-[350px] h-[210px]"
+                    src="images/img_logo.png"
                   />
                 </div>
                 <ul className="flex sm:flex-1 sm:flex-col flex-row gap-[42px] sm:hidden items-center justify-end md:ml-[0] ml-[596px] pl-2.5 w-[561px] sm:w-full common-row-list">
@@ -145,79 +151,39 @@ const DesktopOnePage = () => {
             </div>
           </div>
           {/* Inventory Management */}
-          <div id="store" className="container-snap flex flex-col items-center justify-start overflow-y-scroll transform -rotate-90 h-[1250px] w-full">
+          <div
+            id="store"
+            className="container-snap flex flex-col items-center justify-start overflow-y-scroll transform -rotate-90 h-[1250px] w-full"
+          >
             <div className="flex-none w-[1270px] h-[1270px] md:w-full md:h-full transform rotate-90">
-              <div className="w-full h-full p-5 relative">
-                <div className="h-[1170px] m-auto w-full">
-                  <div className="absolute bg-red-800 h-[1170px] inset-y-[0] my-auto right-[0] w-[22%]"></div>
-                  <div className="absolute h-[1170px] inset-y-[0] left-[0] my-auto w-[79%] md:w-full">
+              <div className="w-full h-[1170px] p-5 relative">
+                <div className="h-[1000px] m-auto w-full">
+                  <div className="absolute bg-red-800 h-[770px] inset-y-[0] my-auto right-[0] w-[22%]"></div>
+                  <div className="absolute h-[770px] inset-y-[0] left-[0] my-auto w-[79%] md:w-full">
                     <Img
-                      className="h-[1170px] m-auto object-cover w-full"
+                      className="h-[770px] m-auto object-cover w-full"
                       src="images/img_rectangle119.png"
                       alt="rectangle119"
                     />
-                    <div className="absolute flex flex-col md:gap-10 gap-[119px] h-max inset-y-[0] justify-start left-[5%] my-auto w-3/4">
+                    <div className="absolute flex flex-col md:gap-10 gap-[134px] h-[859px] inset-y-[0] justify-start left-[5%] my-auto w-3/4">
                       <div className="flex sm:flex-col flex-row gap-[25px] items-end justify-start w-[46%] md:w-full">
-                        <div className="flex flex-col items-center justify-start w-[45%] sm:w-full">
-                          <div className="h-[59px] relative w-full">
-                            <div className="h-[59px] m-auto w-full">
-                              <Text
-                                className="absolute inset-x-[0] mx-auto sm:text-[35.26px] md:text-[37.26px] text-[39.26px] text-white-A700 top-[3%] w-max"
-                                size="txtInterSemiBold3926"
-                              >
-                                <span className="text-white-A700 font-inter text-left font-semibold">
-                                  Sc
-                                </span>
-                                <span className="text-red-A400 font-inter text-left font-semibold">
-                                  a
-                                </span>
-                                <span className="text-white-A700 font-inter text-left font-semibold">
-                                  nkart
-                                </span>
-                              </Text>
-                              <div className="absolute flex flex-row gap-[34px] h-full inset-y-[0] items-end justify-between left-[17%] md:left-[44%] sm:left-[38%] my-auto w-[59px]">
-                                <Img
-                                  className="h-[13px] mt-[46px] w-3"
-                                  src="images/img_computer.svg"
-                                  alt="computer_Two"
-                                />
-                                <div className="flex flex-col gap-[33px] items-center justify-start">
-                                  <Img
-                                    className="img-invert h-[13px] w-3"
-                                    src="images/img_signal.svg"
-                                    alt="signal_Two"
-                                  />
-                                  <Img
-                                    className="h-[13px] w-3"
-                                    src="images/img_signal.svg"
-                                    alt="signal_Three"
-                                  />
-                                </div>
-                              </div>
-                            </div>
-                            <Img
-                              className="img-invert absolute h-[13px] left-[17%] md:left-[44%] sm:left-[38%] top-[0] w-3"
-                              src="images/img_computer.svg"
-                              alt="computer_Three"
-                            />
-                            <Img
-                              className="absolute bottom-[14%] h-px left-[23%]"
-                              src="images/img_vector86.svg"
-                              alt="vectorEightySix_One"
-                            />
-                          </div>
+                        <div className="h-[59px] relative w-[53%] md:w-full">
+                          <Img
+                            className="absolute flex flex-row gap-[34px] h-full inset-y-[0] items-end justify-between left-[17%] md:left-[44%] sm:left-[38%] my-auto w-[350px] h-[210px]"
+                            src="images/img_logo.png"
+                          />
                         </div>
                         <Text
-                          className="sm:mt-0 mt-[9px] sm:text-[35.26px] md:text-[37.26px] text-[39.26px] text-white-A700"
+                          className="sm:mt-0 mt-[58px] sm:text-[35.26px] md:text-[37.26px] text-[39.26px] text-white-A700"
                           size="txtInterSemiBold3926"
                         >
                           Store App
                         </Text>
                       </div>
-                      <div className="flex flex-col items-center justify-start md:ml-[0] ml-[65px] w-[93%] md:w-full">
+                      <div className="flex flex-col items-start justify-start md:ml-[0] ml-[65px] h-[750px] w-[93%] md:w-full">
                         <div className="flex flex-col items-start justify-start w-full">
                           <Text
-                            className="leading-[76.00px] md:text-5xl text-6xl text-white-A700"
+                            className="leading-[36.00px] md:text-4xl text-left text-5xl top-[1%] -mt-[100px] text-white-A700 h-[10px] w-full"
                             size="txtInterBold60"
                           >
                             <span className="text-red-A400 font-inter text-left font-bold">
@@ -235,9 +201,9 @@ const DesktopOnePage = () => {
                               Scankart™
                             </span>
                           </Text>
-                          <div className="flex flex-col gap-[25px] items-start justify-start mt-[68px]">
+                          <div className="flex flex-col gap-[25px] items-start justify-start mt-[150px]">
                             <Text
-                              className="text-4xl sm:text-[32px] md:text-[34px] text-red-A400"
+                              className="text-3xl sm:text-[32px] md:text-[34px] text-red-A400"
                               size="txtInterSemiBold36"
                             >
                               INVENTORY MANAGEMENT
@@ -263,12 +229,12 @@ const DesktopOnePage = () => {
                           </div>
                           <div className="flex md:flex-col flex-row gap-9 items-center justify-start mt-[60px] w-[78%] md:w-full">
                             <Img
-                              className="h-[84px]"
+                              className="h-[84px] -mt-[50px]"
                               src="images/img_group22225.svg"
                               alt="group22225"
                             />
                             <Img
-                              className="h-[84px] md:h-auto object-cover"
+                              className="h-[84px] -mt-[50px] md:h-auto object-cover"
                               src="images/img_group.png"
                               alt="group"
                             />
@@ -278,7 +244,11 @@ const DesktopOnePage = () => {
                     </div>
                   </div>
                 </div>
-                <div className="absolute bg-white-A700 bottom-[10%] flex flex-col items-center justify-start outline outline-[6px] outline-black-900_01 p-6 sm:px-5 right-[9%] rounded-[24px] w-1/4">
+                <Img
+                  className="absolute h-[740px] inset-y-[0] right-[8%] my-auto w-[25%] md:w-[25%] md:h-[740px]"
+                  src="images/homepage_store.png"
+                />
+                {/* <div className="absolute bg-white-A700 bottom-[10%] flex flex-col items-center justify-start outline outline-[6px] outline-black-900_01 p-6 sm:px-5 right-[9%] rounded-[24px] w-1/4">
                   <div className="flex flex-col gap-3 items-center justify-start mb-[38px] mt-6 w-full">
                     <div className="flex flex-col items-start justify-start w-full">
                       <div className="flex flex-row gap-2 items-start justify-start w-3/4 md:w-full">
@@ -626,20 +596,20 @@ const DesktopOnePage = () => {
                       </div>
                     </div>
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
             <div className="flex-none w-[1270px] h-[1270px] md:w-full md:h-full transform rotate-90">
-              <div className="w-full h-full p-5 relative">
-                <div className="h-[1024px] m-auto w-full">
-                  <div className="absolute bg-red-800 h-[1024px] inset-y-[0] my-auto right-[0] w-[22%]"></div>
-                  <div className="absolute h-[1024px] inset-y-[0] left-[0] my-auto w-[79%] md:w-full">
+              <div className="w-full h-[1170px] p-5 relative">
+                <div className="h-[1000px] m-auto w-full">
+                  <div className="absolute bg-red-800 h-[770px] inset-y-[0] my-auto right-[0] w-[22%]"></div>
+                  <div className="absolute h-[770px] inset-y-[0] left-[0] my-auto w-[79%] md:w-full">
                     <Img
-                      className="h-[1024px] m-auto object-cover w-full"
+                      className="h-[770px] m-auto object-cover w-full"
                       src="images/img_rectangle119.png"
                       alt="rectangle119_One"
                     />
-                    <div className="absolute flex flex-col h-max inset-y-[0] items-start justify-start left-[11%] my-auto w-[70%]">
+                    <div className="absolute flex flex-col inset-y-[0] items-start justify-start left-[11%] my-auto w-[70%]">
                       <Text
                         className="leading-[76.00px] md:text-5xl text-6xl text-white-A700"
                         size="txtInterBold60"
@@ -691,12 +661,12 @@ const DesktopOnePage = () => {
                       </div>
                       <div className="flex md:flex-col flex-row gap-9 items-center justify-start mt-[60px] w-[78%] md:w-full">
                         <Img
-                          className="h-[84px]"
+                          className="h-[84px] -mt-[50px]"
                           src="images/img_group22225.svg"
                           alt="group22225_One"
                         />
                         <Img
-                          className="h-[84px] md:h-auto object-cover"
+                          className="h-[84px] -mt-[50px] md:h-auto object-cover"
                           src="images/img_group.png"
                           alt="group_One"
                         />
@@ -704,7 +674,7 @@ const DesktopOnePage = () => {
                     </div>
                   </div>
                 </div>
-                <div className="absolute bg-white-A700 flex flex-col h-max inset-y-[0] items-start justify-end my-auto p-6 sm:px-5 right-[9%] rounded-bl-[24px] rounded-br-[24px] w-1/4">
+                {/* <div className="absolute bg-white-A700 flex flex-col h-max inset-y-[0] items-start justify-end my-auto p-6 sm:px-5 right-[9%] rounded-bl-[24px] rounded-br-[24px] w-1/4">
                   <div className="flex flex-row gap-2 items-center justify-start mt-6 w-[47%] md:w-full">
                     <Img
                       className="h-6 w-6"
@@ -886,20 +856,24 @@ const DesktopOnePage = () => {
                   <Button className="bg-red-800 cursor-pointer font-medium min-w-[312px] mt-4 py-3.5 rounded text-base text-center text-white-A700">
                     Download Invoice
                   </Button>
-                </div>
+                </div> */}
+                <Img
+                className="absolute h-[740px] inset-y-[0] right-[8%] my-auto w-[25%] md:w-[25%] md:h-[740px]"
+                src="images/order_details.png"
+              />
               </div>
             </div>
             <div className="flex-none w-[1270px] h-[1270px] md:w-full md:h-full transform rotate-90">
-              <div className="w-full h-full p-5 relative">
-                <div className="h-[1024px] m-auto w-full">
-                  <div className="absolute bg-red-800 h-[1024px] inset-y-[0] my-auto right-[0] w-[22%]"></div>
-                  <div className="absolute h-[1024px] inset-y-[0] left-[0] my-auto w-[79%] md:w-full">
+              <div className="w-full h-[1170px] p-5 relative">
+                <div className="h-[1000px] m-auto w-full">
+                  <div className="absolute bg-red-800 h-[770px] inset-y-[0] my-auto right-[0] w-[22%]"></div>
+                  <div className="absolute h-[770px] inset-y-[0] left-[0] my-auto w-[79%] md:w-full">
                     <Img
-                      className="h-[1024px] m-auto object-cover w-full"
+                      className="h-[770px] m-auto object-cover w-full"
                       src="images/img_rectangle119.png"
                       alt="rectangle119_Two"
                     />
-                    <div className="absolute flex flex-col md:gap-10 gap-[68px] h-max inset-y-[0] items-start justify-start left-[11%] my-auto w-[70%]">
+                    <div className="absolute flex flex-col md:gap-10 gap-[68px] h-[770px] inset-y-[0] items-start justify-start left-[11%] my-auto w-[70%]">
                       <Text
                         className="leading-[76.00px] md:text-5xl text-6xl text-white-A700"
                         size="txtInterBold60"
@@ -953,12 +927,12 @@ const DesktopOnePage = () => {
                           </div>
                           <div className="flex md:flex-col flex-row gap-9 items-center justify-start w-[85%] md:w-full">
                             <Img
-                              className="h-[84px]"
+                              className="h-[84px] -mt-[50px]"
                               src="images/img_group22225.svg"
                               alt="group22225_Two"
                             />
                             <Img
-                              className="h-[84px] md:h-auto object-cover"
+                              className="h-[84px] -mt-[50px] md:h-auto object-cover"
                               src="images/img_group.png"
                               alt="group_Two"
                             />
@@ -968,7 +942,7 @@ const DesktopOnePage = () => {
                     </div>
                   </div>
                 </div>
-                <div className="absolute bg-white-A700 flex flex-col gap-[19px] h-max inset-y-[0] items-start justify-center my-auto p-6 sm:px-5 right-[9%] rounded-[24px] w-1/4">
+                {/* <div className="absolute bg-white-A700 flex flex-col gap-[19px] h-max inset-y-[0] items-start justify-center my-auto p-6 sm:px-5 right-[9%] rounded-[24px] w-1/4">
                   <div className="flex flex-row gap-2 items-start justify-start mt-6 w-[68%] md:w-full">
                     <Img
                       className="h-6 w-6"
@@ -1110,22 +1084,26 @@ const DesktopOnePage = () => {
                       </div>
                     </div>
                   </List>
-                </div>
+                </div> */}
+                <Img
+                className="absolute h-[740px] inset-y-[0] right-[8%] my-auto w-[25%] md:w-[25%] md:h-[740px]"
+                src="images/vendor_management.png"
+              />
               </div>
             </div>
             <div className="flex-none w-[1270px] h-[1270px] md:w-full md:h-full transform rotate-90">
-              <div className="w-full h-full p-5 relative">
-                <div className="h-[1024px] m-auto w-full">
-                  <div className="absolute bg-red-800 h-[1024px] inset-y-[0] my-auto right-[0] w-[22%]"></div>
-                  <div className="absolute h-[1024px] inset-y-[0] left-[0] my-auto w-[79%] md:w-full">
+              <div className="w-full h-[1170px] p-5 relative">
+                <div className="h-[1000px] m-auto w-full">
+                  <div className="absolute bg-red-800 h-[770px] inset-y-[0] my-auto right-[0] w-[22%]"></div>
+                  <div className="absolute h-[770px] inset-y-[0] left-[0] my-auto w-[79%] md:w-full">
                     <Img
-                      className="h-[1024px] m-auto object-cover w-full"
+                      className="h-[770px] m-auto object-cover w-full"
                       src="images/img_rectangle119.png"
                       alt="rectangle119_Three"
                     />
-                    <div className="absolute flex flex-col md:gap-10 gap-[68px] h-max inset-y-[0] justify-start left-[11%] my-auto w-[70%]">
+                    <div className="absolute flex flex-col md:gap-10 gap-[68px] h-[859px] inset-y-[0] justify-start left-[5%] my-auto w-[70%]">
                       <Text
-                        className="leading-[76.00px] ml-2 md:ml-[0] md:text-5xl text-6xl text-white-A700"
+                        className="leading-[76.00px] top-[1%] mt-[50px] ml-2 md:ml-[0] md:text-5xl text-5xl text-white-A700"
                         size="txtInterBold60"
                       >
                         <span className="text-red-A400 font-inter text-left font-bold">
@@ -1192,7 +1170,7 @@ const DesktopOnePage = () => {
                     </div>
                   </div>
                 </div>
-                <div className="absolute bg-white-A700 flex flex-col h-max inset-y-[0] items-center justify-start my-auto pt-11 right-[9%] rounded-bl-[24px] rounded-br-[24px] w-1/4">
+                {/* <div className="absolute bg-white-A700 flex flex-col h-max inset-y-[0] items-center justify-start my-auto pt-11 right-[9%] rounded-bl-[24px] rounded-br-[24px] w-1/4">
                   <div className="flex flex-col gap-4 items-center justify-start w-full">
                     <div className="flex flex-col items-center justify-start w-[87%] md:w-full">
                       <div className="flex flex-row items-start justify-between w-full">
@@ -1584,24 +1562,31 @@ const DesktopOnePage = () => {
                       </div>
                     </div>
                   </div>
-                </div>
+                </div> */}
+                <Img
+                className="absolute h-[740px] inset-y-[0] right-[8%] my-auto w-[25%] md:w-[25%] md:h-[740px]"
+                src="images/homepage_store.png"
+              />
               </div>
             </div>
           </div>
 
-          <div id="consumer" className="flex flex-col h-full items-center justify-start w-full">
+          <div
+            id="consumer"
+            className="flex flex-col h-full items-center justify-start w-full"
+          >
             <div className="h-[1170px] md:px-5 relative w-full">
-              <div className="h-fit m-auto w-full">
-                <div className="absolute bg-red-800 h-[1170px] inset-y-[0] my-auto right-[0] w-[22%]"></div>
-                <div className="absolute h-[1170px] inset-y-[0] left-[0] my-auto w-[79%] md:w-full">
+              <div className="h-[1000px] m-auto w-full">
+                <div className="absolute bg-red-800 h-[770px] inset-y-[0] my-auto right-[0] w-[22%]"></div>
+                <div className="absolute h-[770px] inset-y-[0] left-[0] my-auto w-[79%] md:w-full">
                   <Img
-                    className="h-[1170px] m-auto object-cover w-full"
+                    className="h-[770px] m-auto object-cover w-full"
                     src="images/img_rectangle119.png"
                     alt="rectangle119_Four"
                   />
                   <div className="absolute flex flex-col md:gap-10 gap-[134px] h-[859px] md:h-auto justify-start left-[5%] top-[10%] w-[859px]">
                     <div className="flex sm:flex-col flex-row gap-[25px] items-end justify-start w-[56%] md:w-full">
-                      <div className="flex flex-col items-center justify-start w-[36%] sm:w-full">
+                      {/* <div className="flex flex-col items-center justify-start w-[36%] sm:w-full">
                         <div className="h-[59px] relative w-full">
                           <div className="h-[59px] m-auto w-full">
                             <Text
@@ -1649,6 +1634,12 @@ const DesktopOnePage = () => {
                             alt="vectorEightySix_Two"
                           />
                         </div>
+                      </div> */}
+                      <div className="h-[59px] relative w-[43%] md:w-full">
+                        <Img
+                          className="absolute flex flex-row gap-[34px] h-full inset-y-[0] items-end justify-between left-[17%] md:left-[44%] sm:left-[38%] my-auto w-[370px] h-[180px]"
+                          src="images/img_logo.png"
+                        />
                       </div>
                       <Text
                         className="sm:mt-0 mt-[9px] sm:text-[35.26px] md:text-[37.26px] text-[39.26px] text-white-A700"
@@ -1657,15 +1648,15 @@ const DesktopOnePage = () => {
                         Consumer App
                       </Text>
                     </div>
-                    <div className="flex flex-col items-start justify-start md:ml-[0] ml-[65px] w-[93%] md:w-full">
+                    <div className="flex flex-col items-start justify-start md:ml-[0] mt-[1%] top-[10%] ml-[65px] h-[770px] w-[93%] md:w-full">
                       <Text
-                        className="leading-[76.00px] md:text-5xl text-6xl text-white-A700 w-full"
+                        className="leading-[76.00px] md:text-5xl text-left text-6xl top-[1%] -mt-[120px] text-white-A700 h-[10px] w-full"
                         size="txtInterBold60"
                       >
-                        <span className="text-red-A400 font-inter text-left font-bold">
+                        <span className="text-red-A400 font-inter mt-[1%] text-left h-[50px] font-bold">
                           Transform
                         </span>
-                        <span className="text-white-A700 font-inter text-left font-bold">
+                        <span className="text-white-A700 font-inter mt-[10vh] text-left font-bold">
                           <>
                             {" "}
                             the Way You
@@ -1680,9 +1671,9 @@ const DesktopOnePage = () => {
                           {" "}
                         </span>
                       </Text>
-                      <div className="flex flex-col items-start justify-start mt-[68px]">
+                      <div className="flex flex-col items-start justify-start mt-[120px]">
                         <Text
-                          className="text-4xl sm:text-[32px] md:text-[34px] text-red-A400"
+                          className="text-3xl sm:text-[32px] md:text-[34px] mt-[30px] text-red-A400"
                           size="txtInterSemiBold36"
                         >
                           INSTANT CHECKOUT
@@ -1707,485 +1698,81 @@ const DesktopOnePage = () => {
                         </Text>
                       </div>
                       <Img
-                        className="h-[84px] mt-[60px]"
+                        className="h-[84px] mt-[20px]"
                         src="images/img_group22258.svg"
                         alt="group22258"
                       />
                     </div>
+                    {/* <div className="flex flex-col items-start justify-start md:items-start mt-[1%] ml-[0] h-[770px] w-[93%] md:w-[79%]">
+                    <Text
+                      className="leading-[76.00px] md:text-5xl text-left text-6xl text-white-A700 -mt-[120px] top-[1%] text-center md:text-left w-full"
+                      size="txtInterBold60"
+                    >
+                      <span className="text-red-A400 font-inter text-left mt-[1%] text-left h-[50px] font-bold">
+                        Transform
+                      </span>
+                      <span className="text-white-A700 font-inter mt-[1vh] text-left font-bold">
+                        <>
+                          {" "}
+                          the Way You
+                          <br />
+                          Shop with{" "}
+                        </>
+                      </span>
+                      <span className="text-red-A400 font-inter text-left font-bold">
+                        Scankart™
+                      </span>
+                      <span className="text-white-A700 font-inter text-left font-bold">
+                        {" "}
+                      </span>
+                    </Text>
+                    <div className="flex flex-col items-center justify-center mt-[1px] md:items-start text-center md:text-left">
+                      <Text
+                        className="text-4xl sm:text-[32px] md:text-[34px] text-red-A400"
+                        size="txtInterSemiBold36"
+                      >
+                        INSTANT CHECKOUT
+                      </Text>
+                      <Text
+                        className="mt-7 md:text-5xl ml-[0] sm:text-[42px] text-[56px] text-white-A700"
+                        size="txtInterBold56"
+                      >
+                        Scan, Compare & Buy
+                      </Text>
+                      <Text
+                        className="leading-[48.00px] mt-4 md:text-3xl sm:text-[28px] text-[32px] text-blue_gray-100_e5"
+                        size="txtInterMedium32"
+                      >
+                        <>
+                          AI Shopping Mate (SKAI)
+                          <br />
+                          Onboard Stores & Earn
+                          <br />
+                          Compare Best Prices
+                        </>
+                      </Text>
+                    </div>
+                    <Img
+                      className="h-[84px] mt-[60px]"
+                      src="images/img_group22258.svg"
+                      alt="group22258"
+                    />
+                    </div> */}
                   </div>
                 </div>
               </div>
-              <div className="absolute bg-white-A700 bottom-[12%] flex flex-col items-center justify-start pt-[47px] right-[9%] rounded-bl-[24px] rounded-br-[24px] w-1/4">
-                <div className="flex flex-col gap-5 items-end justify-start w-full">
-                  <div className="flex flex-col gap-4 items-start justify-start w-[94%] md:w-full">
-                    <div className="flex flex-row items-start justify-start w-[93%] md:w-full">
-                      <Img
-                        className="h-[34px]"
-                        src="images/img_location.svg"
-                        alt="location"
-                      />
-                      <div className="flex flex-col items-center justify-start ml-2 w-[51%]">
-                        <div className="flex flex-col items-center justify-start w-full">
-                          <div className="flex flex-col items-start justify-start w-full">
-                            <div className="flex flex-row items-start justify-start w-[81%] md:w-full">
-                              <div className="flex flex-col items-center justify-start w-[85%]">
-                                <div className="flex flex-col items-center justify-start w-full">
-                                  <Text
-                                    className="text-base text-gray-900"
-                                    size="txtInterSemiBold16"
-                                  >
-                                    Gandhi Nagar
-                                  </Text>
-                                </div>
-                              </div>
-                              <Img
-                                className="h-4 ml-[3px] w-4"
-                                src="images/img_arrowdown_gray_900.svg"
-                                alt="arrowdown_One"
-                              />
-                            </div>
-                            <div className="flex flex-col items-center justify-start mt-[3px] w-full">
-                              <Text
-                                className="text-gray-600 text-xs"
-                                size="txtInterMedium12Gray600"
-                              >
-                                14/110, Moti Mill Compound
-                              </Text>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <Img
-                        className="h-8 ml-[88px] mt-0.5 w-8"
-                        src="images/img_file_gray_900_32x32.svg"
-                        alt="file_One"
-                      />
-                    </div>
-                    <Input
-                      name="group21746_Two"
-                      placeholder="Search by product name"
-                      className="font-medium p-0 placeholder:text-gray-600_cc text-[13px] text-gray-600_cc text-left w-full"
-                      wrapClassName="bg-white-A700 border border-gray-600_59 border-solid flex p-[11px] rounded-[21px] w-[93%]"
-                      type="text"
-                      prefix={
-                        <Img
-                          className="h-5 mr-2 my-auto"
-                          src="images/img_search.svg"
-                          alt="search"
-                        />
-                      }
-                      suffix={
-                        <Img
-                          className="h-5 ml-[35px] my-auto"
-                          src="images/img_iconsax_linear_microphone.svg"
-                          alt="Iconsax/Linear/microphone"
-                        />
-                      }
-                    ></Input>
-                    <div className="flex flex-row gap-24 items-end justify-start w-[93%] md:w-full">
-                      <div className="flex flex-col items-center justify-start my-[5px] w-[30%]">
-                        <div className="flex flex-col gap-[7px] items-start justify-start w-full">
-                          <Text
-                            className="text-[13px] text-red-800"
-                            size="txtInterSemiBold13"
-                          >
-                            Wallet Balance
-                          </Text>
-                          <div className="flex flex-row font-archivo gap-2 items-center justify-start w-[96%] md:w-full">
-                            <Img
-                              className="h-6 w-6"
-                              src="images/img_addtosvgrepocom.svg"
-                              alt="addtosvgrepocom"
-                            />
-                            <Text
-                              className="text-gray-900 text-lg"
-                              size="txtArchivoRomanMedium18"
-                            >
-                              ₹ 2500
-                            </Text>
-                          </div>
-                        </div>
-                      </div>
-                      <div
-                        className="bg-cover bg-no-repeat flex flex-col h-[58px] items-center justify-end p-2.5 w-2/5"
-                        style={{
-                          backgroundImage: "url('images/img_group21930.svg')",
-                        }}
-                      >
-                        <div className="flex flex-row gap-1.5 items-center justify-between mt-0.5 w-[99%] md:w-full">
-                          <Img
-                            className="h-9 md:h-auto object-cover w-9"
-                            src="images/img_savetheplanet.png"
-                            alt="savetheplanet"
-                          />
-                          <div className="flex flex-col items-center justify-start">
-                            <Text
-                              className="text-[13px] text-center text-gray-900_01"
-                              size="txtInterMedium13Gray90001"
-                            >
-                              Go Green
-                            </Text>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="overflow-x-auto w-full">
-                      <div className="flex flex-row gap-3 items-center justify-between w-full">
-                        <Button className="bg-blue_gray-100_7f cursor-pointer font-medium leading-[normal] min-w-[168px] py-[35px] rounded text-center text-gray-600 text-xs">
-                          Promotional Offers
-                        </Button>
-                        <Button className="bg-blue_gray-100_7f cursor-pointer font-medium leading-[normal] min-w-[168px] py-[35px] rounded text-center text-gray-600 text-xs">
-                          Promotional Offers
-                        </Button>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="h-[455px] md:h-[459px] relative w-full">
-                    <div className="md:h-[459px] h-[461px] m-auto pb-1.5 w-full">
-                      <div className="absolute flex flex-col h-max inset-[0] items-start justify-center m-auto w-[87%]">
-                        <div className="flex flex-col items-center justify-start w-full">
-                          <div className="flex flex-col gap-3 items-center justify-start w-full">
-                            <div className="flex flex-row items-start justify-between w-full">
-                              <Text
-                                className="text-[13px] text-red-800"
-                                size="txtInterSemiBold13"
-                              >
-                                ScanKart Stores
-                              </Text>
-                              <Text
-                                className="text-[13px] text-gray-600 text-right"
-                                size="txtInterMedium13"
-                              >
-                                View in Map
-                              </Text>
-                            </div>
-                            <div className="flex flex-col items-center justify-start w-full">
-                              <div className="flex flex-col gap-[5px] items-center justify-start w-full">
-                                <List
-                                  className="sm:flex-col flex-row gap-5 grid grid-cols-4 justify-center w-full"
-                                  orientation="horizontal"
-                                >
-                                  <div className="flex flex-1 flex-col items-center justify-start sm:ml-[0] w-full">
-                                    <Img
-                                      className="h-[63px] md:h-auto rounded-[50%] w-[63px]"
-                                      src="images/img_ellipse8.png"
-                                      alt="ellipseEight"
-                                    />
-                                    <Text
-                                      className="leading-[13.00px] mt-1 text-[10px] text-center text-gray-900 w-full"
-                                      size="txtInterMedium10"
-                                    >
-                                      <>
-                                        Shivam A<br />
-                                        Mart
-                                      </>
-                                    </Text>
-                                  </div>
-                                  <div className="flex flex-1 flex-col items-center justify-start sm:ml-[0] w-full">
-                                    <Img
-                                      className="h-[63px] md:h-auto rounded-[50%] w-[63px]"
-                                      src="images/img_ellipse7_63x63.png"
-                                      alt="ellipseSeven"
-                                    />
-                                    <Text
-                                      className="leading-[13.00px] mt-1 text-[10px] text-center text-gray-900 w-full"
-                                      size="txtInterMedium10"
-                                    >
-                                      <>
-                                        King’s Food
-                                        <br />
-                                        Mart
-                                      </>
-                                    </Text>
-                                  </div>
-                                  <div className="flex flex-1 flex-col items-center justify-start sm:ml-[0] w-full">
-                                    <Img
-                                      className="h-[63px] md:h-auto rounded-[50%] w-[63px]"
-                                      src="images/img_ellipse6_63x63.png"
-                                      alt="ellipseSix"
-                                    />
-                                    <Text
-                                      className="leading-[13.00px] mt-1 text-[10px] text-center text-gray-900 w-full"
-                                      size="txtInterMedium10"
-                                    >
-                                      Raghav Kirana Mart
-                                    </Text>
-                                  </div>
-                                  <div className="flex flex-1 flex-col items-center justify-start sm:ml-[0] w-full">
-                                    <Img
-                                      className="h-[63px] md:h-auto rounded-[50%] w-[63px]"
-                                      src="images/img_ellipse3.png"
-                                      alt="ellipseThree"
-                                    />
-                                    <Text
-                                      className="leading-[13.00px] mt-1 text-[10px] text-center text-gray-900 w-full"
-                                      size="txtInterMedium10"
-                                    >
-                                      <>
-                                        A to Z Food
-                                        <br />
-                                        Shop
-                                      </>
-                                    </Text>
-                                  </div>
-                                </List>
-                                <div className="flex flex-row items-center justify-between w-[92%] md:w-full">
-                                  <Text
-                                    className="text-[8px] text-center text-gray-600"
-                                    size="txtInterMedium8"
-                                  >
-                                    800 Mtrs.
-                                  </Text>
-                                  <Text
-                                    className="text-[8px] text-center text-gray-600"
-                                    size="txtInterMedium8"
-                                  >
-                                    1.2 Kms.
-                                  </Text>
-                                  <Text
-                                    className="text-[8px] text-center text-gray-600"
-                                    size="txtInterMedium8"
-                                  >
-                                    1.6 Kms.
-                                  </Text>
-                                  <Text
-                                    className="text-[8px] text-center text-gray-600"
-                                    size="txtInterMedium8"
-                                  >
-                                    1.7 Kms.
-                                  </Text>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div className="flex flex-col items-center justify-start mt-[22px] w-full">
-                          <div className="flex flex-col gap-3 items-start justify-start w-full">
-                            <Text
-                              className="text-[13px] text-red-800"
-                              size="txtInterSemiBold13"
-                            >
-                              My Offers & Deals
-                            </Text>
-                            <List
-                              className="sm:flex-col flex-row gap-5 grid grid-cols-4 justify-center w-full"
-                              orientation="horizontal"
-                            >
-                              <div className="flex flex-1 flex-col items-center justify-start w-full">
-                                <Img
-                                  className="h-[63px] md:h-auto rounded-[50%] w-[63px]"
-                                  src="images/img_ellipse8_63x63.png"
-                                  alt="ellipseEight"
-                                />
-                                <Text
-                                  className="leading-[13.00px] mt-1 text-[10px] text-center text-gray-900 w-full"
-                                  size="txtInterMedium10"
-                                >
-                                  <>
-                                    Spectacular
-                                    <br />
-                                    Deals
-                                  </>
-                                </Text>
-                              </div>
-                              <div className="flex flex-1 flex-col items-center justify-start w-full">
-                                <Img
-                                  className="h-[63px] md:h-auto rounded-[50%] w-[63px]"
-                                  src="images/img_ellipse7_1.png"
-                                  alt="ellipseSeven"
-                                />
-                                <Text
-                                  className="leading-[13.00px] mt-1 text-[10px] text-center text-gray-900 w-full"
-                                  size="txtInterMedium10"
-                                >
-                                  <>
-                                    Get Extra
-                                    <br />
-                                    5% Off
-                                  </>
-                                </Text>
-                              </div>
-                              <div className="flex flex-1 flex-col items-center justify-start w-full">
-                                <Img
-                                  className="h-[63px] md:h-auto rounded-[50%] w-[63px]"
-                                  src="images/img_ellipse6_3.png"
-                                  alt="ellipseSix"
-                                />
-                                <Text
-                                  className="leading-[13.00px] mt-1 text-[10px] text-center text-gray-900 w-full"
-                                  size="txtInterMedium10"
-                                >
-                                  <>
-                                    Get Flat
-                                    <br />
-                                    20% Off
-                                  </>
-                                </Text>
-                              </div>
-                              <div className="flex flex-1 flex-col items-center justify-start w-full">
-                                <Img
-                                  className="h-[63px] md:h-auto rounded-[50%] w-[63px]"
-                                  src="images/img_ellipse3_63x63.png"
-                                  alt="ellipseThree"
-                                />
-                                <Text
-                                  className="leading-[13.00px] mt-1 text-[10px] text-center text-gray-900 w-full"
-                                  size="txtInterMedium10"
-                                >
-                                  <>
-                                    Get Extra
-                                    <br />
-                                    10% Off
-                                  </>
-                                </Text>
-                              </div>
-                            </List>
-                          </div>
-                        </div>
-                        <div className="flex flex-col items-center justify-start mt-[22px] w-full">
-                          <div className="flex flex-col gap-3 items-center justify-start w-full">
-                            <div className="flex flex-row items-start justify-between w-full">
-                              <Text
-                                className="text-[13px] text-red-800"
-                                size="txtInterSemiBold13"
-                              >
-                                My Previous Orders
-                              </Text>
-                              <a
-                                href="javascript:"
-                                className="text-[13px] text-gray-600 text-right"
-                              >
-                                <Text size="txtInterMedium13">View All</Text>
-                              </a>
-                            </div>
-                            <div className="flex flex-col items-center justify-start w-full">
-                              <div className="flex flex-col items-center justify-start w-full">
-                                <div className="flex flex-row gap-5 items-center justify-between w-full">
-                                  <Img
-                                    className="h-[63px] md:h-auto rounded-[50%] w-[63px]"
-                                    src="images/img_ellipse3_1.png"
-                                    alt="ellipseThree"
-                                  />
-                                  <Img
-                                    className="h-[63px] md:h-auto rounded-[50%] w-[63px]"
-                                    src="images/img_ellipse6_4.png"
-                                    alt="ellipseSix_One"
-                                  />
-                                  <Img
-                                    className="h-[63px] md:h-auto rounded-[50%] w-[63px]"
-                                    src="images/img_ellipse7_2.png"
-                                    alt="ellipseSeven_One"
-                                  />
-                                  <Img
-                                    className="h-[63px] md:h-auto rounded-[50%] w-[63px]"
-                                    src="images/img_ellipse8_1.png"
-                                    alt="ellipseEight"
-                                  />
-                                </div>
-                                <div className="flex flex-row gap-5 items-center justify-between mt-1 w-full">
-                                  <Text
-                                    className="leading-[13.00px] text-[10px] text-center text-gray-900"
-                                    size="txtInterMedium10"
-                                  >
-                                    <>
-                                      Safola Soya
-                                      <br />
-                                      Chunks
-                                    </>
-                                  </Text>
-                                  <Text
-                                    className="leading-[13.00px] text-[10px] text-center text-gray-900"
-                                    size="txtInterMedium10"
-                                  >
-                                    <>
-                                      Tata Pink
-                                      <br />
-                                      Salt
-                                    </>
-                                  </Text>
-                                  <Text
-                                    className="leading-[13.00px] text-[10px] text-center text-gray-900"
-                                    size="txtInterMedium10"
-                                  >
-                                    <>
-                                      Tata
-                                      <br />
-                                      Toor Dal
-                                    </>
-                                  </Text>
-                                  <Text
-                                    className="leading-[13.00px] text-[10px] text-center text-gray-900"
-                                    size="txtInterMedium10"
-                                  >
-                                    Dawat Rozana Rice
-                                  </Text>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div className="flex flex-col items-center justify-end mt-[19px]">
-                          <Text
-                            className="text-[13px] text-amber-900"
-                            size="txtInterMedium13Amber900"
-                          >
-                            Categories
-                          </Text>
-                        </div>
-                      </div>
-                      <div
-                        className="absolute bg-cover bg-no-repeat bottom-[1%] flex flex-col h-20 inset-x-[0] items-center justify-end mx-auto p-[18px] w-full"
-                        style={{
-                          backgroundImage: "url('images/img_group21692.svg')",
-                        }}
-                      >
-                        <div className="flex flex-row items-start justify-between w-[93%] md:w-full">
-                          <div className="flex flex-col h-[42px] items-center justify-start w-[42px]">
-                            <div className="h-[42px] relative w-[42px]">
-                              <Img
-                                className="h-[42px] m-auto rounded-[50%] w-[42px]"
-                                src="images/img_ellipse38.png"
-                                alt="ellipseThirtyEight"
-                              />
-                              <Text
-                                className="absolute h-max inset-[0] justify-center m-auto text-[9px] text-black-900_01 text-center w-max"
-                                size="txtInterMedium9"
-                              >
-                                SKAI
-                              </Text>
-                            </div>
-                          </div>
-                          <Text
-                            className="mt-[27px] text-center text-gray-900 text-xs"
-                            size="txtInterMedium12"
-                          >
-                            Scan & Buy
-                          </Text>
-                          <Img
-                            className="h-[42px] md:h-auto rounded-[50%] w-[42px]"
-                            src="images/img_ellipse1_1.png"
-                            alt="ellipseOne_One"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                    <div className="absolute bg-gradient1  bottom-[11%] flex flex-col h-16 inset-x-[0] items-center justify-start mx-auto p-1 rounded-[50%] w-16">
-                      <Button className="bg-red-700_e5 flex h-14 items-center justify-center p-3.5 rounded-[50%] w-14">
-                        <Img
-                          className="h-[26px]"
-                          src="images/img_qrcode.svg"
-                          alt="qrcode_One"
-                        />
-                      </Button>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <Img
+                className="absolute h-[740px] inset-y-[0] right-[8%] my-auto w-[25%] md:w-[25%] md:h-[740px]"
+                src="images/homepage_consumer.png"
+              />
             </div>
           </div>
         </div>
         {/* Payment */}
-        <div id="pricing" className="flex flex-col items-start justify-start max-w-[1951px] mt-[103px] mx-auto md:px-5 w-full">
+        <div
+          id="pricing"
+          className="flex flex-col items-start justify-start max-w-[1951px] mt-[103px] mx-auto md:px-5 w-full"
+        >
           <div className="flex flex-col items-center justify-start w-full md:w-full">
             <Text
               className="md:text-5xl text-6xl text-center text-gray-100_02"
@@ -2376,14 +1963,17 @@ const DesktopOnePage = () => {
             </div>
           </div>
         </div>
-        <div id="contact" className="h-[678px] md:h-[717px] mt-[77px] md:px-5 relative w-full">
+        <div
+          id="contact"
+          className="h-[678px] md:h-[717px] mt-[77px] md:px-5 relative w-full"
+        >
           <footer className="absolute bg-black-900 bottom-[0] flex inset-x-[0] items-center justify-center mx-auto shadow-bs w-full">
             <div className="flex flex-col items-center justify-center mb-[42px] mt-[72px] w-full">
               <div className="flex flex-col items-center justify-center w-full">
                 <div className="flex md:flex-col flex-row md:gap-10 items-start justify-between w-[86%] md:w-full">
                   <div className="flex flex-col gap-[51px] items-start justify-start w-[49%] md:w-full">
                     <div className="flex flex-col gap-[26px] items-start justify-start w-[29%] md:w-full">
-                      <div className="h-[59px] relative w-full">
+                      {/* <div className="h-[59px] relative w-full">
                         <div className="h-[59px] m-auto w-full">
                           <Text
                             className="absolute inset-x-[0] mx-auto sm:text-[35.26px] md:text-[37.26px] text-[39.26px] text-white-A700 top-[3%] w-max"
@@ -2428,6 +2018,12 @@ const DesktopOnePage = () => {
                           className="absolute bottom-[14%] h-px left-[23%]"
                           src="images/img_vector86.svg"
                           alt="vectorEightySix_Three"
+                        />
+                      </div> */}
+                      <div className="h-[59px] relative w-[83%] md:w-full">
+                        <Img
+                          className="absolute flex flex-row gap-[34px] h-full inset-y-[0] items-end justify-between  md:left-[44%] sm:left-[38%] my-auto w-[350px] h-[210px]"
+                          src="images/img_logo.png"
                         />
                       </div>
                       <a
