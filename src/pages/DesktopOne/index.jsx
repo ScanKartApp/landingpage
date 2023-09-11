@@ -3,8 +3,35 @@ import React from "react";
 import { Button, Img, Input, Line, List, Switch, Text } from "components";
 
 const DesktopOnePage = () => {
+  const [isOpen, setIsOpen] = React.useState(true);
+  const closePopup = () => {
+    setIsOpen(false);
+  };
+
   return (
     <>
+      {/* {isOpen && (
+        <div className="flex h-[664px] w-[384px] p-[12px] justify-center align-center border-[32px]">
+          <div className="popup-content">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="30"
+              height="30"
+              viewBox="0 0 30 30"
+              fill="none"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M27.5 15C27.5 21.9035 21.9035 27.5 15 27.5C8.09644 27.5 2.5 21.9035 2.5 15C2.5 8.09644 8.09644 2.5 15 2.5C21.9035 2.5 27.5 8.09644 27.5 15ZM11.212 11.2121C11.5782 10.846 12.1717 10.846 12.5379 11.2121L15 13.6741L17.462 11.2121C17.8281 10.846 18.4218 10.846 18.7879 11.2121C19.154 11.5782 19.154 12.1718 18.7879 12.5379L16.3258 15L18.7879 17.462C19.154 17.8281 19.154 18.4218 18.7879 18.7879C18.4218 19.154 17.8281 19.154 17.462 18.7879L15 16.3259L12.5379 18.7879C12.1718 19.154 11.5782 19.154 11.2121 18.7879C10.846 18.4218 10.846 17.8281 11.2121 17.4621L13.6741 15L11.212 12.5379C10.8459 12.1718 10.8459 11.5782 11.212 11.2121Z"
+                fill="#A6A6A6"
+              />
+            </svg>
+            <h2>Popup Content</h2>
+            <p>This is a popup.</p>
+          </div>
+        </div>
+      )} */}
       <div className="bg-black-900 flex flex-col font-inter items-center justify-start mx-auto overflow-auto w-full">
         <div className="flex flex-col items-center justify-start w-full h-full">
           <div className="bg-black-900 flex flex-col items-center justify-start pt-12 w-full h-full">
@@ -57,18 +84,15 @@ const DesktopOnePage = () => {
                     alt="vectorEightySix"
                   />
                 </div> */}
-                <div className="h-[59px] relative w-[25%] md:w-full">
+                <div className="h-[59px] relative w-[24%] md:w-full">
                   <Img
-                    className="absolute flex flex-row gap-[34px] inset-y-[0] justify-between left-[17%] md:left-[44%] sm:left-[38%] my-auto w-[650px] h-[250px]"
+                    className="absolute flex flex-row gap-[34px] inset-y-[0] left-[17%] md:left-[44%] sm:left-[38%] my-auto w-[750px] h-[250px]"
                     src="images/img_logo.png"
                   />
                 </div>
-                <ul className="flex sm:flex-1 sm:flex-col flex-row gap-[42px] sm:hidden justify-end md:ml-[0] ml-[596px] pl-2.5 w-full sm:w-full common-row-list">
+                <ul className="flex sm:flex-1 sm:flex-col flex-row gap-[42px] sm:hidden justify-end md:ml-[0] mt-[2%] ml-[596px] pl-2.5 w-full sm:w-full common-row-list">
                   <li>
-                    <a
-                      href="#store"
-                      className="text-gray-400 text-lg"
-                    >
+                    <a href="#store" className="text-gray-400 text-lg">
                       <Text size="txtInterMedium18">Store App</Text>
                     </a>
                   </li>
@@ -91,7 +115,7 @@ const DesktopOnePage = () => {
                   <li>
                     {/* -py-[5px] px-[23px] rounded-[36px] */}
                     <a href="#contact">
-                      <Button className="bg-red-800 cursor-pointer font-medium px-[13px] py-[5px] rounded-[36px] text-center text-gray-100 text-xl">
+                      <Button className="bg-red-800 cursor-pointer font-medium -mt-[10px] px-[15px] py-[5px] rounded-[46px] text-center text-gray-100 text-xl">
                         Contact Us
                       </Button>
                     </a>
@@ -155,123 +179,43 @@ const DesktopOnePage = () => {
             id="store"
             className="container-snap flex flex-col items-center justify-start overflow-y-scroll transform -rotate-90 h-screen w-screen"
           > */}
-            <div className="flex flex-col h-screen items-center justify-start w-screen">
-              <div className="h-screen overflow-y-visible md:px-5 relative w-screen">
-                <div className="h-screen overflow-y-visible m-auto w-screen">
-                  <div className="absolute bg-red-800 h-screen inset-y-[0] my-auto right-[0] w-screen"></div>
-                  <div className="absolute h-screen inset-y-[0] left-[0] my-auto w-[79%] md:w-screen">
-                    <Img
-                      className="h-screen m-auto object-cover w-screen"
-                      src="images/img_rectangle119.png"
-                      alt="rectangle119_Four"
-                    />
-                    <div className="absolute flex flex-col md:gap-10 gap-[134px] h-screen md:h-auto justify-start left-[5%] top-[10%] w-[859px]">
-                      <div className="flex flex-row justify-start items-start gap-[25px] w-[56%] md:w-screen">
-                        <div className="h-[130px] relative w-[43%] -mt-[40px] md:w-screen">
-                          <Img
-                            className="absolute flex flex-row gap-[34px] items-start justify-between ml-[1%] md:left-[44%] sm:left-[38%] my-auto w-[370px] h-[120px]"
-                            src="images/img_logo.png"
-                          />
-                        </div>
-                        <Text
-                          className="sm:mt-0 top-[1%] sm:text-[35.26px] ml-[1%] md:text-[37.26px] text-[32.26px] text-white-A700"
-                          size="txtInterSemiBold3926"
-                        >
-                          Store App
-                        </Text>
-                      </div>
-                      <div className="flex flex-col items-start justify-start md:ml-[0] -mt-[10px] top-[5%] ml-[65px] h-[770px] w-[93%] md:w-full">
-                        <Text
-                          className="leading-[76.00px] md:text-5xl text-left text-5xl top-[1%] -mt-[120px] text-white-A700 h-[10px] w-full"
-                          size="txtInterBold60"
-                        >
-                          <span className="text-red-A400 font-inter -mt-[1%] text-left h-[30px] font-bold">
-                            Transform
-                          </span>
-                          <span className="text-white-A700 font-inter mt-[10vh] text-left font-bold">
-                            <>
-                              {" "}
-                              your Business
-                              <br />
-                              with{" "}
-                            </>
-                          </span>
-                          <span className="text-red-A400 font-inter text-left font-bold">
-                            Scankart™
-                          </span>
-                          <span className="text-white-A700 font-inter text-left font-bold">
-                            {" "}
-                          </span>
-                        </Text>
-                        <br /> <br />
-                        <div className="flex flex-col items-start justify-start mt-[120px]">
-                          <Text
-                            className="text-2xl sm:text-[32px] md:text-[34px] mt-[5px] text-red-A400"
-                            size="txtInterSemiBold36"
-                          >
-                            INVENTORY MANAGEMENT
-                          </Text>
-                          <Text
-                            className="mt-7 md:text-5xl sm:text-[42px] text-[35px] text-white-A700"
-                            size="txtInterBold56"
-                          >
-                            Just Automate Your
-                          </Text>
-                          <Text
-                            className="mt-1 md:text-5xl sm:text-[42px] text-[35px] text-white-A700"
-                            size="txtInterBold56"
-                          >
-                            Stock Control
-                          </Text>
-                          <Text
-                            className="leading-[48.00px] mt-4 md:text-3xl sm:text-[28px] text-[28px] text-blue_gray-100_e5"
-                            size="txtInterMedium32"
-                          >
-                            <>
-                              <li>AI Powered Stock-In</li>
-                              {/* <br /> */}
-                              <li>Expiry & Stock Alerts</li>
-                              {/* <br /> */}
-                              <li>Scan based Auditing</li>
-                            </>
-                          </Text>
-                        </div>
+          <div
+            id="store"
+            className="flex flex-col h-screen items-center justify-start w-screen"
+          >
+            <div className="h-screen overflow-y-visible md:px-5 relative w-screen">
+              <div className="h-screen overflow-y-visible m-auto w-screen">
+                <div className="absolute bg-red-800 h-screen inset-y-[0] my-auto right-[0] w-screen"></div>
+                <div className="absolute h-screen inset-y-[0] left-[0] my-auto w-[79%] md:w-screen">
+                  <Img
+                    className="h-screen m-auto object-cover w-screen"
+                    src="images/img_rectangle119.png"
+                    alt="rectangle119_Four"
+                  />
+                  <div className="absolute flex flex-col md:gap-10 gap-[134px] h-screen md:h-auto justify-start left-[5%] top-[10%] w-[859px]">
+                    <div className="flex flex-row justify-start items-start gap-[25px] w-[56%] md:w-screen">
+                      <div className="h-[130px] relative w-[43%] -mt-[40px] md:w-screen">
                         <Img
-                          className="h-[350px] w-[350px]  -mt-[130px]"
-                          src="images/img_group22258.svg"
-                          alt="group22258"
+                          className="absolute flex flex-row gap-[34px] items-start justify-between ml-[1%] md:left-[44%] sm:left-[38%] my-auto w-[370px] h-[120px]"
+                          src="images/img_logo.png"
                         />
                       </div>
-                    </div>
-                  </div>
-                </div>
-                <Img
-                  className="absolute h-[90%] inset-y-[0] right-[8%] my-auto w-[25%] md:w-[25%] md:h-[740px]"
-                  src="images/homepage_consumer.png"
-                />
-              </div>
-            </div>
-            
-            <div className="flex-none w-full h-screen md:w-full md:h-full">
-              {/* <div className="flex-none w-full h-full md:w-full md:h-full transform rotate-90"> */}
-              <div className="w-full h-screen p-5 relative">
-                <div className="h-screen m-auto w-full">
-                  <div className="absolute bg-red-800 h-screen inset-y-[0] my-auto right-[0] w-[22%]"></div>
-                  <div className="absolute h-screen left-[0] inset-y-[0] my-auto w-[79%] md:w-full">
-                    <Img
-                      className="h-screen m-auto object-cover w-full"
-                      src="images/img_rectangle119.png"
-                      alt="rectangle119_One"
-                    />
-                    <div className="absolute flex flex-col inset-y-[0] items-start justify-start left-[11%] my-auto w-[70%]">
                       <Text
-                        className="leading-[76.00px] md:text-5xl text-5xl text-white-A700"
+                        className="sm:mt-0 top-[1%] sm:text-[35.26px] ml-[1%] md:text-[37.26px] text-[32.26px] text-white-A700"
+                        size="txtInterSemiBold3926"
+                      >
+                        Store App
+                      </Text>
+                    </div>
+                    <div className="flex flex-col items-start justify-start md:ml-[0] -mt-[10px] top-[5%] ml-[65px] h-[770px] w-[93%] md:w-full">
+                      <Text
+                        className="leading-[76.00px] md:text-5xl text-left text-5xl top-[1%] -mt-[120px] text-white-A700 h-[10px] w-full"
                         size="txtInterBold60"
                       >
-                        <span className="text-red-A400 font-inter text-left font-bold">
+                        <span className="text-red-A400 font-inter -mt-[1%] text-left h-[30px] font-bold">
                           Transform
                         </span>
-                        <span className="text-white-A700 font-inter text-left font-bold">
+                        <span className="text-white-A700 font-inter mt-[10vh] text-left font-bold">
                           <>
                             {" "}
                             your Business
@@ -282,201 +226,284 @@ const DesktopOnePage = () => {
                         <span className="text-red-A400 font-inter text-left font-bold">
                           Scankart™
                         </span>
-                      </Text>
-                      <div className="flex flex-col gap-[25px] items-start justify-start mt-[68px]">
-                        <Text
-                          className="text-4xl sm:text-[32px] md:text-[34px] text-red-A400"
-                          size="txtInterSemiBold36"
-                        >
-                          PAPERLESS RETAIL
-                        </Text>
-                        <Text
-                          className="leading-[64.00px] md:text-5xl sm:text-[42px] text-5xl text-white-A700 w-full"
-                          size="txtInterBold56"
-                        >
-                          <>
-                            More Power, Less Paper
-                            <br />
-                            Go Digital
-                          </>
-                        </Text>
-                        <Text
-                          className="leading-[48.00px] md:text-3xl sm:text-[28px] text-[32px] text-blue_gray-100_e5"
-                          size="txtInterMedium32"
-                        >
-                          <>
-                            <li>Digital Receipts</li>
-                            <li>Mobile Checkout</li>
-                            <li>Digital Displays</li>
-                          </>
-                        </Text>
-                      </div>
-                      <Img
-                        className="h-[550px] w-[450px]  -mt-[0px]"
-                        src="images/img_group22258.svg"
-                        alt="group22258"
-                      />
-                    </div>
-                  </div>
-                </div>
-
-                <Img
-                  className="absolute h-[90%] inset-y-[0] right-[8%] my-auto w-[25%] md:w-[25%] md:h-[740px]"
-                  src="images/order_details.png"
-                />
-              </div>
-            </div>
-            
-            <div className="flex-none w-full h-screen md:w-full md:h-full">
-              {/* <div className="flex-none w-full h-full md:w-full md:h-full transform rotate-90"> */}
-              <div className="w-full h-screen p-5 relative">
-                <div className="h-screen m-auto w-full">
-                  <div className="absolute bg-red-800 h-screen inset-y-[0] my-auto right-[0] w-[22%]"></div>
-                  <div className="absolute h-screen left-[0] inset-y-[0] my-auto w-[79%] md:w-full">
-                    <Img
-                      className="h-screen m-auto object-cover w-full"
-                      src="images/img_rectangle119.png"
-                      alt="rectangle119_One"
-                    />
-                    <div className="absolute flex flex-col inset-y-[0] items-start justify-start left-[11%] my-auto w-[70%]">
-                      <Text
-                        className="leading-[76.00px] md:text-5xl text-5xl text-white-A700"
-                        size="txtInterBold60"
-                      >
-                        <span className="text-red-A400 font-inter text-left font-bold">
-                          Transform
-                        </span>
                         <span className="text-white-A700 font-inter text-left font-bold">
-                          <>
-                            {" "}
-                            your Business
-                            <br />
-                            with{" "}
-                          </>
-                        </span>
-                        <span className="text-red-A400 font-inter text-left font-bold">
-                          Scankart™
+                          {" "}
                         </span>
                       </Text>
-                      <div className="flex flex-col gap-[25px] items-start justify-start mt-[68px]">
+                      <br /> <br />
+                      <div className="flex flex-col items-start justify-start mt-[120px]">
                         <Text
-                          className="text-4xl sm:text-[32px] md:text-[34px] text-red-A400"
+                          className="text-2xl sm:text-[32px] md:text-[34px] mt-[5px] text-red-A400"
                           size="txtInterSemiBold36"
                         >
-                          VENDOR MANAGEMENT
+                          INVENTORY MANAGEMENT
                         </Text>
                         <Text
-                          className="leading-[64.00px] md:text-5xl sm:text-[42px] text-5xl text-white-A700 w-full"
+                          className="mt-7 md:text-5xl sm:text-[42px] text-[35px] text-white-A700"
                           size="txtInterBold56"
                         >
-                          <>
-                            Keep your Vendors
-                            <br />
-                            On-Track
-                          </>
+                          Just Automate Your
                         </Text>
                         <Text
-                          className="leading-[48.00px] md:text-3xl sm:text-[28px] text-[32px] text-blue_gray-100_e5"
+                          className="mt-1 md:text-5xl sm:text-[42px] text-[35px] text-white-A700"
+                          size="txtInterBold56"
+                        >
+                          Stock Control
+                        </Text>
+                        <Text
+                          className="leading-[48.00px] mt-4 md:text-3xl sm:text-[28px] text-[28px] text-blue_gray-100_e5"
                           size="txtInterMedium32"
                         >
                           <>
-                            <li>Demand Forecasting</li>
-                            <li>Supply & Payment Tracking</li>
-                            <li>Performance Reports</li>
+                            <li>AI Powered Stock-In</li>
+                            {/* <br /> */}
+                            <li>Expiry & Stock Alerts</li>
+                            {/* <br /> */}
+                            <li>Scan based Auditing</li>
                           </>
                         </Text>
                       </div>
                       <Img
-                        className="h-[550px] w-[450px]  -mt-[0px]"
+                        className="h-[350px] w-[350px]  -mt-[130px]"
                         src="images/img_group22258.svg"
                         alt="group22258"
                       />
                     </div>
                   </div>
                 </div>
-
-                <Img
-                  className="absolute h-[90%] inset-y-[0] right-[8%] my-auto w-[25%] md:w-[25%] md:h-[740px]"
-                  src="images/vendor_management.png"
-                />
               </div>
+              <Img
+                className="absolute h-[90%] inset-y-[0] right-[8%] my-auto w-[25%] md:w-[25%] md:h-[740px]"
+                src="images/homepage_consumer.png"
+              />
             </div>
-            
-            <div className="flex-none w-full h-screen md:w-full md:h-full">
-              {/* <div className="flex-none w-full h-full md:w-full md:h-full transform rotate-90"> */}
-              <div className="w-full h-screen p-5 relative">
-                <div className="h-screen m-auto w-full">
-                  <div className="absolute bg-red-800 h-screen inset-y-[0] my-auto right-[0] w-[22%]"></div>
-                  <div className="absolute h-screen left-[0] inset-y-[0] my-auto w-[79%] md:w-full">
-                    <Img
-                      className="h-screen m-auto object-cover w-full"
-                      src="images/img_rectangle119.png"
-                      alt="rectangle119_One"
-                    />
-                    <div className="absolute flex flex-col inset-y-[0] items-start justify-start left-[11%] my-auto w-[70%]">
+          </div>
+
+          <div className="flex-none w-full h-screen md:w-full md:h-full">
+            {/* <div className="flex-none w-full h-full md:w-full md:h-full transform rotate-90"> */}
+            <div className="w-full h-screen p-5 relative">
+              <div className="h-screen m-auto w-full">
+                <div className="absolute bg-red-800 h-screen inset-y-[0] my-auto right-[0] w-[22%]"></div>
+                <div className="absolute h-screen left-[0] inset-y-[0] my-auto w-[79%] md:w-full">
+                  <Img
+                    className="h-screen m-auto object-cover w-full"
+                    src="images/img_rectangle119.png"
+                    alt="rectangle119_One"
+                  />
+                  <div className="absolute flex flex-col inset-y-[0] items-start justify-start left-[11%] my-auto w-[70%]">
+                    <Text
+                      className="leading-[76.00px] md:text-5xl text-5xl text-white-A700"
+                      size="txtInterBold60"
+                    >
+                      <span className="text-red-A400 font-inter text-left font-bold">
+                        Transform
+                      </span>
+                      <span className="text-white-A700 font-inter text-left font-bold">
+                        <>
+                          {" "}
+                          your Business
+                          <br />
+                          with{" "}
+                        </>
+                      </span>
+                      <span className="text-red-A400 font-inter text-left font-bold">
+                        Scankart™
+                      </span>
+                    </Text>
+                    <div className="flex flex-col gap-[25px] items-start justify-start mt-[68px]">
                       <Text
-                        className="leading-[76.00px] md:text-5xl text-5xl text-white-A700"
-                        size="txtInterBold60"
+                        className="text-4xl sm:text-[32px] md:text-[34px] text-red-A400"
+                        size="txtInterSemiBold36"
                       >
-                        <span className="text-red-A400 font-inter text-left font-bold">
-                          Transform
-                        </span>
-                        <span className="text-white-A700 font-inter text-left font-bold">
-                          <>
-                            {" "}
-                            your Business
-                            <br />
-                            with{" "}
-                          </>
-                        </span>
-                        <span className="text-red-A400 font-inter text-left font-bold">
-                          Scankart™
-                        </span>
+                        PAPERLESS RETAIL
                       </Text>
-                      <div className="flex flex-col gap-[25px] items-start justify-start mt-[68px]">
-                        <Text
-                          className="text-4xl sm:text-[32px] md:text-[34px] text-red-A400"
-                          size="txtInterSemiBold36"
-                        >
-                          STORE ANALYTICS
-                        </Text>
-                        <Text
-                          className="leading-[64.00px] md:text-5xl sm:text-[42px] text-5xl text-white-A700 w-full"
-                          size="txtInterBold56"
-                        >
-                          <>
-                            Empowering You with
-                            <br />
-                            Data Wisdom
-                          </>
-                        </Text>
-                        <Text
-                          className="leading-[48.00px] md:text-3xl sm:text-[28px] text-[32px] text-blue_gray-100_e5"
-                          size="txtInterMedium32"
-                        >
-                          <>
-                            <li>360º Store Analytics</li>
-                            <li>Visual Reports</li>
-                            <li>Predictive Analysis</li>
-                          </>
-                        </Text>
-                      </div>
-                      <Img
-                        className="h-[550px] w-[450px]  -mt-[0px]"
-                        src="images/img_group22258.svg"
-                        alt="group22258"
-                      />
+                      <Text
+                        className="leading-[64.00px] md:text-5xl sm:text-[42px] text-5xl text-white-A700 w-full"
+                        size="txtInterBold56"
+                      >
+                        <>
+                          More Power, Less Paper
+                          <br />
+                          Go Digital
+                        </>
+                      </Text>
+                      <Text
+                        className="leading-[48.00px] md:text-3xl sm:text-[28px] text-[32px] text-blue_gray-100_e5"
+                        size="txtInterMedium32"
+                      >
+                        <>
+                          <li>Digital Receipts</li>
+                          <li>Mobile Checkout</li>
+                          <li>Digital Displays</li>
+                        </>
+                      </Text>
                     </div>
+                    <Img
+                      className="h-[550px] w-[450px]  -mt-[0px]"
+                      src="images/img_group22258.svg"
+                      alt="group22258"
+                    />
                   </div>
                 </div>
-
-                <Img
-                  className="absolute h-[90%] inset-y-[0] right-[8%] my-auto w-[25%] md:w-[25%] md:h-[740px]"
-                  src="images/homepage_store.png"
-                />
               </div>
+
+              <Img
+                className="absolute h-[90%] inset-y-[0] right-[8%] my-auto w-[25%] md:w-[25%] md:h-[740px]"
+                src="images/order_details.png"
+              />
             </div>
-            
+          </div>
+
+          <div className="flex-none w-full h-screen md:w-full md:h-full">
+            {/* <div className="flex-none w-full h-full md:w-full md:h-full transform rotate-90"> */}
+            <div className="w-full h-screen p-5 relative">
+              <div className="h-screen m-auto w-full">
+                <div className="absolute bg-red-800 h-screen inset-y-[0] my-auto right-[0] w-[22%]"></div>
+                <div className="absolute h-screen left-[0] inset-y-[0] my-auto w-[79%] md:w-full">
+                  <Img
+                    className="h-screen m-auto object-cover w-full"
+                    src="images/img_rectangle119.png"
+                    alt="rectangle119_One"
+                  />
+                  <div className="absolute flex flex-col inset-y-[0] items-start justify-start left-[11%] my-auto w-[70%]">
+                    <Text
+                      className="leading-[76.00px] md:text-5xl text-5xl text-white-A700"
+                      size="txtInterBold60"
+                    >
+                      <span className="text-red-A400 font-inter text-left font-bold">
+                        Transform
+                      </span>
+                      <span className="text-white-A700 font-inter text-left font-bold">
+                        <>
+                          {" "}
+                          your Business
+                          <br />
+                          with{" "}
+                        </>
+                      </span>
+                      <span className="text-red-A400 font-inter text-left font-bold">
+                        Scankart™
+                      </span>
+                    </Text>
+                    <div className="flex flex-col gap-[25px] items-start justify-start mt-[68px]">
+                      <Text
+                        className="text-4xl sm:text-[32px] md:text-[34px] text-red-A400"
+                        size="txtInterSemiBold36"
+                      >
+                        VENDOR MANAGEMENT
+                      </Text>
+                      <Text
+                        className="leading-[64.00px] md:text-5xl sm:text-[42px] text-5xl text-white-A700 w-full"
+                        size="txtInterBold56"
+                      >
+                        <>
+                          Keep your Vendors
+                          <br />
+                          On-Track
+                        </>
+                      </Text>
+                      <Text
+                        className="leading-[48.00px] md:text-3xl sm:text-[28px] text-[32px] text-blue_gray-100_e5"
+                        size="txtInterMedium32"
+                      >
+                        <>
+                          <li>Demand Forecasting</li>
+                          <li>Supply & Payment Tracking</li>
+                          <li>Performance Reports</li>
+                        </>
+                      </Text>
+                    </div>
+                    <Img
+                      className="h-[550px] w-[450px]  -mt-[0px]"
+                      src="images/img_group22258.svg"
+                      alt="group22258"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <Img
+                className="absolute h-[90%] inset-y-[0] right-[8%] my-auto w-[25%] md:w-[25%] md:h-[740px]"
+                src="images/vendor_management.png"
+              />
+            </div>
+          </div>
+
+          <div className="flex-none w-full h-screen md:w-full md:h-full">
+            {/* <div className="flex-none w-full h-full md:w-full md:h-full transform rotate-90"> */}
+            <div className="w-full h-screen p-5 relative">
+              <div className="h-screen m-auto w-full">
+                <div className="absolute bg-red-800 h-screen inset-y-[0] my-auto right-[0] w-[22%]"></div>
+                <div className="absolute h-screen left-[0] inset-y-[0] my-auto w-[79%] md:w-full">
+                  <Img
+                    className="h-screen m-auto object-cover w-full"
+                    src="images/img_rectangle119.png"
+                    alt="rectangle119_One"
+                  />
+                  <div className="absolute flex flex-col inset-y-[0] items-start justify-start left-[11%] my-auto w-[70%]">
+                    <Text
+                      className="leading-[76.00px] md:text-5xl text-5xl text-white-A700"
+                      size="txtInterBold60"
+                    >
+                      <span className="text-red-A400 font-inter text-left font-bold">
+                        Transform
+                      </span>
+                      <span className="text-white-A700 font-inter text-left font-bold">
+                        <>
+                          {" "}
+                          your Business
+                          <br />
+                          with{" "}
+                        </>
+                      </span>
+                      <span className="text-red-A400 font-inter text-left font-bold">
+                        Scankart™
+                      </span>
+                    </Text>
+                    <div className="flex flex-col gap-[25px] items-start justify-start mt-[68px]">
+                      <Text
+                        className="text-4xl sm:text-[32px] md:text-[34px] text-red-A400"
+                        size="txtInterSemiBold36"
+                      >
+                        STORE ANALYTICS
+                      </Text>
+                      <Text
+                        className="leading-[64.00px] md:text-5xl sm:text-[42px] text-5xl text-white-A700 w-full"
+                        size="txtInterBold56"
+                      >
+                        <>
+                          Empowering You with
+                          <br />
+                          Data Wisdom
+                        </>
+                      </Text>
+                      <Text
+                        className="leading-[48.00px] md:text-3xl sm:text-[28px] text-[32px] text-blue_gray-100_e5"
+                        size="txtInterMedium32"
+                      >
+                        <>
+                          <li>360º Store Analytics</li>
+                          <li>Visual Reports</li>
+                          <li>Predictive Analysis</li>
+                        </>
+                      </Text>
+                    </div>
+                    <Img
+                      className="h-[550px] w-[450px]  -mt-[0px]"
+                      src="images/img_group22258.svg"
+                      alt="group22258"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <Img
+                className="absolute h-[90%] inset-y-[0] right-[8%] my-auto w-[25%] md:w-[25%] md:h-[740px]"
+                src="images/homepage_store.png"
+              />
+            </div>
+          </div>
+
           {/* </div> */}
           <div
             id="consumer"

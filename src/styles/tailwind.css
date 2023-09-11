@@ -40,6 +40,30 @@ select:focus {
         transform: scaleY(-1);
 }
 
+.popup {
+  display: flex;
+  width: 664px;
+  height: 384px;
+  padding: 12px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 32px;
+background: linear-gradient(106deg, rgba(255, 255, 255, 0.35) -15.26%, rgba(255, 255, 255, 0.10) 117.77%);
+backdrop-filter: blur(32px);
+}
+
+.popup-content{
+  width: 640px;
+height: 360px;
+flex-shrink: 0;
+  display: flex;
+  border-radius: 24px;
+background: #000814;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .react-datepicker-wrapper .react-datepicker__input-container input{
   background-color: transparent;
   border: none;
