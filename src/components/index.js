@@ -5,3 +5,4 @@ export { Line } from "./Line";
 export { List } from "./List";
 export { Switch } from "./Switch";
 export { Text } from "./Text";
+export { Popup } from "./Popup";

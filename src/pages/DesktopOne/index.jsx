@@ -10,28 +10,85 @@ const DesktopOnePage = () => {
 
   return (
     <>
-      {/* {isOpen && (
-        <div className="flex h-[664px] w-[384px] p-[12px] justify-center align-center border-[32px]">
-          <div className="popup-content">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="30"
-              height="30"
-              viewBox="0 0 30 30"
-              fill="none"
-            >
-              <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M27.5 15C27.5 21.9035 21.9035 27.5 15 27.5C8.09644 27.5 2.5 21.9035 2.5 15C2.5 8.09644 8.09644 2.5 15 2.5C21.9035 2.5 27.5 8.09644 27.5 15ZM11.212 11.2121C11.5782 10.846 12.1717 10.846 12.5379 11.2121L15 13.6741L17.462 11.2121C17.8281 10.846 18.4218 10.846 18.7879 11.2121C19.154 11.5782 19.154 12.1718 18.7879 12.5379L16.3258 15L18.7879 17.462C19.154 17.8281 19.154 18.4218 18.7879 18.7879C18.4218 19.154 17.8281 19.154 17.462 18.7879L15 16.3259L12.5379 18.7879C12.1718 19.154 11.5782 19.154 11.2121 18.7879C10.846 18.4218 10.846 17.8281 11.2121 17.4621L13.6741 15L11.212 12.5379C10.8459 12.1718 10.8459 11.5782 11.212 11.2121Z"
-                fill="#A6A6A6"
-              />
-            </svg>
-            <h2>Popup Content</h2>
-            <p>This is a popup.</p>
+      {isOpen && (
+        <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center z-50">
+          <div className="max-h-[97vh] h-[50%] w-[50%] sm:w-full md:w-full">
+            <div className="bg-gradient_gray flex flex-col items-center justify-start p-3 md:px-5 rounded-[32px] w-full">
+              <div className="bg-black-900 flex flex-col gap-2.5 justify-start p-5 rounded-[24px] w-full">
+                <Img
+                  className="h-[30px] -mt-[15px] md:ml-[0] ml-[560px] w-[30px]"
+                  src="images/img_closecirclesvgrepocom.svg"
+                  alt="closecirclesvgr"
+                  onClick={closePopup}
+                />
+                <div className="flex flex-col items-center justify-start mb-10 mx-auto w-[91%] md:w-full">
+                  <div className="flex sm:flex-col flex-row gap-[18px] items-end justify-start w-[83%] md:w-full">
+                    <Img
+                      className="h-12 md:h-auto mb-[3px] object-cover w-12"
+                      src="images/img_email1.svg"
+                      alt="emailOne"
+                      
+                    />
+                    <Text className="font-semibold sm:mt-0 mt-[7px] text-3xl sm:text-[32px] md:text-[34px] text-white-A700">
+                      <span className="text-white-A700 font-inter text-left">
+                        Subscribe
+                      </span>
+                      <span className="text-white-A700 font-inter text-left">
+                        {" "}
+                      </span>
+                      <span className="text-white-A700 font-inter text-left">
+                        our
+                      </span>
+                      <span className="text-white-A700 font-inter text-left">
+                        {" "}
+                      </span>
+                      <span className="text-red-A400 font-inter text-left">
+                        Waitlist
+                      </span>
+                    </Text>
+                  </div>
+                  <Text className="font-medium leading-[28.00px] mt-3 text-blue_gray-100_a5 text-center text-lg w-[87%] sm:w-full">
+                    <span className="text-blue_gray-100_a5 font-inter">
+                      Join the Waitlist{" "}
+                    </span>
+                    <span className="text-blue_gray-100_a5 font-inter font-bold">
+                      💌
+                    </span>
+                    <span className="text-blue_gray-100_a5 font-inter">
+                      <>
+                        {" "}
+                        Now and Secure Your Chance to Be Among the Lucky Few
+                        Who&#39;ll Unlock Exclusive Rewards and Gadgets at
+                        Launch! 🎉💫
+                      </>
+                    </span>
+                  </Text>
+                  <div className="flex sm:flex-col flex-row gap-[18px]  items-center justify-between mt-9 w-full">
+                    <input
+                      name="email"
+                      placeholder="Enter your email"
+                      className="font-medium p-0 placeholder:text-gray-600 text-left h-[50px] rounded-[48px] text-lg w-full bg-white"
+                      wrapClassName="sm:flex-1 rounded-[48px] sm:w-full"
+                      type="email"
+                      color="gray_100"
+                      size="sm"
+                      variant="fill"
+                    />
+                    <Button
+                      className="!text-white-A700 cursor-pointer font-semibold min-w-[142px] h-[50px] rounded-[28px] text-center text-lg bg-red-800"
+                      size="lg"
+                      variant="fill"
+                    >
+                      Join Now
+                    </Button>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      )} */}
+      )}
+
       <div className="bg-black-900 flex flex-col font-inter items-center justify-start mx-auto overflow-auto w-full">
         <div className="flex flex-col items-center justify-start w-full h-full">
           <div className="bg-black-900 flex flex-col items-center justify-start pt-12 w-full h-screen">
@@ -84,9 +141,9 @@ const DesktopOnePage = () => {
                     alt="vectorEightySix"
                   />
                 </div> */}
-                <div className="h-[59px] relative w-[23%] md:w-full">
+                <div className="h-[59px] relative w-[24%] md:w-full">
                   <Img
-                    className="absolute flex flex-row gap-[34px] inset-y-[0] left-[17%] md:left-[44%] sm:left-[38%] my-auto w-[800px] h-[250px]"
+                    className="absolute flex flex-row gap-[34px] inset-y-[0] left-[17%] md:left-[44%] sm:left-[38%] my-auto w-[830px] h-[250px]"
                     src="images/img_logo.png"
                   />
                 </div>
@@ -804,8 +861,7 @@ const DesktopOnePage = () => {
                 <div className="flex md:flex-col flex-row md:gap-10 items-start justify-between w-[86%] md:w-full">
                   <div className="flex flex-col gap-[51px] items-start justify-start w-[49%] md:w-full">
                     <div className="flex flex-col gap-[26px] items-start justify-start w-[29%] md:w-full">
-                    
-                      <div className="h-[59px] relative w-[95%] md:w-full">
+                      <div className="h-[109px] -mt-[10px] relative w-[95%] md:w-full">
                         <Img
                           className="absolute flex flex-row gap-[34px] h-full inset-y-[0] items-end justify-between  md:left-[44%] sm:left-[38%] my-auto w-[1000px] h-[260px]"
                           src="images/img_logo.png"
