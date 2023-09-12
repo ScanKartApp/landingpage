@@ -34,7 +34,7 @@ const DesktopOnePage = () => {
       )} */}
       <div className="bg-black-900 flex flex-col font-inter items-center justify-start mx-auto overflow-auto w-full">
         <div className="flex flex-col items-center justify-start w-full h-full">
-          <div className="bg-black-900 flex flex-col items-center justify-start pt-12 w-full h-full">
+          <div className="bg-black-900 flex flex-col items-center justify-start pt-12 w-full h-screen">
             <div className="flex flex-col items-center justify-start w-full">
               <header className="flex md:flex-col flex-row md:gap-5 md:px-5 sm:-mt-400 w-full">
                 {/* <div className="h-[59px] relative w-[13%] md:w-full">
@@ -84,9 +84,9 @@ const DesktopOnePage = () => {
                     alt="vectorEightySix"
                   />
                 </div> */}
-                <div className="h-[59px] relative w-[24%] md:w-full">
+                <div className="h-[59px] relative w-[23%] md:w-full">
                   <Img
-                    className="absolute flex flex-row gap-[34px] inset-y-[0] left-[17%] md:left-[44%] sm:left-[38%] my-auto w-[750px] h-[250px]"
+                    className="absolute flex flex-row gap-[34px] inset-y-[0] left-[17%] md:left-[44%] sm:left-[38%] my-auto w-[800px] h-[250px]"
                     src="images/img_logo.png"
                   />
                 </div>
@@ -193,15 +193,15 @@ const DesktopOnePage = () => {
                     alt="rectangle119_Four"
                   />
                   <div className="absolute flex flex-col md:gap-10 gap-[134px] h-screen md:h-auto justify-start left-[5%] top-[10%] w-[859px]">
-                    <div className="flex flex-row justify-start items-start gap-[25px] w-[56%] md:w-screen">
-                      <div className="h-[130px] relative w-[43%] -mt-[40px] md:w-screen">
+                    <div className="flex flex-row justify-start items-start gap-[25px]">
+                      <div className="h-[130px] relative w-[23%] -mt-[43px] md:w-screen">
                         <Img
-                          className="absolute flex flex-row gap-[34px] items-start justify-between ml-[1%] md:left-[44%] sm:left-[38%] my-auto w-[370px] h-[120px]"
+                          className="absolute flex flex-row gap-[10px] items-start justify-between ml-[1%] mt:[110px] md:left-[44%] sm:left-[38%] my-auto w-[360px] h-[150px]"
                           src="images/img_logo.png"
                         />
                       </div>
                       <Text
-                        className="sm:mt-0 top-[1%] sm:text-[35.26px] ml-[1%] md:text-[37.26px] text-[32.26px] text-white-A700"
+                        className="sm:mt-0 sm:text-[34.26px] ml-[1%] md:text-[37.26px] mt-[1%] text-[32.26px] text-white-A700"
                         size="txtInterSemiBold3926"
                       >
                         Store App
@@ -519,15 +519,15 @@ const DesktopOnePage = () => {
                     alt="rectangle119_Four"
                   />
                   <div className="absolute flex flex-col md:gap-10 gap-[134px] h-screen md:h-auto justify-start left-[5%] top-[10%] w-[859px]">
-                    <div className="flex sm:flex-col flex-row gap-[25px] items-start justify-start w-[56%] md:w-screen">
-                      <div className="h-[130px] relative w-[43%] -mt-[40px] md:w-screen">
+                    <div className="flex sm:flex-col flex-row gap-[25px] items-start justify-start md:w-screen">
+                      <div className="h-[130px] relative w-[23%] -mt-[43px] md:w-screen">
                         <Img
-                          className="absolute flex flex-row gap-[34px] h-full items-start justify-between left-[17%] md:left-[44%] sm:left-[38%] my-auto w-[370px] h-[180px]"
+                          className="absolute flex flex-row gap-[10px] items-start justify-between ml-[1%] mt:[110px] md:left-[44%] sm:left-[38%] my-auto w-[360px] h-[150px]"
                           src="images/img_logo.png"
                         />
                       </div>
                       <Text
-                        className="sm:mt-0 top-[1%] sm:text-[35.26px] ml-[1%] md:text-[37.26px] text-[32.26px] text-white-A700"
+                        className="sm:mt-0 sm:text-[34.26px] ml-[1%] md:text-[37.26px] mt-[1%] text-[32.26px] text-white-A700"
                         size="txtInterSemiBold3926"
                       >
                         Consumer App
@@ -804,56 +804,10 @@ const DesktopOnePage = () => {
                 <div className="flex md:flex-col flex-row md:gap-10 items-start justify-between w-[86%] md:w-full">
                   <div className="flex flex-col gap-[51px] items-start justify-start w-[49%] md:w-full">
                     <div className="flex flex-col gap-[26px] items-start justify-start w-[29%] md:w-full">
-                      {/* <div className="h-[59px] relative w-full">
-                        <div className="h-[59px] m-auto w-full">
-                          <Text
-                            className="absolute inset-x-[0] mx-auto sm:text-[35.26px] md:text-[37.26px] text-[39.26px] text-white-A700 top-[3%] w-max"
-                            size="txtInterSemiBold3926"
-                          >
-                            <span className="text-white-A700 font-inter text-left font-semibold">
-                              Sc
-                            </span>
-                            <span className="text-red-A400 font-inter text-left font-semibold">
-                              a
-                            </span>
-                            <span className="text-white-A700 font-inter text-left font-semibold">
-                              nkart
-                            </span>
-                          </Text>
-                          <div className="absolute flex flex-row gap-[34px] h-full inset-y-[0] items-end justify-between left-[17%] md:left-[44%] sm:left-[38%] my-auto w-[59px]">
-                            <Img
-                              className="h-[13px] mt-[46px] w-3"
-                              src="images/img_computer.svg"
-                              alt="computer_Six"
-                            />
-                            <div className="flex flex-col gap-[33px] items-center justify-start">
-                              <Img
-                                className="img-invert h-[13px] w-3"
-                                src="images/img_signal.svg"
-                                alt="signal_Six"
-                              />
-                              <Img
-                                className="h-[13px] w-3"
-                                src="images/img_signal.svg"
-                                alt="signal_Seven"
-                              />
-                            </div>
-                          </div>
-                        </div>
+                    
+                      <div className="h-[59px] relative w-[95%] md:w-full">
                         <Img
-                          className="img-invert absolute h-[13px] left-[17%] md:left-[44%] sm:left-[38%] top-[0] w-3"
-                          src="images/img_computer.svg"
-                          alt="computer_Seven"
-                        />
-                        <Img
-                          className="absolute bottom-[14%] h-px left-[23%]"
-                          src="images/img_vector86.svg"
-                          alt="vectorEightySix_Three"
-                        />
-                      </div> */}
-                      <div className="h-[59px] relative w-[83%] md:w-full">
-                        <Img
-                          className="absolute flex flex-row gap-[34px] h-full inset-y-[0] items-end justify-between  md:left-[44%] sm:left-[38%] my-auto w-[350px] h-[210px]"
+                          className="absolute flex flex-row gap-[34px] h-full inset-y-[0] items-end justify-between  md:left-[44%] sm:left-[38%] my-auto w-[1000px] h-[260px]"
                           src="images/img_logo.png"
                         />
                       </div>
