@@ -1,7 +1,6 @@
 const express = require('express');
 const cors = require('cors');
-const { URLSearchParams } = require('url');
-const fetch = require('node-fetch');
+const axios = require('axios');
 
 const app = express();
 const PORT = 3005;
@@ -14,19 +13,31 @@ app.get('/test', (req, res) => {
     res.send('Hello World!');
 });
 
+// app.post('/proxy/post', (req, res) => {
+//     const url = req.query.url;
+//     const body = req.body;
+
+//     (url, {
+//         method: 'POST',
+//         body: JSON.stringify(body),
+//         headers: { 'Content-Type': 'application/json' }
+//     })
+//         .then(response => { return response.json() })
+//         .then(data => res.send(data))
+//         .catch(err => res.send(err));
+
+// });
+
 app.post('/proxy/post', (req, res) => {
     const url = req.query.url;
     const body = req.body;
 
-    fetch(url, {
-        method: 'POST',
-        body: JSON.stringify(body),
+    axios.post(url, body, {
         headers: { 'Content-Type': 'application/json' }
     })
-        .then(response => { return response.json() })
+        .then(response => { return response.data })
         .then(data => res.send(data))
         .catch(err => res.send(err));
-
 });
 
 app.listen(PORT, () => {

@@ -6,6 +6,54 @@ import { Link } from "react-scroll";
 function ScrollToCenterSection({ sectionId }) {
   const myRef = React.useRef(null);
   const [scrolling, setScrolling] = React.useState(false);
+  const [isOpen, setIsOpen] = React.useState(true);
+  const [email, setEmail] = React.useState("");
+  
+  const openPopup = () => {
+    setIsOpen(true);
+  };
+
+  const closePopup = () => {
+    setIsOpen(false);
+  };
+
+  const joinWaitlist = () => {
+    const uniqueId = 10544;
+    // console.log(email, uniqueId);
+    const apiUrl = `https://scankart.onrender.com/proxy/post?url=${encodeURIComponent(
+      "https://api.getwaitlist.com/api/v1/signup"
+    )}`;
+
+    // Data to send in the request body
+    const requestData = {
+      email: email,
+      waitlist_id: uniqueId,
+    };
+
+    // Send a POST request to the API
+    fetch(apiUrl, {
+      method: "POST",
+      headers: {
+        "Allow-Access-Control-Origin": "*",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(requestData),
+    })
+      .then((response) => {
+        if (response.ok) {
+          // Request was successful
+          console.log("Joined the waitlist successfully!");
+          alert("Joined the waitlist successfully!");
+        } else {
+          // Request failed
+          console.error("Failed to join the waitlist.");
+          alert("Failed to join the waitlist.");
+        }
+      })
+      .catch((error) => {
+        console.error("Error while joining the waitlist:", error);
+      });
+  };
 
   React.useEffect(() => {
     // const handleScroll = () => {
@@ -161,8 +209,9 @@ function ScrollToCenterSection({ sectionId }) {
                     </Text>
                   </div>
                   <Img
-                    className="h-[350px] w-[350px]  -mt-[130px]"
+                    className="cursor-pointer h-[350px] w-[350px]  -mt-[130px]"
                     src="images/img_group22258.svg"
+                    onClick={openPopup}
                     alt="group22258"
                   />
                 </div>
@@ -1069,8 +1118,9 @@ const DesktopOnePage = () => {
                       </Text>
                     </div>
                     <Img
-                      className="h-[350px] w-[350px]  -mt-[110px]"
+                      className="cursor-pointer h-[350px] w-[350px]  -mt-[110px]"
                       src="images/img_group22258.svg"
+                      onClick={openPopup}
                       alt="group22258"
                     />
                   </div>
@@ -1252,17 +1302,17 @@ const DesktopOnePage = () => {
                       </Button>
                     </div>
                     {/* <div className="flex flex-col gap-[25px] items-center justify-start mt-[26px] w-[64%] md:w-full"> */}
-                      <Text
-                        className="mt-[26px] text-base text-center text-gray-900"
-                        size="txtInterMedium16Gray900"
-                      >
-                        *LIMITED PERIOD OFFER
-                      </Text>
-                      <Img
-                        className="h-[186px] md:h-auto mt-[25px] object-cover w-[186px]"
-                        src="images/img_qrcode32.png"
-                        alt="qrcodeThirtyTwo"
-                      />
+                    <Text
+                      className="mt-[26px] text-base text-center text-gray-900"
+                      size="txtInterMedium16Gray900"
+                    >
+                      *LIMITED PERIOD OFFER
+                    </Text>
+                    <Img
+                      className="h-[186px] md:h-auto mt-[25px] object-cover w-[186px]"
+                      src="images/img_qrcode32.png"
+                      alt="qrcodeThirtyTwo"
+                    />
                     {/* </div> */}
                   </div>
                 </div>
