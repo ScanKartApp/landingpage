@@ -1,30 +1,82 @@
 import React from "react";
 // const encodedParams = new URLSearchParams();
 import { Button, Img, Input, Line, List, Switch, Text } from "components";
+import { Link } from "react-scroll";
 
 function ScrollToCenterSection({ sectionId }) {
-  React.useEffect(() => {
-    const section = document.getElementById(sectionId);
-    if (section) {
-      const sectionRect = section.getBoundingClientRect();
-      const viewportHeight =
-        window.innerHeight || document.documentElement.clientHeight;
+  const myRef = React.useRef(null);
+  const [scrolling, setScrolling] = React.useState(false);
 
-      // Check if the section is partially visible in the viewport
-      console.log(sectionRect.top, viewportHeight / 2, sectionRect.bottom);
-      if (
-        sectionRect.top < viewportHeight / 2 &&
-        sectionRect.bottom > viewportHeight / 2
-      ) {
-        section.scrollIntoView({ behavior: "smooth", block: "center" });
+  React.useEffect(() => {
+    // const handleScroll = () => {
+    //   const element = myRef.current;
+    //   const heroSection = document.getElementById('hero'); // Replace 'hero' with the actual ID of your hero section
+    //   if (element && heroSection) {
+    //     const heroBottom = heroSection.getBoundingClientRect().bottom;
+    //     const elementTop = element.getBoundingClientRect().top;
+
+    //     if (elementTop <= heroBottom) {
+    //       element.scrollIntoView({ behavior: 'smooth' });
+    //     }
+    //   }
+    // };
+    const handleScroll = () => {
+      const element = myRef.current;
+      const heroSection = document.getElementById("hero"); // Replace 'hero' with the actual ID of your hero section
+      if (element && heroSection) {
+        const heroBottom = heroSection.getBoundingClientRect().bottom;
+        const elementTop = element.getBoundingClientRect().top;
+        const shouldScroll = elementTop <= heroBottom / 2; // Scroll when the element is halfway in the hero section
+
+        if (shouldScroll !== scrolling) {
+          setScrolling(shouldScroll);
+        }
+
+        if (scrolling) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
       }
-    }
-  }, [sectionId]);
+    };
+
+    // const scrollInterval = setInterval(() => {
+    //   if (scrolling) {
+    //     window.scrollBy(0, 2); // Adjust the scroll speed as needed
+    //   }
+    // }, 10);
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      // clearInterval(scrollInterval);
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [scrolling]);
+  // React.useEffect(() => {
+  //   myRef.current.scrollIntoView({ behavior: "smooth" });
+
+  //   const section = document.getElementById(sectionId);
+  //   if (section) {
+  //     const sectionRect = section.getBoundingClientRect();
+  //     const viewportHeight =
+  //       window.innerHeight || document.documentElement.clientHeight;
+
+  //     // Check if the section is partially visible in the viewport
+  //     console.log(sectionRect.top, viewportHeight / 2, sectionRect.bottom);
+  //     if (
+  //       sectionRect.top < viewportHeight / 2 &&
+  //       sectionRect.bottom > viewportHeight / 2
+  //     ) {
+  //       section.current.scrollIntoView({ behavior: "smooth" });
+  //       // <Link to="store" smooth={true} duration={500}></Link>;
+  //     }
+  //   }
+  // }, [sectionId]);
 
   return (
     <div
+      ref={myRef}
       id={sectionId}
-      className="container-snap flex flex-col items-center justify-start overflow-y-scroll h-screen w-screen"
+      className="scrollTo container-snap flex flex-col items-center justify-start overflow-y-scroll h-screen w-screen"
     >
       <div
         id="store"
@@ -364,7 +416,7 @@ const DesktopOnePage = () => {
   const joinWaitlist = () => {
     const uniqueId = 10544;
     // console.log(email, uniqueId);
-    const apiUrl = `http://localhost:3005/proxy/post?url=${encodeURIComponent(
+    const apiUrl = `https://scankart.onrender.com/proxy/post?url=${encodeURIComponent(
       "https://api.getwaitlist.com/api/v1/signup"
     )}`;
 
@@ -511,7 +563,10 @@ const DesktopOnePage = () => {
       )}
 
       <div className="bg-black-900 flex flex-col font-inter items-center justify-start mx-auto overflow-hidden w-screen">
-        <div className="flex flex-col items-center justify-start w-full h-full">
+        <div
+          id="hero"
+          className="flex flex-col items-center justify-start w-full h-full"
+        >
           <div className="bg-black-900 flex flex-col items-center justify-start pt-12 w-full h-screen">
             <div className="flex flex-col items-center justify-start w-full">
               <header className="flex md:flex-col flex-row md:gap-5 md:px-5 sm:-mt-400 w-full">
@@ -607,12 +662,11 @@ const DesktopOnePage = () => {
               </div>
             </div>
           </div>
-
           {/* Inventory Management */}
           {/* <div className="container-snap flex flex-col items-center justify-start overflow-visible transform -rotate-90 h-screen w-screen"> */}
           {/* <div className="flex-none w-full overflow-y-scroll flex-shrink-0 md:w-full md:h-full"> */}
           <ScrollToCenterSection sectionId="store" />
-          
+
           {/* <div
             id="store"
             className="container-snap flex flex-col items-center justify-start overflow-y-scroll h-screen w-screen"
@@ -937,7 +991,6 @@ const DesktopOnePage = () => {
               </div>
             </div>
           </div> */}
-
         </div>
         <div
           id="consumer"
@@ -1198,19 +1251,19 @@ const DesktopOnePage = () => {
                         Onboard Store
                       </Button>
                     </div>
-                    <div className="flex flex-col gap-[25px] items-center justify-start mt-[26px] w-[64%] md:w-full">
+                    {/* <div className="flex flex-col gap-[25px] items-center justify-start mt-[26px] w-[64%] md:w-full"> */}
                       <Text
-                        className="text-base text-center text-gray-900"
+                        className="mt-[26px] text-base text-center text-gray-900"
                         size="txtInterMedium16Gray900"
                       >
                         *LIMITED PERIOD OFFER
                       </Text>
                       <Img
-                        className="h-[186px] md:h-auto object-cover w-[186px]"
+                        className="h-[186px] md:h-auto mt-[25px] object-cover w-[186px]"
                         src="images/img_qrcode32.png"
-                        alt="qrcodeThirtyThree"
+                        alt="qrcodeThirtyTwo"
                       />
-                    </div>
+                    {/* </div> */}
                   </div>
                 </div>
               </List>

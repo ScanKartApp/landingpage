@@ -64,6 +64,11 @@ background: #000814;
   justify-content: space-between;
 }
 
+.scrollTo {
+  scroll-behavior: smooth;
+}
+
+
 .react-datepicker-wrapper .react-datepicker__input-container input{
   background-color: transparent;
   border: none;

@@ -10,7 +10,7 @@ const PORT = 3005;
 app.use(express.json());
 app.use(cors());
 
-app.get('/', (req, res) => {
+app.get('/test', (req, res) => {
     res.send('Hello World!');
 });
 
