@@ -13,21 +13,6 @@ app.get('/test', (req, res) => {
     res.send('Hello World!');
 });
 
-// app.post('/proxy/post', (req, res) => {
-//     const url = req.query.url;
-//     const body = req.body;
-
-//     (url, {
-//         method: 'POST',
-//         body: JSON.stringify(body),
-//         headers: { 'Content-Type': 'application/json' }
-//     })
-//         .then(response => { return response.json() })
-//         .then(data => res.send(data))
-//         .catch(err => res.send(err));
-
-// });
-
 app.post('/proxy/post', (req, res) => {
     const url = req.query.url;
     const body = req.body;
