@@ -207,7 +207,7 @@ function ScrollToCenterSection({ sectionId }) {
                 className="h-screen w-screen"
                 title="Youtube player"
                 sandbox="allow-same-origin allow-forms allow-popups allow-scripts allow-presentation"
-                src={`https://youtube.com/embed/${youtubeID}?autoplay=0&mute=1`}
+                src={`https://youtube.com/embed/${youtubeID}?autoplay=1&mute=1`}
               ></iframe>
             </div>
           </div>
@@ -649,8 +649,6 @@ function ScrollToCenterSection({ sectionId }) {
 
 const DesktopOnePage = () => {
   const [isOpen, setIsOpen] = React.useState(true);
-  const [video, setVideo] = React.useState(true);
-  const [youtubeID] = React.useState("rDP1O5MepmQ");
   const [email, setEmail] = React.useState("");
 
   const openPopup = () => {
@@ -659,10 +657,6 @@ const DesktopOnePage = () => {
 
   const closePopup = () => {
     setIsOpen(false);
-  };
-
-  const closeVideo = () => {
-    setVideo(false);
   };
 
   const joinWaitlist = () => {
@@ -813,8 +807,6 @@ const DesktopOnePage = () => {
           </div>
         </div>
       )}
-
-      
 
       <div className="bg-black-900 flex flex-col font-inter items-center justify-start mx-auto overflow-hidden w-screen">
         <div
