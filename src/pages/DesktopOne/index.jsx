@@ -1,7 +1,6 @@
 import React from "react";
-// const encodedParams = new URLSearchParams();
 import { Button, Img, Input, Line, List, Switch, Text } from "components";
-import { Link } from "react-scroll";
+// import { Link } from "react-scroll";
 
 function ScrollToCenterSection({ sectionId }) {
   const myRef = React.useRef(null);
@@ -56,41 +55,39 @@ function ScrollToCenterSection({ sectionId }) {
   };
 
   React.useEffect(() => {
+
     // const handleScroll = () => {
     //   const element = myRef.current;
     //   const heroSection = document.getElementById('hero'); // Replace 'hero' with the actual ID of your hero section
+    //   // const storeSection = document.getElementById('store');// Replace 'hero' with the actual ID of your hero section
+      
     //   if (element && heroSection) {
     //     const heroBottom = heroSection.getBoundingClientRect().bottom;
     //     const elementTop = element.getBoundingClientRect().top;
+    //     const shouldScroll = elementTop <= heroBottom / 2; // Scroll when the element is halfway in the hero section
 
-    //     if (elementTop <= heroBottom) {
-    //       element.scrollIntoView({ behavior: 'smooth' });
+    //     if (shouldScroll !== scrolling) {
+    //       setScrolling(shouldScroll);
+    //     }
+
+    //     if (scrolling) {
+    //       element.scrollIntoView({ behavior: "smooth" });
     //     }
     //   }
     // };
     const handleScroll = () => {
-      const element = myRef.current;
-      const heroSection = document.getElementById("hero"); // Replace 'hero' with the actual ID of your hero section
-      if (element && heroSection) {
-        const heroBottom = heroSection.getBoundingClientRect().bottom;
-        const elementTop = element.getBoundingClientRect().top;
-        const shouldScroll = elementTop <= heroBottom / 2; // Scroll when the element is halfway in the hero section
+      const section = document.getElementById(sectionId);
+      if (section) {
+        const rect = section.getBoundingClientRect();
+        const halfHeight =  window.innerHeight / 8;
 
-        if (shouldScroll !== scrolling) {
-          setScrolling(shouldScroll);
-        }
-
-        if (scrolling) {
-          element.scrollIntoView({ behavior: "smooth" });
+        if (rect.top < halfHeight && rect.bottom > halfHeight) {
+          setScrolling(true);
+        } else {
+          setScrolling(false);
         }
       }
     };
-
-    // const scrollInterval = setInterval(() => {
-    //   if (scrolling) {
-    //     window.scrollBy(0, 2); // Adjust the scroll speed as needed
-    //   }
-    // }, 10);
 
     window.addEventListener("scroll", handleScroll);
 
@@ -99,26 +96,6 @@ function ScrollToCenterSection({ sectionId }) {
       window.removeEventListener("scroll", handleScroll);
     };
   }, [scrolling]);
-  // React.useEffect(() => {
-  //   myRef.current.scrollIntoView({ behavior: "smooth" });
-
-  //   const section = document.getElementById(sectionId);
-  //   if (section) {
-  //     const sectionRect = section.getBoundingClientRect();
-  //     const viewportHeight =
-  //       window.innerHeight || document.documentElement.clientHeight;
-
-  //     // Check if the section is partially visible in the viewport
-  //     console.log(sectionRect.top, viewportHeight / 2, sectionRect.bottom);
-  //     if (
-  //       sectionRect.top < viewportHeight / 2 &&
-  //       sectionRect.bottom > viewportHeight / 2
-  //     ) {
-  //       section.current.scrollIntoView({ behavior: "smooth" });
-  //       // <Link to="store" smooth={true} duration={500}></Link>;
-  //     }
-  //   }
-  // }, [sectionId]);
 
   return (
     <div>
@@ -230,7 +207,8 @@ function ScrollToCenterSection({ sectionId }) {
           </div>
         </div>
       )}
-      <div
+      {scrolling ? (
+        <div
         ref={myRef}
         id={sectionId}
         className="scrollTo container-snap flex flex-col items-center justify-start overflow-y-scroll h-screen w-screen"
@@ -559,6 +537,110 @@ function ScrollToCenterSection({ sectionId }) {
           </div>
         </div>
       </div>
+      )
+      : (
+        <div
+          id="store"
+          className="flex flex-col h-screen items-center justify-start w-screen"
+        >
+          <div className="h-screen overflow-y-visible md:px-5 relative w-screen">
+            <div className="h-screen overflow-y-visible m-auto w-screen">
+              <div className="absolute bg-red-800 h-screen inset-y-[0] my-auto right-[0] w-screen"></div>
+              <div className="absolute h-screen inset-y-[0] left-[0] my-auto w-[79%] md:w-screen">
+                <Img
+                  className="h-screen m-auto object-cover w-screen"
+                  src="images/img_rectangle119.png"
+                  alt="rectangle119_Four"
+                />
+                <div className="absolute flex flex-col md:gap-10 gap-[134px] h-screen md:h-auto justify-start left-[5%] top-[10%] w-[859px]">
+                  <div className="flex flex-row justify-start items-start gap-[25px]">
+                    <div className="h-[130px] relative w-[23%] -mt-[43px] md:w-screen">
+                      <Img
+                        className="absolute flex flex-row gap-[10px] items-start justify-between ml-[1%] mt:[110px] md:left-[44%] sm:left-[38%] my-auto w-[360px] h-[150px]"
+                        src="images/img_logo.png"
+                      />
+                    </div>
+                    <Text
+                      className="sm:mt-0 sm:text-[34.26px] ml-[1%] md:text-[37.26px] mt-[1%] text-[32.26px] text-white-A700"
+                      size="txtInterSemiBold3926"
+                    >
+                      Store App
+                    </Text>
+                  </div>
+                  <div className="flex flex-col items-start justify-start md:ml-[0] -mt-[10px] top-[5%] ml-[65px] h-[770px] w-[93%] md:w-full">
+                    <Text
+                      className="leading-[76.00px] md:text-5xl text-left text-5xl top-[1%] -mt-[120px] text-white-A700 h-[10px] w-full"
+                      size="txtInterBold60"
+                    >
+                      <span className="text-red-A400 font-inter -mt-[1%] text-left h-[30px] font-bold">
+                        Transform
+                      </span>
+                      <span className="text-white-A700 font-inter mt-[10vh] text-left font-bold">
+                        <>
+                          {" "}
+                          your Business
+                          <br />
+                          with{" "}
+                        </>
+                      </span>
+                      <span className="text-red-A400 font-inter text-left font-bold">
+                        Scankart™
+                      </span>
+                      <span className="text-white-A700 font-inter text-left font-bold">
+                        {" "}
+                      </span>
+                    </Text>
+                    <br /> <br />
+                    <div className="flex flex-col items-start justify-start mt-[120px]">
+                      <Text
+                        className="text-2xl sm:text-[32px] md:text-[34px] mt-[5px] text-red-A400"
+                        size="txtInterSemiBold36"
+                      >
+                        INVENTORY MANAGEMENT
+                      </Text>
+                      <Text
+                        className="mt-7 md:text-5xl sm:text-[42px] text-[35px] text-white-A700"
+                        size="txtInterBold56"
+                      >
+                        Just Automate Your
+                      </Text>
+                      <Text
+                        className="mt-1 md:text-5xl sm:text-[42px] text-[35px] text-white-A700"
+                        size="txtInterBold56"
+                      >
+                        Stock Control
+                      </Text>
+                      <Text
+                        className="leading-[48.00px] mt-4 md:text-3xl sm:text-[28px] text-[28px] text-blue_gray-100_e5"
+                        size="txtInterMedium32"
+                      >
+                        <>
+                          <li>AI Powered Stock-In</li>
+                          <li>Expiry & Stock Alerts</li>
+                          <li>Scan based Auditing</li>
+                        </>
+                      </Text>
+                    </div>
+                    <Img
+                      className="cursor-pointer h-[350px] w-[350px]  -mt-[130px]"
+                      src="images/img_group22258.svg"
+                      onClick={openPopup}
+                      alt="group22258"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <Img
+              className="absolute h-[90%] inset-y-[0] right-[8%] my-auto w-[25%] md:w-[25%] md:h-[740px]"
+              src="images/homepage_consumer.png"
+            />
+          </div>
+        </div>
+      )
+      }
+      
+      
     </div>
   );
 }
