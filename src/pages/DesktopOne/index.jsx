@@ -6,6 +6,8 @@ function ScrollToCenterSection({ sectionId }) {
   const myRef = React.useRef(null);
   const [scrolling, setScrolling] = React.useState(false);
   const [isOpen, setIsOpen] = React.useState(true);
+  const [video, setVideo] = React.useState(true);
+  const [youtubeID] = React.useState("rDP1O5MepmQ");
   const [email, setEmail] = React.useState("");
 
   const openPopup = () => {
@@ -14,6 +16,9 @@ function ScrollToCenterSection({ sectionId }) {
 
   const closePopup = () => {
     setIsOpen(false);
+  };
+  const closeVideo = () => {
+    setVideo(false);
   };
 
   const joinWaitlist = () => {
@@ -56,30 +61,11 @@ function ScrollToCenterSection({ sectionId }) {
 
   React.useEffect(() => {
 
-    // const handleScroll = () => {
-    //   const element = myRef.current;
-    //   const heroSection = document.getElementById('hero'); // Replace 'hero' with the actual ID of your hero section
-    //   // const storeSection = document.getElementById('store');// Replace 'hero' with the actual ID of your hero section
-      
-    //   if (element && heroSection) {
-    //     const heroBottom = heroSection.getBoundingClientRect().bottom;
-    //     const elementTop = element.getBoundingClientRect().top;
-    //     const shouldScroll = elementTop <= heroBottom / 2; // Scroll when the element is halfway in the hero section
-
-    //     if (shouldScroll !== scrolling) {
-    //       setScrolling(shouldScroll);
-    //     }
-
-    //     if (scrolling) {
-    //       element.scrollIntoView({ behavior: "smooth" });
-    //     }
-    //   }
-    // };
     const handleScroll = () => {
       const section = document.getElementById(sectionId);
       if (section) {
         const rect = section.getBoundingClientRect();
-        const halfHeight =  window.innerHeight / 8;
+        const halfHeight = window.innerHeight / 8;
 
         if (rect.top < halfHeight && rect.bottom > halfHeight) {
           setScrolling(true);
@@ -207,12 +193,357 @@ function ScrollToCenterSection({ sectionId }) {
           </div>
         </div>
       )}
+      {video && (
+        <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center z-50">
+          <div className="max-h-[97vh] h-screen w-screen sm:w-full md:w-full relative">
+            <div className="bg-black-900 flex flex-col gap-2.5 justify-start p-5 rounded-[24px] h-screen w-screen">
+              <Img
+                className="absolute top-0 right-0 m-4 cursor-pointer"
+                src="images/img_closecirclesvgrepocom.svg"
+                alt="closecirclesvgr"
+                onClick={closeVideo}
+              />
+              <iframe
+                className="h-screen w-screen"
+                title="Youtube player"
+                sandbox="allow-same-origin allow-forms allow-popups allow-scripts allow-presentation"
+                src={`https://youtube.com/embed/${youtubeID}?autoplay=0&mute=1`}
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      )}
       {scrolling ? (
         <div
-        ref={myRef}
-        id={sectionId}
-        className="scrollTo container-snap flex flex-col items-center justify-start overflow-y-scroll h-screen w-screen"
-      >
+          ref={myRef}
+          id={sectionId}
+          className="scrollTo container-snap flex flex-col items-center justify-start overflow-y-scroll h-screen w-screen"
+        >
+          <div
+            id="store"
+            className="flex flex-col h-screen items-center justify-start w-screen"
+          >
+            <div className="h-screen overflow-y-visible md:px-5 relative w-screen">
+              <div className="h-screen overflow-y-visible m-auto w-screen">
+                <div className="absolute bg-red-800 h-screen inset-y-[0] my-auto right-[0] w-screen"></div>
+                <div className="absolute h-screen inset-y-[0] left-[0] my-auto w-[79%] md:w-screen">
+                  <Img
+                    className="h-screen m-auto object-cover w-screen"
+                    src="images/img_rectangle119.png"
+                    alt="rectangle119_Four"
+                  />
+                  <div className="absolute flex flex-col md:gap-10 gap-[134px] h-screen md:h-auto justify-start left-[5%] top-[10%] w-[859px]">
+                    <div className="flex flex-row justify-start items-start gap-[25px]">
+                      <div className="h-[130px] relative w-[23%] -mt-[43px] md:w-screen">
+                        <Img
+                          className="absolute flex flex-row gap-[10px] items-start justify-between ml-[1%] mt:[110px] md:left-[44%] sm:left-[38%] my-auto w-[360px] h-[150px]"
+                          src="images/img_logo.png"
+                        />
+                      </div>
+                      <Text
+                        className="sm:mt-0 sm:text-[34.26px] ml-[1%] md:text-[37.26px] mt-[1%] text-[32.26px] text-white-A700"
+                        size="txtInterSemiBold3926"
+                      >
+                        Store App
+                      </Text>
+                    </div>
+                    <div className="flex flex-col items-start justify-start md:ml-[0] -mt-[10px] top-[5%] ml-[65px] h-[770px] w-[93%] md:w-full">
+                      <Text
+                        className="leading-[76.00px] md:text-5xl text-left text-5xl top-[1%] -mt-[120px] text-white-A700 h-[10px] w-full"
+                        size="txtInterBold60"
+                      >
+                        <span className="text-red-A400 font-inter -mt-[1%] text-left h-[30px] font-bold">
+                          Transform
+                        </span>
+                        <span className="text-white-A700 font-inter mt-[10vh] text-left font-bold">
+                          <>
+                            {" "}
+                            your Business
+                            <br />
+                            with{" "}
+                          </>
+                        </span>
+                        <span className="text-red-A400 font-inter text-left font-bold">
+                          Scankart™
+                        </span>
+                        <span className="text-white-A700 font-inter text-left font-bold">
+                          {" "}
+                        </span>
+                      </Text>
+                      <br /> <br />
+                      <div className="flex flex-col items-start justify-start mt-[120px]">
+                        <Text
+                          className="text-2xl sm:text-[32px] md:text-[34px] mt-[5px] text-red-A400"
+                          size="txtInterSemiBold36"
+                        >
+                          INVENTORY MANAGEMENT
+                        </Text>
+                        <Text
+                          className="mt-7 md:text-5xl sm:text-[42px] text-[35px] text-white-A700"
+                          size="txtInterBold56"
+                        >
+                          Just Automate Your
+                        </Text>
+                        <Text
+                          className="mt-1 md:text-5xl sm:text-[42px] text-[35px] text-white-A700"
+                          size="txtInterBold56"
+                        >
+                          Stock Control
+                        </Text>
+                        <Text
+                          className="leading-[48.00px] mt-4 md:text-3xl sm:text-[28px] text-[28px] text-blue_gray-100_e5"
+                          size="txtInterMedium32"
+                        >
+                          <>
+                            <li>AI Powered Stock-In</li>
+                            <li>Expiry & Stock Alerts</li>
+                            <li>Scan based Auditing</li>
+                          </>
+                        </Text>
+                      </div>
+                      <Img
+                        className="cursor-pointer h-[350px] w-[350px]  -mt-[130px]"
+                        src="images/img_group22258.svg"
+                        onClick={openPopup}
+                        alt="group22258"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <Img
+                className="absolute h-[90%] inset-y-[0] right-[8%] my-auto w-[25%] md:w-[25%] md:h-[740px]"
+                src="images/homepage_consumer.png"
+              />
+            </div>
+          </div>
+
+          <div className="flex-none w-full h-screen md:w-full md:h-full">
+            <div className="w-full h-screen p-5 relative">
+              <div className="h-screen m-auto w-full">
+                <div className="absolute bg-red-800 h-screen inset-y-[0] my-auto right-[0] w-[22%]"></div>
+                <div className="absolute h-screen left-[0] inset-y-[0] my-auto w-[79%] md:w-full">
+                  <Img
+                    className="h-screen m-auto object-cover w-full"
+                    src="images/img_rectangle119.png"
+                    alt="rectangle119_One"
+                  />
+                  <div className="absolute flex flex-col inset-y-[0] items-start justify-start left-[11%] my-auto w-[70%]">
+                    <Text
+                      className="leading-[76.00px] md:text-5xl text-5xl text-white-A700"
+                      size="txtInterBold60"
+                    >
+                      <span className="text-red-A400 font-inter text-left font-bold">
+                        Transform
+                      </span>
+                      <span className="text-white-A700 font-inter text-left font-bold">
+                        <>
+                          {" "}
+                          your Business
+                          <br />
+                          with{" "}
+                        </>
+                      </span>
+                      <span className="text-red-A400 font-inter text-left font-bold">
+                        Scankart™
+                      </span>
+                    </Text>
+                    <div className="flex flex-col gap-[25px] items-start justify-start mt-[68px]">
+                      <Text
+                        className="text-4xl sm:text-[32px] md:text-[34px] text-red-A400"
+                        size="txtInterSemiBold36"
+                      >
+                        PAPERLESS RETAIL
+                      </Text>
+                      <Text
+                        className="leading-[64.00px] md:text-5xl sm:text-[42px] text-5xl text-white-A700 w-full"
+                        size="txtInterBold56"
+                      >
+                        <>
+                          More Power, Less Paper
+                          <br />
+                          Go Digital
+                        </>
+                      </Text>
+                      <Text
+                        className="leading-[48.00px] md:text-3xl sm:text-[28px] text-[32px] text-blue_gray-100_e5"
+                        size="txtInterMedium32"
+                      >
+                        <>
+                          <li>Digital Receipts</li>
+                          <li>Mobile Checkout</li>
+                          <li>Digital Displays</li>
+                        </>
+                      </Text>
+                    </div>
+                    <Img
+                      className="cursor-pointer h-[550px] w-[450px]  -mt-[0px]"
+                      src="images/img_group22258.svg"
+                      onClick={openPopup}
+                      alt="group22258"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <Img
+                className="absolute h-[90%] inset-y-[0] right-[8%] my-auto w-[25%] md:w-[25%] md:h-[740px]"
+                src="images/order_details.png"
+              />
+            </div>
+          </div>
+
+          <div className="flex-none w-full h-screen md:w-full md:h-full">
+            <div className="w-full h-screen p-5 relative">
+              <div className="h-screen m-auto w-full">
+                <div className="absolute bg-red-800 h-screen inset-y-[0] my-auto right-[0] w-[22%]"></div>
+                <div className="absolute h-screen left-[0] inset-y-[0] my-auto w-[79%] md:w-full">
+                  <Img
+                    className="h-screen m-auto object-cover w-full"
+                    src="images/img_rectangle119.png"
+                    alt="rectangle119_One"
+                  />
+                  <div className="absolute flex flex-col inset-y-[0] items-start justify-start left-[11%] my-auto w-[70%]">
+                    <Text
+                      className="leading-[76.00px] md:text-5xl text-5xl text-white-A700"
+                      size="txtInterBold60"
+                    >
+                      <span className="text-red-A400 font-inter text-left font-bold">
+                        Transform
+                      </span>
+                      <span className="text-white-A700 font-inter text-left font-bold">
+                        <>
+                          {" "}
+                          your Business
+                          <br />
+                          with{" "}
+                        </>
+                      </span>
+                      <span className="text-red-A400 font-inter text-left font-bold">
+                        Scankart™
+                      </span>
+                    </Text>
+                    <div className="flex flex-col gap-[25px] items-start justify-start mt-[68px]">
+                      <Text
+                        className="text-4xl sm:text-[32px] md:text-[34px] text-red-A400"
+                        size="txtInterSemiBold36"
+                      >
+                        VENDOR MANAGEMENT
+                      </Text>
+                      <Text
+                        className="leading-[64.00px] md:text-5xl sm:text-[42px] text-5xl text-white-A700 w-full"
+                        size="txtInterBold56"
+                      >
+                        <>
+                          Keep your Vendors
+                          <br />
+                          On-Track
+                        </>
+                      </Text>
+                      <Text
+                        className="leading-[48.00px] md:text-3xl sm:text-[28px] text-[32px] text-blue_gray-100_e5"
+                        size="txtInterMedium32"
+                      >
+                        <>
+                          <li>Demand Forecasting</li>
+                          <li>Supply & Payment Tracking</li>
+                          <li>Performance Reports</li>
+                        </>
+                      </Text>
+                    </div>
+                    <Img
+                      className="cursor-pointer h-[550px] w-[450px]  -mt-[0px]"
+                      src="images/img_group22258.svg"
+                      onClick={openPopup}
+                      alt="group22258"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <Img
+                className="absolute h-[90%] inset-y-[0] right-[8%] my-auto w-[25%] md:w-[25%] md:h-[740px]"
+                src="images/vendor_management.png"
+              />
+            </div>
+          </div>
+
+          <div className="flex-none w-full h-screen md:w-full md:h-full">
+            <div className="w-full h-screen p-5 relative">
+              <div className="h-screen m-auto w-full">
+                <div className="absolute bg-red-800 h-screen inset-y-[0] my-auto right-[0] w-[22%]"></div>
+                <div className="absolute h-screen left-[0] inset-y-[0] my-auto w-[79%] md:w-full">
+                  <Img
+                    className="h-screen m-auto object-cover w-full"
+                    src="images/img_rectangle119.png"
+                    alt="rectangle119_One"
+                  />
+                  <div className="absolute flex flex-col inset-y-[0] items-start justify-start left-[11%] my-auto w-[70%]">
+                    <Text
+                      className="leading-[76.00px] md:text-5xl text-5xl text-white-A700"
+                      size="txtInterBold60"
+                    >
+                      <span className="text-red-A400 font-inter text-left font-bold">
+                        Transform
+                      </span>
+                      <span className="text-white-A700 font-inter text-left font-bold">
+                        <>
+                          {" "}
+                          your Business
+                          <br />
+                          with{" "}
+                        </>
+                      </span>
+                      <span className="text-red-A400 font-inter text-left font-bold">
+                        Scankart™
+                      </span>
+                    </Text>
+                    <div className="flex flex-col gap-[25px] items-start justify-start mt-[68px]">
+                      <Text
+                        className="text-4xl sm:text-[32px] md:text-[34px] text-red-A400"
+                        size="txtInterSemiBold36"
+                      >
+                        STORE ANALYTICS
+                      </Text>
+                      <Text
+                        className="leading-[64.00px] md:text-5xl sm:text-[42px] text-5xl text-white-A700 w-full"
+                        size="txtInterBold56"
+                      >
+                        <>
+                          Empowering You with
+                          <br />
+                          Data Wisdom
+                        </>
+                      </Text>
+                      <Text
+                        className="leading-[48.00px] md:text-3xl sm:text-[28px] text-[32px] text-blue_gray-100_e5"
+                        size="txtInterMedium32"
+                      >
+                        <>
+                          <li>360º Store Analytics</li>
+                          <li>Visual Reports</li>
+                          <li>Predictive Analysis</li>
+                        </>
+                      </Text>
+                    </div>
+                    <Img
+                      className="cursor-pointer h-[550px] w-[450px]  -mt-[0px]"
+                      src="images/img_group22258.svg"
+                      onClick={openPopup}
+                      alt="group22258"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <Img
+                className="absolute h-[90%] inset-y-[0] right-[8%] my-auto w-[25%] md:w-[25%] md:h-[740px]"
+                src="images/homepage_store.png"
+              />
+            </div>
+          </div>
+        </div>
+      ) : (
         <div
           id="store"
           className="flex flex-col h-screen items-center justify-start w-screen"
@@ -311,342 +642,15 @@ function ScrollToCenterSection({ sectionId }) {
             />
           </div>
         </div>
-
-        <div className="flex-none w-full h-screen md:w-full md:h-full">
-          <div className="w-full h-screen p-5 relative">
-            <div className="h-screen m-auto w-full">
-              <div className="absolute bg-red-800 h-screen inset-y-[0] my-auto right-[0] w-[22%]"></div>
-              <div className="absolute h-screen left-[0] inset-y-[0] my-auto w-[79%] md:w-full">
-                <Img
-                  className="h-screen m-auto object-cover w-full"
-                  src="images/img_rectangle119.png"
-                  alt="rectangle119_One"
-                />
-                <div className="absolute flex flex-col inset-y-[0] items-start justify-start left-[11%] my-auto w-[70%]">
-                  <Text
-                    className="leading-[76.00px] md:text-5xl text-5xl text-white-A700"
-                    size="txtInterBold60"
-                  >
-                    <span className="text-red-A400 font-inter text-left font-bold">
-                      Transform
-                    </span>
-                    <span className="text-white-A700 font-inter text-left font-bold">
-                      <>
-                        {" "}
-                        your Business
-                        <br />
-                        with{" "}
-                      </>
-                    </span>
-                    <span className="text-red-A400 font-inter text-left font-bold">
-                      Scankart™
-                    </span>
-                  </Text>
-                  <div className="flex flex-col gap-[25px] items-start justify-start mt-[68px]">
-                    <Text
-                      className="text-4xl sm:text-[32px] md:text-[34px] text-red-A400"
-                      size="txtInterSemiBold36"
-                    >
-                      PAPERLESS RETAIL
-                    </Text>
-                    <Text
-                      className="leading-[64.00px] md:text-5xl sm:text-[42px] text-5xl text-white-A700 w-full"
-                      size="txtInterBold56"
-                    >
-                      <>
-                        More Power, Less Paper
-                        <br />
-                        Go Digital
-                      </>
-                    </Text>
-                    <Text
-                      className="leading-[48.00px] md:text-3xl sm:text-[28px] text-[32px] text-blue_gray-100_e5"
-                      size="txtInterMedium32"
-                    >
-                      <>
-                        <li>Digital Receipts</li>
-                        <li>Mobile Checkout</li>
-                        <li>Digital Displays</li>
-                      </>
-                    </Text>
-                  </div>
-                  <Img
-                    className="cursor-pointer h-[550px] w-[450px]  -mt-[0px]"
-                    src="images/img_group22258.svg"
-                    onClick={openPopup}
-                    alt="group22258"
-                  />
-                </div>
-              </div>
-            </div>
-
-            <Img
-              className="absolute h-[90%] inset-y-[0] right-[8%] my-auto w-[25%] md:w-[25%] md:h-[740px]"
-              src="images/order_details.png"
-            />
-          </div>
-        </div>
-
-        <div className="flex-none w-full h-screen md:w-full md:h-full">
-          <div className="w-full h-screen p-5 relative">
-            <div className="h-screen m-auto w-full">
-              <div className="absolute bg-red-800 h-screen inset-y-[0] my-auto right-[0] w-[22%]"></div>
-              <div className="absolute h-screen left-[0] inset-y-[0] my-auto w-[79%] md:w-full">
-                <Img
-                  className="h-screen m-auto object-cover w-full"
-                  src="images/img_rectangle119.png"
-                  alt="rectangle119_One"
-                />
-                <div className="absolute flex flex-col inset-y-[0] items-start justify-start left-[11%] my-auto w-[70%]">
-                  <Text
-                    className="leading-[76.00px] md:text-5xl text-5xl text-white-A700"
-                    size="txtInterBold60"
-                  >
-                    <span className="text-red-A400 font-inter text-left font-bold">
-                      Transform
-                    </span>
-                    <span className="text-white-A700 font-inter text-left font-bold">
-                      <>
-                        {" "}
-                        your Business
-                        <br />
-                        with{" "}
-                      </>
-                    </span>
-                    <span className="text-red-A400 font-inter text-left font-bold">
-                      Scankart™
-                    </span>
-                  </Text>
-                  <div className="flex flex-col gap-[25px] items-start justify-start mt-[68px]">
-                    <Text
-                      className="text-4xl sm:text-[32px] md:text-[34px] text-red-A400"
-                      size="txtInterSemiBold36"
-                    >
-                      VENDOR MANAGEMENT
-                    </Text>
-                    <Text
-                      className="leading-[64.00px] md:text-5xl sm:text-[42px] text-5xl text-white-A700 w-full"
-                      size="txtInterBold56"
-                    >
-                      <>
-                        Keep your Vendors
-                        <br />
-                        On-Track
-                      </>
-                    </Text>
-                    <Text
-                      className="leading-[48.00px] md:text-3xl sm:text-[28px] text-[32px] text-blue_gray-100_e5"
-                      size="txtInterMedium32"
-                    >
-                      <>
-                        <li>Demand Forecasting</li>
-                        <li>Supply & Payment Tracking</li>
-                        <li>Performance Reports</li>
-                      </>
-                    </Text>
-                  </div>
-                  <Img
-                    className="cursor-pointer h-[550px] w-[450px]  -mt-[0px]"
-                    src="images/img_group22258.svg"
-                    onClick={openPopup}
-                    alt="group22258"
-                  />
-                </div>
-              </div>
-            </div>
-
-            <Img
-              className="absolute h-[90%] inset-y-[0] right-[8%] my-auto w-[25%] md:w-[25%] md:h-[740px]"
-              src="images/vendor_management.png"
-            />
-          </div>
-        </div>
-
-        <div className="flex-none w-full h-screen md:w-full md:h-full">
-          <div className="w-full h-screen p-5 relative">
-            <div className="h-screen m-auto w-full">
-              <div className="absolute bg-red-800 h-screen inset-y-[0] my-auto right-[0] w-[22%]"></div>
-              <div className="absolute h-screen left-[0] inset-y-[0] my-auto w-[79%] md:w-full">
-                <Img
-                  className="h-screen m-auto object-cover w-full"
-                  src="images/img_rectangle119.png"
-                  alt="rectangle119_One"
-                />
-                <div className="absolute flex flex-col inset-y-[0] items-start justify-start left-[11%] my-auto w-[70%]">
-                  <Text
-                    className="leading-[76.00px] md:text-5xl text-5xl text-white-A700"
-                    size="txtInterBold60"
-                  >
-                    <span className="text-red-A400 font-inter text-left font-bold">
-                      Transform
-                    </span>
-                    <span className="text-white-A700 font-inter text-left font-bold">
-                      <>
-                        {" "}
-                        your Business
-                        <br />
-                        with{" "}
-                      </>
-                    </span>
-                    <span className="text-red-A400 font-inter text-left font-bold">
-                      Scankart™
-                    </span>
-                  </Text>
-                  <div className="flex flex-col gap-[25px] items-start justify-start mt-[68px]">
-                    <Text
-                      className="text-4xl sm:text-[32px] md:text-[34px] text-red-A400"
-                      size="txtInterSemiBold36"
-                    >
-                      STORE ANALYTICS
-                    </Text>
-                    <Text
-                      className="leading-[64.00px] md:text-5xl sm:text-[42px] text-5xl text-white-A700 w-full"
-                      size="txtInterBold56"
-                    >
-                      <>
-                        Empowering You with
-                        <br />
-                        Data Wisdom
-                      </>
-                    </Text>
-                    <Text
-                      className="leading-[48.00px] md:text-3xl sm:text-[28px] text-[32px] text-blue_gray-100_e5"
-                      size="txtInterMedium32"
-                    >
-                      <>
-                        <li>360º Store Analytics</li>
-                        <li>Visual Reports</li>
-                        <li>Predictive Analysis</li>
-                      </>
-                    </Text>
-                  </div>
-                  <Img
-                    className="cursor-pointer h-[550px] w-[450px]  -mt-[0px]"
-                    src="images/img_group22258.svg"
-                    onClick={openPopup}
-                    alt="group22258"
-                  />
-                </div>
-              </div>
-            </div>
-
-            <Img
-              className="absolute h-[90%] inset-y-[0] right-[8%] my-auto w-[25%] md:w-[25%] md:h-[740px]"
-              src="images/homepage_store.png"
-            />
-          </div>
-        </div>
-      </div>
-      )
-      : (
-        <div
-          id="store"
-          className="flex flex-col h-screen items-center justify-start w-screen"
-        >
-          <div className="h-screen overflow-y-visible md:px-5 relative w-screen">
-            <div className="h-screen overflow-y-visible m-auto w-screen">
-              <div className="absolute bg-red-800 h-screen inset-y-[0] my-auto right-[0] w-screen"></div>
-              <div className="absolute h-screen inset-y-[0] left-[0] my-auto w-[79%] md:w-screen">
-                <Img
-                  className="h-screen m-auto object-cover w-screen"
-                  src="images/img_rectangle119.png"
-                  alt="rectangle119_Four"
-                />
-                <div className="absolute flex flex-col md:gap-10 gap-[134px] h-screen md:h-auto justify-start left-[5%] top-[10%] w-[859px]">
-                  <div className="flex flex-row justify-start items-start gap-[25px]">
-                    <div className="h-[130px] relative w-[23%] -mt-[43px] md:w-screen">
-                      <Img
-                        className="absolute flex flex-row gap-[10px] items-start justify-between ml-[1%] mt:[110px] md:left-[44%] sm:left-[38%] my-auto w-[360px] h-[150px]"
-                        src="images/img_logo.png"
-                      />
-                    </div>
-                    <Text
-                      className="sm:mt-0 sm:text-[34.26px] ml-[1%] md:text-[37.26px] mt-[1%] text-[32.26px] text-white-A700"
-                      size="txtInterSemiBold3926"
-                    >
-                      Store App
-                    </Text>
-                  </div>
-                  <div className="flex flex-col items-start justify-start md:ml-[0] -mt-[10px] top-[5%] ml-[65px] h-[770px] w-[93%] md:w-full">
-                    <Text
-                      className="leading-[76.00px] md:text-5xl text-left text-5xl top-[1%] -mt-[120px] text-white-A700 h-[10px] w-full"
-                      size="txtInterBold60"
-                    >
-                      <span className="text-red-A400 font-inter -mt-[1%] text-left h-[30px] font-bold">
-                        Transform
-                      </span>
-                      <span className="text-white-A700 font-inter mt-[10vh] text-left font-bold">
-                        <>
-                          {" "}
-                          your Business
-                          <br />
-                          with{" "}
-                        </>
-                      </span>
-                      <span className="text-red-A400 font-inter text-left font-bold">
-                        Scankart™
-                      </span>
-                      <span className="text-white-A700 font-inter text-left font-bold">
-                        {" "}
-                      </span>
-                    </Text>
-                    <br /> <br />
-                    <div className="flex flex-col items-start justify-start mt-[120px]">
-                      <Text
-                        className="text-2xl sm:text-[32px] md:text-[34px] mt-[5px] text-red-A400"
-                        size="txtInterSemiBold36"
-                      >
-                        INVENTORY MANAGEMENT
-                      </Text>
-                      <Text
-                        className="mt-7 md:text-5xl sm:text-[42px] text-[35px] text-white-A700"
-                        size="txtInterBold56"
-                      >
-                        Just Automate Your
-                      </Text>
-                      <Text
-                        className="mt-1 md:text-5xl sm:text-[42px] text-[35px] text-white-A700"
-                        size="txtInterBold56"
-                      >
-                        Stock Control
-                      </Text>
-                      <Text
-                        className="leading-[48.00px] mt-4 md:text-3xl sm:text-[28px] text-[28px] text-blue_gray-100_e5"
-                        size="txtInterMedium32"
-                      >
-                        <>
-                          <li>AI Powered Stock-In</li>
-                          <li>Expiry & Stock Alerts</li>
-                          <li>Scan based Auditing</li>
-                        </>
-                      </Text>
-                    </div>
-                    <Img
-                      className="cursor-pointer h-[350px] w-[350px]  -mt-[130px]"
-                      src="images/img_group22258.svg"
-                      onClick={openPopup}
-                      alt="group22258"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-            <Img
-              className="absolute h-[90%] inset-y-[0] right-[8%] my-auto w-[25%] md:w-[25%] md:h-[740px]"
-              src="images/homepage_consumer.png"
-            />
-          </div>
-        </div>
-      )
-      }
-      
-      
+      )}
     </div>
   );
 }
 
 const DesktopOnePage = () => {
   const [isOpen, setIsOpen] = React.useState(true);
+  const [video, setVideo] = React.useState(true);
+  const [youtubeID] = React.useState("rDP1O5MepmQ");
   const [email, setEmail] = React.useState("");
 
   const openPopup = () => {
@@ -655,6 +659,10 @@ const DesktopOnePage = () => {
 
   const closePopup = () => {
     setIsOpen(false);
+  };
+
+  const closeVideo = () => {
+    setVideo(false);
   };
 
   const joinWaitlist = () => {
@@ -805,6 +813,8 @@ const DesktopOnePage = () => {
           </div>
         </div>
       )}
+
+      
 
       <div className="bg-black-900 flex flex-col font-inter items-center justify-start mx-auto overflow-hidden w-screen">
         <div
