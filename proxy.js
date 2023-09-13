@@ -10,6 +10,10 @@ const PORT = 3005;
 app.use(express.json());
 app.use(cors());
 
+app.get('/', (req, res) => {
+    res.send('Hello World!');
+});
+
 app.post('/proxy/post', (req, res) => {
     const url = req.query.url;
     const body = req.body;
