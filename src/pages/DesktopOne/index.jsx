@@ -5,7 +5,7 @@ import { Button, Img, Input, Line, List, Switch, Text } from "components";
 function ScrollToCenterSection({ sectionId }) {
   const myRef = React.useRef(null);
   const [scrolling, setScrolling] = React.useState(false);
-  const [isOpen, setIsOpen] = React.useState(true);
+  const [isOpen, setIsOpen] = React.useState(false);
   const [video, setVideo] = React.useState(true);
   const [youtubeID] = React.useState("rDP1O5MepmQ");
   const [email, setEmail] = React.useState("");
@@ -60,7 +60,6 @@ function ScrollToCenterSection({ sectionId }) {
   };
 
   React.useEffect(() => {
-
     const handleScroll = () => {
       const section = document.getElementById(sectionId);
       if (section) {
@@ -195,24 +194,29 @@ function ScrollToCenterSection({ sectionId }) {
       )}
       {video && (
         <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center z-50">
-          <div className="max-h-[97vh] h-screen w-screen sm:w-full md:w-full relative">
-            <div className="bg-black-900 flex flex-col gap-2.5 justify-start p-5 rounded-[24px] h-screen w-screen">
-              <Img
+          <div className="h-[75vh] w-[75vw] sm:w-full md:w-full relative">
+            <div className="bg-black-900 flex flex-col gap-2.5 justify-start p-5 rounded-[24px] h-full w-full">
+              <img
                 className="absolute top-0 right-0 m-4 cursor-pointer"
                 src="images/img_closecirclesvgrepocom.svg"
                 alt="closecirclesvgr"
                 onClick={closeVideo}
               />
-              <iframe
-                className="h-screen w-screen"
-                title="Youtube player"
-                sandbox="allow-same-origin allow-forms allow-popups allow-scripts allow-presentation"
-                src={`https://youtube.com/embed/${youtubeID}?autoplay=1&mute=1`}
-              ></iframe>
+              <div className="w-full h-full">
+                <iframe
+                  className="h-full w-full"
+                  title="Youtube player"
+                  sandbox="allow-same-origin allow-forms allow-popups allow-scripts allow-presentation"
+                  src={`https://www.youtube.com/embed/${youtubeID}?autoplay=1&mute=1`}
+                  frameBorder="0"
+                  allowFullScreen
+                ></iframe>
+              </div>
             </div>
           </div>
         </div>
       )}
+
       {scrolling ? (
         <div
           ref={myRef}
@@ -648,7 +652,7 @@ function ScrollToCenterSection({ sectionId }) {
 }
 
 const DesktopOnePage = () => {
-  const [isOpen, setIsOpen] = React.useState(true);
+  const [isOpen, setIsOpen] = React.useState(false);
   const [email, setEmail] = React.useState("");
 
   const openPopup = () => {
