@@ -192,6 +192,7 @@ function ScrollToCenterSection({ sectionId }) {
           </div>
         </div>
       )}
+
       {video && (
         <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center z-50">
           <div className="h-[75vh] w-[75vw] sm:w-full md:w-full relative">
@@ -230,30 +231,35 @@ function ScrollToCenterSection({ sectionId }) {
             <div className="h-screen overflow-y-visible md:px-5 relative w-screen">
               <div className="h-screen overflow-y-visible m-auto w-screen">
                 <div className="absolute bg-red-800 h-screen inset-y-[0] my-auto right-[0] w-screen"></div>
-                <div className="absolute h-screen inset-y-[0] left-[0] my-auto w-[79%] md:w-screen">
+                <div className="absolute h-screen inset-y-[0] left-[0] my-auto w-[79%] sm:w-[79%] md:w-screen">
                   <Img
-                    className="h-screen m-auto object-cover w-screen"
+                    className="h-screen m-auto object-cover w-screen sm:hidden"
                     src="images/img_rectangle119.png"
                     alt="rectangle119_Four"
                   />
-                  <div className="absolute flex flex-col md:gap-10 gap-[134px] h-screen md:h-auto justify-start left-[5%] top-[10%] w-[859px]">
-                    <div className="flex flex-row justify-start items-start gap-[25px]">
-                      <div className="h-[130px] relative w-[23%] -mt-[43px] md:w-screen">
+                  <Img
+                    className="hidden sm:block h-screen m-auto object-cover w-screen"
+                    src="images/img_rectangle119.png"
+                    alt="rectangle119_Four"
+                  />
+                  <div className="absolute flex flex-col md:gap-10 sm:gap-[90px] gap-[134px] h-screen md:h-auto justify-start left-[5%] top-[10%] w-[859px] sm:w-[859px]">
+                    <div className="flex flex-row sm:flex-row justify-start sm:items-start items-start gap-[25px]">
+                      <div className="h-[130px] relative w-[23%] sm:w-[23%] sm:mt-0 -mt-[43px] md:w-screen">
                         <Img
-                          className="absolute flex flex-row gap-[10px] items-start justify-between ml-[1%] mt:[110px] md:left-[44%] sm:left-[38%] my-auto w-[360px] h-[150px]"
+                          className="absolute flex flex-row gap-[10px] items-start justify-between ml-[1%] mt:[110px] md:left-[44%] sm:left-[30px] sm:-top-[80px] my-auto sm:w-[360px] w-[360px] h-[150px]"
                           src="images/img_logo.png"
                         />
                       </div>
                       <Text
-                        className="sm:mt-0 sm:text-[34.26px] ml-[1%] md:text-[37.26px] mt-[1%] text-[32.26px] text-white-A700"
+                        className="sm:-mt-[24px] sm:text-[34.26px] ml-[1%] md:text-[37.26px] mt-[1%] sm:-top-[80px] text-[32.26px] text-white-A700"
                         size="txtInterSemiBold3926"
                       >
                         Store App
                       </Text>
                     </div>
-                    <div className="flex flex-col items-start justify-start md:ml-[0] -mt-[10px] top-[5%] ml-[65px] h-[770px] w-[93%] md:w-full">
+                    <div className="flex flex-col items-start justify-start md:ml-[0] sm:ml-[0] -mt-[10px] top-[5%] sm:top-[5%] ml-[65px] h-[770px] md:w-full sm:ml-[65px] sm:h-[770px] sm:w-[93%] md:w-full">
                       <Text
-                        className="leading-[76.00px] md:text-5xl text-left text-5xl top-[1%] -mt-[120px] text-white-A700 h-[10px] w-full"
+                        className="leading-[76.00px] sm:text-3xl text-left text-5xl top-[1%] sm:-ml-[30px] -mt-[120px] text-white-A700 h-[10px] w-full"
                         size="txtInterBold60"
                       >
                         <span className="text-red-A400 font-inter -mt-[1%] text-left h-[30px] font-bold">
@@ -275,21 +281,21 @@ function ScrollToCenterSection({ sectionId }) {
                         </span>
                       </Text>
                       <br /> <br />
-                      <div className="flex flex-col items-start justify-start mt-[120px]">
+                      <div className="flex flex-col items-start justify-start sm:-ml-[30px] mt-[120px]">
                         <Text
-                          className="text-2xl sm:text-[32px] md:text-[34px] mt-[5px] text-red-A400"
+                          className="text-2xl sm:text-[28px] sm:-mt-[52px] md:text-[34px] mt-[5px] text-red-A400"
                           size="txtInterSemiBold36"
                         >
                           INVENTORY MANAGEMENT
                         </Text>
                         <Text
-                          className="mt-7 md:text-5xl sm:text-[42px] text-[35px] text-white-A700"
+                          className="mt-7 sm:md-1  md:text-5xl sm:text-[28px] text-[35px] text-white-A700"
                           size="txtInterBold56"
                         >
                           Just Automate Your
                         </Text>
                         <Text
-                          className="mt-1 md:text-5xl sm:text-[42px] text-[35px] text-white-A700"
+                          className="mt-1 md:text-5xl sm:text-[28px] text-[35px] text-white-A700"
                           size="txtInterBold56"
                         >
                           Stock Control
@@ -306,7 +312,7 @@ function ScrollToCenterSection({ sectionId }) {
                         </Text>
                       </div>
                       <Img
-                        className="cursor-pointer h-[350px] w-[350px]  -mt-[130px]"
+                        className="cursor-pointer sm:h-[350px] sm:-mb-[7%] h-[350px] w-[350px]  -mt-[130px]"
                         src="images/img_group22258.svg"
                         onClick={openPopup}
                         alt="group22258"
@@ -316,7 +322,7 @@ function ScrollToCenterSection({ sectionId }) {
                 </div>
               </div>
               <Img
-                className="absolute h-[90%] inset-y-[0] right-[8%] my-auto w-[25%] md:w-[25%] md:h-[740px]"
+                className="absolute sm:hidden sm:block h-[90%] inset-y-[0] right-[8%] my-auto w-[25%] md:w-[25%] md:h-[740px] sm:w-[75%] sm:h-[75%]"
                 src="images/homepage_consumer.png"
               />
             </div>
@@ -391,7 +397,7 @@ function ScrollToCenterSection({ sectionId }) {
               </div>
 
               <Img
-                className="absolute h-[90%] inset-y-[0] right-[8%] my-auto w-[25%] md:w-[25%] md:h-[740px]"
+                className="absolut sm:hidden sm:blocke h-[90%] inset-y-[0] right-[8%] my-auto w-[25%] md:w-[25%] md:h-[740px]"
                 src="images/order_details.png"
               />
             </div>
@@ -466,7 +472,7 @@ function ScrollToCenterSection({ sectionId }) {
               </div>
 
               <Img
-                className="absolute h-[90%] inset-y-[0] right-[8%] my-auto w-[25%] md:w-[25%] md:h-[740px]"
+                className="absolute sm:hidden sm:block h-[90%] inset-y-[0] right-[8%] my-auto sm:my-3 w-[25%] md:w-[25%] md:h-[740px] sm:w-[75%] sm:h-[75%] sm:top-[50%]"
                 src="images/vendor_management.png"
               />
             </div>
@@ -541,7 +547,7 @@ function ScrollToCenterSection({ sectionId }) {
               </div>
 
               <Img
-                className="absolute h-[90%] inset-y-[0] right-[8%] my-auto w-[25%] md:w-[25%] md:h-[740px]"
+                className="absolute sm:hidden sm:block h-[90%] inset-y-[0] right-[8%] my-auto w-[25%] md:w-[25%] md:h-[740px]"
                 src="images/homepage_store.png"
               />
             </div>
@@ -555,30 +561,35 @@ function ScrollToCenterSection({ sectionId }) {
           <div className="h-screen overflow-y-visible md:px-5 relative w-screen">
             <div className="h-screen overflow-y-visible m-auto w-screen">
               <div className="absolute bg-red-800 h-screen inset-y-[0] my-auto right-[0] w-screen"></div>
-              <div className="absolute h-screen inset-y-[0] left-[0] my-auto w-[79%] md:w-screen">
+              <div className="absolute h-screen inset-y-[0] left-[0] my-auto w-[79%] sm:w-[79%] md:w-screen">
                 <Img
-                  className="h-screen m-auto object-cover w-screen"
+                  className="h-screen m-auto object-cover w-screen sm:hidden"
                   src="images/img_rectangle119.png"
                   alt="rectangle119_Four"
                 />
-                <div className="absolute flex flex-col md:gap-10 gap-[134px] h-screen md:h-auto justify-start left-[5%] top-[10%] w-[859px]">
-                  <div className="flex flex-row justify-start items-start gap-[25px]">
-                    <div className="h-[130px] relative w-[23%] -mt-[43px] md:w-screen">
+                <Img
+                  className="hidden sm:block h-screen m-auto object-cover w-screen"
+                  src="images/img_rectangle119.png"
+                  alt="rectangle119_Four"
+                />
+                <div className="absolute flex flex-col md:gap-10 sm:gap-[90px] gap-[134px] h-screen md:h-auto justify-start left-[5%] top-[10%] w-[859px] sm:w-[859px]">
+                  <div className="flex flex-row sm:flex-row justify-start sm:items-start items-start gap-[25px]">
+                    <div className="h-[130px] relative w-[23%] sm:w-[23%] sm:mt-0 -mt-[43px] md:w-screen">
                       <Img
-                        className="absolute flex flex-row gap-[10px] items-start justify-between ml-[1%] mt:[110px] md:left-[44%] sm:left-[38%] my-auto w-[360px] h-[150px]"
+                        className="absolute flex flex-row gap-[10px] items-start justify-between ml-[1%] mt:[110px] md:left-[44%] sm:left-[30px] sm:-top-[80px] my-auto sm:w-[360px] w-[360px] h-[150px]"
                         src="images/img_logo.png"
                       />
                     </div>
                     <Text
-                      className="sm:mt-0 sm:text-[34.26px] ml-[1%] md:text-[37.26px] mt-[1%] text-[32.26px] text-white-A700"
+                      className="sm:-mt-[24px] sm:text-[34.26px] ml-[1%] md:text-[37.26px] mt-[1%] sm:-top-[80px] text-[32.26px] text-white-A700"
                       size="txtInterSemiBold3926"
                     >
                       Store App
                     </Text>
                   </div>
-                  <div className="flex flex-col items-start justify-start md:ml-[0] -mt-[10px] top-[5%] ml-[65px] h-[770px] w-[93%] md:w-full">
+                  <div className="flex flex-col items-start justify-start md:ml-[0] sm:ml-[0] -mt-[10px] top-[5%] sm:top-[5%] ml-[65px] h-[770px] md:w-full sm:ml-[65px] sm:h-[770px] sm:w-[93%] md:w-full">
                     <Text
-                      className="leading-[76.00px] md:text-5xl text-left text-5xl top-[1%] -mt-[120px] text-white-A700 h-[10px] w-full"
+                      className="leading-[76.00px] sm:text-3xl text-left text-5xl top-[1%] sm:-ml-[30px] -mt-[120px] text-white-A700 h-[10px] w-full"
                       size="txtInterBold60"
                     >
                       <span className="text-red-A400 font-inter -mt-[1%] text-left h-[30px] font-bold">
@@ -600,21 +611,21 @@ function ScrollToCenterSection({ sectionId }) {
                       </span>
                     </Text>
                     <br /> <br />
-                    <div className="flex flex-col items-start justify-start mt-[120px]">
+                    <div className="flex flex-col items-start justify-start sm:-ml-[30px] mt-[120px]">
                       <Text
-                        className="text-2xl sm:text-[32px] md:text-[34px] mt-[5px] text-red-A400"
+                        className="text-2xl sm:text-[28px] sm:-mt-[52px] md:text-[34px] mt-[5px] text-red-A400"
                         size="txtInterSemiBold36"
                       >
                         INVENTORY MANAGEMENT
                       </Text>
                       <Text
-                        className="mt-7 md:text-5xl sm:text-[42px] text-[35px] text-white-A700"
+                        className="mt-7 sm:md-1  md:text-5xl sm:text-[28px] text-[35px] text-white-A700"
                         size="txtInterBold56"
                       >
                         Just Automate Your
                       </Text>
                       <Text
-                        className="mt-1 md:text-5xl sm:text-[42px] text-[35px] text-white-A700"
+                        className="mt-1 md:text-5xl sm:text-[28px] text-[35px] text-white-A700"
                         size="txtInterBold56"
                       >
                         Stock Control
@@ -631,7 +642,7 @@ function ScrollToCenterSection({ sectionId }) {
                       </Text>
                     </div>
                     <Img
-                      className="cursor-pointer h-[350px] w-[350px]  -mt-[130px]"
+                      className="cursor-pointer sm:h-[350px] sm:-mb-[7%] h-[350px] w-[350px]  -mt-[130px]"
                       src="images/img_group22258.svg"
                       onClick={openPopup}
                       alt="group22258"
@@ -641,7 +652,7 @@ function ScrollToCenterSection({ sectionId }) {
               </div>
             </div>
             <Img
-              className="absolute h-[90%] inset-y-[0] right-[8%] my-auto w-[25%] md:w-[25%] md:h-[740px]"
+              className="absolute sm:hidden sm:block h-[90%] inset-y-[0] right-[8%] my-auto sm:my-3 w-[25%] md:w-[25%] md:h-[740px] sm:w-[75%] sm:h-[75%] sm:top-[50%]"
               src="images/homepage_consumer.png"
             />
           </div>
@@ -822,10 +833,16 @@ const DesktopOnePage = () => {
               <header className="flex md:flex-col flex-row md:gap-5 md:px-5 sm:-mt-400 w-full">
                 <div className="h-[59px] relative w-[24%] md:w-full">
                   <Img
-                    className="absolute flex flex-row gap-[34px] inset-y-[0] left-[17%] md:left-[44%] sm:left-[38%] my-auto w-[830px] h-[250px]"
+                    className="absolute flex flex-row gap-[34px] inset-y-[0] left-[17%] md:left-[44%] sm:-left-[10%] sm:w-[150px] sm:h-[150px] my-auto w-[830px] h-[250px]"
                     src="images/img_logo.png"
                   />
                 </div>
+                {/* <div className="h-[59px] relative w-[24%] md:w-full">
+                  <Img
+                    className="absolute flex flex-row gap-[34px] inset-y-[0] left-[17%] md:left-[44%] sm:-right-[10%] sm:w-[150px] sm:h-[150px] my-auto w-[830px] h-[250px]"
+                    src="images/navbar.png"
+                  />
+                </div> */}
                 <ul className="flex sm:flex-1 sm:flex-col flex-row gap-[42px] sm:hidden justify-end md:ml-[0] mt-[2%] ml-[596px] pl-2.5 w-full sm:w-full common-row-list">
                   <li>
                     <a href="#store" className="text-gray-400 text-lg">
@@ -863,13 +880,13 @@ const DesktopOnePage = () => {
               >
                 Welcome to Scankart
               </Text>
-              <div className="flex md:flex-col flex-row md:gap-10 items-start justify-between mt-[15px] w-full">
+              <div className="flex md:flex-col flex-row md:gap-10 mt-[15px] sm:-mt-[400px] w-full">
                 <Img
-                  className="h-[261px] md:h-auto md:mt-0 mt-[247px] object-cover"
+                  className="h-[261px] md:h-auto md:mt-0 mt-[247px] sm:-mt-[10px] object-cover"
                   src="images/img_ellipse61.png"
                   alt="ellipseSixtyOne"
                 />
-                <div className="flex flex-col items-center justify-start sm:-mt-[600px] mb-[102px] md:px-5 sm:-mt-100">
+                <div className="flex flex-col items-center justify-start mb-[102px] md:px-5 sm:-mt-100">
                   <div className="flex flex-col items-center justify-start">
                     <Text
                       className="md:text-5xl text-[64px] text-center text-white-A700"
@@ -898,7 +915,7 @@ const DesktopOnePage = () => {
                     through a simple and intuitive app interface.
                   </Text>
                   <Button
-                    className="bg-gradient cursor-pointer font-semibold mt-[42px] py-[25px] rounded-[40px] text-2xl md:text-[22px] text-center text-gray-100 sm:text-xl w-[400px]"
+                    className="bg-gradient cursor-pointer font-semibold mt-[42px] py-[25px] sm:py-[15px] rounded-[40px] text-2xl md:text-[22px] text-center text-gray-100 sm:text-xl w-full max-w-[400px]"
                     onClick={openPopup}
                   >
                     Join the Retail Revolution
@@ -1249,41 +1266,46 @@ const DesktopOnePage = () => {
           <div className="h-screen overflow-y-visible md:px-5 relative w-screen">
             <div className="h-screen overflow-y-visible m-auto w-screen">
               <div className="absolute bg-red-800 h-screen inset-y-[0] my-auto right-[0] w-screen"></div>
-              <div className="absolute h-screen inset-y-[0] left-[0] my-auto w-[79%] md:w-screen">
+              <div className="absolute h-screen inset-y-[0] left-[0] my-auto w-[79%] sm:w-[79%] md:w-screen">
                 <Img
-                  className="h-screen m-auto object-cover w-screen"
+                  className="h-screen m-auto object-cover w-screen sm:hidden"
                   src="images/img_rectangle119.png"
                   alt="rectangle119_Four"
                 />
-                <div className="absolute flex flex-col md:gap-10 gap-[134px] h-screen md:h-auto justify-start left-[5%] top-[10%] w-[859px]">
-                  <div className="flex sm:flex-col flex-row gap-[25px] items-start justify-start md:w-screen">
-                    <div className="h-[130px] relative w-[23%] -mt-[43px] md:w-screen">
+                <Img
+                  className="hidden sm:block h-screen m-auto object-cover w-screen"
+                  src="images/img_rectangle119.png"
+                  alt="rectangle119_Four"
+                />
+                <div className="absolute flex flex-col md:gap-10 sm:gap-[90px] gap-[134px] h-screen md:h-auto justify-start left-[5%] top-[10%] w-[859px] sm:w-[859px]">
+                  <div className="flex flex-row sm:flex-row justify-start sm:items-start items-start gap-[25px]">
+                    <div className="h-[130px] relative w-[23%] sm:w-[23%] sm:mt-0 -mt-[43px] md:w-screen">
                       <Img
-                        className="absolute flex flex-row gap-[10px] items-start justify-between ml-[1%] mt:[110px] md:left-[44%] sm:left-[38%] my-auto w-[360px] h-[150px]"
+                        className="absolute flex flex-row gap-[10px] items-start justify-between ml-[1%] mt:[110px] md:left-[44%] sm:left-[30px] sm:-top-[80px] my-auto sm:w-[360px] w-[360px] h-[150px]"
                         src="images/img_logo.png"
                       />
                     </div>
                     <Text
-                      className="sm:mt-0 sm:text-[34.26px] ml-[1%] md:text-[37.26px] mt-[1%] text-[32.26px] text-white-A700"
+                      className="sm:-mt-[24px] sm:text-[22.26px] ml-[1%] md:text-[37.26px] mt-[1%] sm:-top-[80px] text-[32.26px] text-white-A700"
                       size="txtInterSemiBold3926"
                     >
                       Consumer App
                     </Text>
                   </div>
-                  <div className="flex flex-col items-start justify-start md:ml-[0] -mt-[10px] top-[5%] ml-[65px] h-[770px] w-[93%] md:w-screen">
+                  <div className="flex flex-col items-start justify-start md:ml-[0] sm:ml-[0] -mt-[10px] top-[5%] sm:top-[5%] ml-[65px] h-[770px] md:w-full sm:ml-[65px] sm:h-[770px] sm:w-[93%] md:w-full">
                     <Text
-                      className="leading-[76.00px] md:text-5xl text-left text-5xl top-[1%] -mt-[120px] text-white-A700 h-[10px] w-screen"
+                      className="leading-[76.00px] sm:text-3xl text-left text-5xl top-[1%] sm:-ml-[30px] -mt-[120px] text-white-A700 h-[10px] w-full"
                       size="txtInterBold60"
                     >
-                      <span className="text-red-A400 font-inter mt-[1%] text-left h-[50px] font-bold">
+                      <span className="text-red-A400 font-inter -mt-[1%] text-left h-[30px] font-bold">
                         Transform
                       </span>
                       <span className="text-white-A700 font-inter mt-[10vh] text-left font-bold">
                         <>
                           {" "}
-                          the Way You
+                          your Business
                           <br />
-                          Shop with{" "}
+                          with{" "}
                         </>
                       </span>
                       <span className="text-red-A400 font-inter text-left font-bold">
@@ -1294,21 +1316,27 @@ const DesktopOnePage = () => {
                       </span>
                     </Text>
                     <br /> <br />
-                    <div className="flex flex-col items-start justify-start mt-[120px]">
+                    <div className="flex flex-col items-start justify-start sm:-ml-[30px] mt-[120px]">
                       <Text
-                        className="text-3xl sm:text-[32px] md:text-[34px] mt-[30px] text-red-A400"
+                        className="text-2xl sm:text-[28px] sm:-mt-[52px] md:text-[34px] mt-[5px] text-red-A400"
                         size="txtInterSemiBold36"
                       >
                         INSTANT CHECKOUT
                       </Text>
                       <Text
-                        className="mt-7 md:text-5xl sm:text-[42px] text-[46px] text-white-A700"
+                        className="mt-7 sm:md-1  md:text-5xl sm:text-[28px] text-[35px] text-white-A700"
                         size="txtInterBold56"
                       >
                         Scan, Compare & Buy
                       </Text>
+                      {/* <Text
+                        className="mt-1 md:text-5xl sm:text-[28px] text-[35px] text-white-A700"
+                        size="txtInterBold56"
+                      >
+                        Stock Control
+                      </Text> */}
                       <Text
-                        className="leading-[48.00px] mt-4 md:text-3xl sm:text-[28px] text-[32px] text-blue_gray-100_e5"
+                        className="leading-[48.00px] mt-4 md:text-3xl sm:text-[28px] text-[28px] text-blue_gray-100_e5"
                         size="txtInterMedium32"
                       >
                         <>
@@ -1319,7 +1347,7 @@ const DesktopOnePage = () => {
                       </Text>
                     </div>
                     <Img
-                      className="cursor-pointer h-[350px] w-[350px]  -mt-[110px]"
+                      className="cursor-pointer sm:h-[350px] sm:-mb-[7%] h-[350px] w-[350px]  -mt-[130px]"
                       src="images/img_group22258.svg"
                       onClick={openPopup}
                       alt="group22258"
@@ -1329,7 +1357,7 @@ const DesktopOnePage = () => {
               </div>
             </div>
             <Img
-              className="absolute h-[90%] inset-y-[0] right-[8%] my-auto w-[25%] md:w-[25%] md:h-[740px]"
+              className="absolute sm:hidden sm:block h-[90%] inset-y-[0] right-[8%] my-auto sm:my-3 w-[25%] md:w-[25%] md:h-[740px] sm:w-[75%] sm:h-[75%] sm:top-[50%]"
               src="images/homepage_consumer.png"
             />
           </div>
@@ -1353,12 +1381,12 @@ const DesktopOnePage = () => {
               </span>
             </Text>
             <div className="flex md:flex-col flex-row md:gap-10 items-start justify-between mt-[109px] w-full">
-              <div className="backdrop-opacity-[0.5] bg-red-800_75 blur-[320.00px] h-[478px] mb-[75px] md:mt-0 mt-[145px] rounded-[50%] w-[478px]"></div>
+              <div className="backdrop-opacity-[0] bg-red-800_75 blur-[320.00px] h-[478px] mb-[75px] md:mt-0 mt-[145px] rounded-[50%] w-[478px]"></div>
               <List
                 className="sm:flex-col flex-row md:gap-10 gap-[124px] grid md:grid-cols-1 grid-cols-2"
                 orientation="horizontal"
               >
-                <div className="flex flex-col items-center justify-start sm:ml-[0] w-full">
+                <div className="flex flex-col items-center justify-start sm:ml-[25%] sm:-mt-[700px] w-full">
                   <div className="bg-white-A700 flex flex-col items-center justify-end p-14 sm:px-5 rounded-[24px] w-full">
                     <div className="flex flex-row items-start justify-center mt-[21px] w-full md:w-full">
                       <Text
@@ -1431,7 +1459,7 @@ const DesktopOnePage = () => {
                     />
                   </div>
                 </div>
-                <div className="flex flex-col items-center justify-start sm:ml-[0] w-full">
+                <div className="flex flex-col items-center justify-start sm:ml-[25%] w-full">
                   <div className="bg-white-A700 flex flex-col items-center justify-end p-14 sm:px-5 rounded-[24px] w-full">
                     <div className="flex flex-row items-start justify-center mt-[21px] w-full md:w-full">
                       <Text
@@ -1518,7 +1546,7 @@ const DesktopOnePage = () => {
                   </div>
                 </div>
               </List>
-              <div className="backdrop-opacity-[0.5] bg-red-800_75 blur-[320.00px] h-[478px] mb-[75px] md:mt-0 mt-[145px] rounded-[50%] w-[478px]"></div>
+              <div className="backdrop-opacity-[0.5] bg-red-800_75 blur-[320.00px] h-[178px] mb-[75px] md:mt-0 mt-[145px] rounded-[50%] w-[478px]"></div>
             </div>
             <div className="flex md:flex-col flex-row md:gap-10 items-center justify-between mt-[35px] w-[47%] md:w-full">
               <Button className="bg-gradient3  cursor-pointer font-medium min-w-[302px] py-3.5 sm:text-[32.18px] md:text-[34.18px] text-[36.18px] text-center text-white-A700">
@@ -1530,7 +1558,7 @@ const DesktopOnePage = () => {
             </div>
           </div>
         </div>
-        <div
+        {/* <div
           id="contact"
           className="h-[678px] md:h-[717px] mt-[77px] md:px-5 relative w-full"
         >
@@ -1684,7 +1712,160 @@ const DesktopOnePage = () => {
             </div>
           </footer>
           <div className="absolute backdrop-opacity-[0.5] bg-black-900 blur-[50.00px] h-[76px] inset-x-[0] mx-auto top-[0] w-full"></div>
+        </div> */}
+        <div id="contact" className="h-[678px] md:h-[717px] mt-[77px] md:px-5 relative w-full">
+  <footer className="absolute bg-black-900 bottom-[0] flex inset-x-[0] items-center justify-center mx-auto shadow-bs w-full">
+    <div className="flex flex-col items-center justify-center mb-[42px] mt-[72px] w-full">
+      <div className="flex flex-col items-center justify-center w-full">
+        <div className="flex md:flex-col flex-row md:gap-10 items-start justify-between w-[86%] md:w-full">
+          <div className="flex flex-col gap-[51px] items-start justify-start w-[49%] md:w-full">
+            <div className="flex flex-col gap-[26px] items-start justify-start w-[29%] md:w-full">
+              <div className="h-[109px] -mt-[10px] relative w-[95%] md:w-full">
+                <Img
+                  className="absolute flex flex-row gap-[34px] h-full inset-y-[0] items-end justify-between md:left-[44%] sm:left-[0%] my-auto w-[1000px] h-[260px] sm:w-[200px] sm:h-[300px]"
+                  src="images/img_logo.png"
+                />
+              </div>
+              <a
+                href="www.scankart.ai"
+                className="text-white-A700 text-xl"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <Text size="txtInterMedium20">www.scankart.ai</Text>
+              </a>
+            </div>
+            <Text
+              className="bg-clip-text bg-gradient4 leading-[64.00px] md:text-5xl text-[64px] text-transparent w-full"
+              size="txtInterSemiBold64"
+            >
+              <span className="text-white-A700 font-inter text-left font-semibold">
+                Made with{" "}
+              </span>
+              <span className="text-red-A400 font-inter text-left font-semibold">
+                ❤
+              </span>
+              <span className="text-white-A700 font-inter text-left font-semibold">
+                <>
+                  ️<br />
+                </>
+              </span>
+              <span className="text-blue_gray-100_59 md:text-[44px] sm:text-[38px] font-inter text-left text-5xl bg-gradient-to-b font-semibold">
+                By Team Scankart
+              </span>
+            </Text>
+          </div>
+          <div className="flex flex-col md:gap-10 gap-[120px] items-start justify-start md:mt-0 mt-[3px] w-[39%] md:w-full">
+            <div className="flex sm:flex-col flex-row sm:gap-10 items-start justify-between w-full">
+              <div className="flex sm:flex-1 flex-col gap-[37px] items-start justify-start w-[44%] sm:w-full">
+                <Text
+                  className="text-2xl md:text-[22px] text-blue_gray-100_99 sm:text-xl"
+                  size="txtInterMedium24Bluegray10099"
+                >
+                  QUICK LINKS
+                </Text>
+                <ul className="flex flex-col gap-[15px] items-start justify-start w-full common-column-list">
+                  <li>
+                    <a
+                      href="javascript:"
+                      className="text-white-A700 text-xl"
+                    >
+                      <Text size="txtInterMedium20">
+                        Features Comparison
+                      </Text>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="javascript:"
+                      className="text-white-A700 text-xl"
+                    >
+                      <Text size="txtInterMedium20">
+                        Privacy Policy
+                      </Text>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="javascript:"
+                      className="text-white-A700 text-xl"
+                    >
+                      <Text size="txtInterMedium20">Partnerships</Text>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="javascript:"
+                      className="text-white-A700 text-xl"
+                    >
+                      <Text size="txtInterMedium20">
+                        Terms & Conditions
+                      </Text>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div className="flex sm:flex-1 flex-col gap-[21px] sm:-ml-[28%] items-center justify-start w-[37%] sm:w-full">
+                <Text
+                  className="text-2xl md:text-[22px] text-blue_gray-100_99 sm:text-xl"
+                  size="txtInterMedium24Bluegray10099"
+                >
+                  GET IN TOUCH
+                </Text>
+                <div className="flex flex-col gap-[13px] items-start justify-start">
+                  <a
+                    className="text-white-A700 text-xl"
+                    size="txtInterMedium20"
+                    href="mailto:ceo@scankart.ai"
+                  >
+                    ceo@scankart.ai
+                  </a>
+                  <Text
+                    className="text-white-A700 text-xl"
+                    size="txtInterMedium20"
+                  >
+                    +91 8638440694
+                  </Text>
+                </div>
+              </div>
+            </div>
+            <div className="flex flex-row gap-6 items-center justify-start w-[57%] md:w-full sm:w-[100%]">
+              <Img
+                className="h-12 w-12"
+                src="images/img_play.svg"
+                alt="play"
+              />
+              <Img
+                className="h-12 w-12"
+                src="images/img_info.svg"
+                alt="info"
+              />
+              <Img
+                className="h-12 w-12"
+                src="images/img_vector.svg"
+                alt="vector"
+              />
+              <Img
+                className="h-12 w-12"
+                src="images/img_eye.svg"
+                alt="eye"
+              />
+            </div>
+          </div>
         </div>
+        <Line className="bg-gray-600_3f h-px mt-[84px] w-full" />
+        <Text
+          className="mt-[33px] text-blue_gray-100_a5 text-center text-xl"
+          size="txtInterMedium20Bluegray100a5"
+        >
+          © 2023, Scankart Innovations Pvt. Ltd. All Rights Reserved.
+        </Text>
+      </div>
+    </div>
+  </footer>
+  <div className="absolute backdrop-opacity-[0.5] bg-black-900 blur-[50.00px] h-[76px] inset-x-[0] mx-auto top-[0] w-full"></div>
+</div>
+
       </div>
     </>
   );
