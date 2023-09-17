@@ -242,7 +242,7 @@ function ScrollToCenterSection({ sectionId }) {
                     src="images/img_rectangle119.png"
                     alt="rectangle119_Four"
                   />
-                  <div className="absolute flex flex-col md:gap-10 sm:gap-[90px] gap-[134px] h-screen md:h-auto justify-start left-[5%] top-[10%] w-[859px] sm:w-[859px]">
+                  <div className="absolute flex flex-col md:gap-10 sm:gap-[90px] gap-[134px] h-screen md:h-auto justify-start left-[5%] top-[10%] w-[859px] sm:w-screen">
                     <div className="flex flex-row sm:flex-row justify-start sm:items-start items-start gap-[25px]">
                       <div className="h-[130px] relative w-[23%] sm:w-[23%] sm:mt-0 -mt-[43px] md:w-screen">
                         <Img
@@ -251,7 +251,7 @@ function ScrollToCenterSection({ sectionId }) {
                         />
                       </div>
                       <Text
-                        className="sm:-mt-[24px] sm:text-[34.26px] ml-[1%] md:text-[37.26px] mt-[1%] sm:-top-[80px] text-[32.26px] text-white-A700"
+                        className="sm:-mt-[24px] sm:text-[22.26px] ml-[1%] md:text-[37.26px] mt-[1%] sm:-top-[80px] text-[32.26px] text-white-A700"
                         size="txtInterSemiBold3926"
                       >
                         Store App
@@ -281,7 +281,7 @@ function ScrollToCenterSection({ sectionId }) {
                         </span>
                       </Text>
                       <br /> <br />
-                      <div className="flex flex-col items-start justify-start sm:-ml-[30px] mt-[120px]">
+                      <div className="flex flex-col items-start justify-start sm:-ml-[30px] mt-[120px] sm:w-[80%]">
                         <Text
                           className="text-2xl sm:text-[28px] sm:-mt-[52px] md:text-[34px] mt-[5px] text-red-A400"
                           size="txtInterSemiBold36"
@@ -301,7 +301,7 @@ function ScrollToCenterSection({ sectionId }) {
                           Stock Control
                         </Text>
                         <Text
-                          className="leading-[48.00px] mt-4 md:text-3xl sm:text-[28px] text-[28px] text-blue_gray-100_e5"
+                          className="leading-[48.00px] mt-4 md:text-3xl sm:text-[28px] sm:w-[80%] text-[28px] text-blue_gray-100_e5"
                           size="txtInterMedium32"
                         >
                           <>
@@ -312,7 +312,7 @@ function ScrollToCenterSection({ sectionId }) {
                         </Text>
                       </div>
                       <Img
-                        className="cursor-pointer sm:h-[350px] sm:-mb-[7%] h-[350px] w-[350px]  -mt-[130px]"
+                        className="cursor-pointer sm:h-[350px] sm:-mb-[7%] sm:-ml-[52px] h-[350px] w-[350px]  -mt-[130px]"
                         src="images/img_group22258.svg"
                         onClick={openPopup}
                         alt="group22258"
@@ -322,8 +322,17 @@ function ScrollToCenterSection({ sectionId }) {
                 </div>
               </div>
               <Img
-                className="absolute sm:hidden sm:block h-[90%] inset-y-[0] right-[8%] my-auto w-[25%] md:w-[25%] md:h-[740px] sm:w-[75%] sm:h-[75%]"
+                className="absolute sm:hidden sm:block h-[90%] inset-y-[0] right-[8%] my-auto sm:my-3 w-[25%] md:w-[25%] md:h-[740px] sm:w-[75%] sm:h-[75%] sm:top-[50%]"
                 src="images/homepage_consumer.png"
+              />
+            </div>
+          </div>
+          {/* Image 1 */}
+          <div className="flex hidden sm:block flex-col h-screen items-center justify-start w-screen">
+            <div className="h-screen hidden sm:block overflow-y-visible md:px-5 relative w-screen">
+              <Img
+                className="absolute hidden sm:block sm:w-[95%] sm:h-full"
+                src="images/inventory_management.png"
               />
             </div>
           </div>
@@ -397,7 +406,16 @@ function ScrollToCenterSection({ sectionId }) {
               </div>
 
               <Img
-                className="absolut sm:hidden sm:blocke h-[90%] inset-y-[0] right-[8%] my-auto w-[25%] md:w-[25%] md:h-[740px]"
+                className="absolute sm:hidden sm:block h-[90%] inset-y-[0] right-[8%] my-auto w-[25%] md:w-[25%] md:h-[740px]"
+                src="images/order_details.png"
+              />
+            </div>
+          </div>
+          {/* Image 2 */}
+          <div className="flex hidden sm:block flex-col h-screen items-center justify-start w-screen">
+            <div className="h-screen hidden sm:block overflow-y-visible md:px-5 relative w-screen">
+              <Img
+                className="absolute hidden sm:block sm:w-[95%] sm:h-full"
                 src="images/order_details.png"
               />
             </div>
@@ -477,6 +495,15 @@ function ScrollToCenterSection({ sectionId }) {
               />
             </div>
           </div>
+          {/* Image 3 */}
+          <div className="flex hidden sm:block flex-col h-screen items-center justify-start w-screen">
+            <div className="h-screen hidden sm:block overflow-y-visible md:px-5 relative w-screen">
+              <Img
+                className="absolute hidden sm:block sm:w-[95%] sm:h-full"
+                src="images/vendor_management.png"
+              />
+            </div>
+          </div>
 
           <div className="flex-none w-full h-screen md:w-full md:h-full">
             <div className="w-full h-screen p-5 relative">
@@ -552,6 +579,15 @@ function ScrollToCenterSection({ sectionId }) {
               />
             </div>
           </div>
+          {/* Image 4 */}
+          <div className="flex hidden sm:block flex-col h-screen items-center justify-start w-screen">
+            <div className="h-screen hidden sm:block overflow-y-visible md:px-5 relative w-screen">
+              <Img
+                className="absolute hidden sm:block sm:w-[95%] sm:h-full"
+                src="images/homepage_store.png"
+              />
+            </div>
+          </div>
         </div>
       ) : (
         <div
@@ -572,7 +608,7 @@ function ScrollToCenterSection({ sectionId }) {
                   src="images/img_rectangle119.png"
                   alt="rectangle119_Four"
                 />
-                <div className="absolute flex flex-col md:gap-10 sm:gap-[90px] gap-[134px] h-screen md:h-auto justify-start left-[5%] top-[10%] w-[859px] sm:w-[859px]">
+                <div className="absolute flex flex-col md:gap-10 sm:gap-[90px] gap-[134px] h-screen md:h-auto justify-start left-[5%] top-[10%] w-[859px] sm:w-screen">
                   <div className="flex flex-row sm:flex-row justify-start sm:items-start items-start gap-[25px]">
                     <div className="h-[130px] relative w-[23%] sm:w-[23%] sm:mt-0 -mt-[43px] md:w-screen">
                       <Img
@@ -581,7 +617,7 @@ function ScrollToCenterSection({ sectionId }) {
                       />
                     </div>
                     <Text
-                      className="sm:-mt-[24px] sm:text-[34.26px] ml-[1%] md:text-[37.26px] mt-[1%] sm:-top-[80px] text-[32.26px] text-white-A700"
+                      className="sm:-mt-[24px] sm:text-[22.26px] ml-[1%] md:text-[37.26px] mt-[1%] sm:-top-[80px] text-[32.26px] text-white-A700"
                       size="txtInterSemiBold3926"
                     >
                       Store App
@@ -611,7 +647,7 @@ function ScrollToCenterSection({ sectionId }) {
                       </span>
                     </Text>
                     <br /> <br />
-                    <div className="flex flex-col items-start justify-start sm:-ml-[30px] mt-[120px]">
+                    <div className="flex flex-col items-start justify-start sm:-ml-[30px] mt-[120px] sm:w-[80%]">
                       <Text
                         className="text-2xl sm:text-[28px] sm:-mt-[52px] md:text-[34px] mt-[5px] text-red-A400"
                         size="txtInterSemiBold36"
@@ -631,7 +667,7 @@ function ScrollToCenterSection({ sectionId }) {
                         Stock Control
                       </Text>
                       <Text
-                        className="leading-[48.00px] mt-4 md:text-3xl sm:text-[28px] text-[28px] text-blue_gray-100_e5"
+                        className="leading-[48.00px] mt-4 md:text-3xl sm:text-[28px] sm:w-[80%] text-[28px] text-blue_gray-100_e5"
                         size="txtInterMedium32"
                       >
                         <>
@@ -642,7 +678,7 @@ function ScrollToCenterSection({ sectionId }) {
                       </Text>
                     </div>
                     <Img
-                      className="cursor-pointer sm:h-[350px] sm:-mb-[7%] h-[350px] w-[350px]  -mt-[130px]"
+                      className="cursor-pointer sm:h-[350px] sm:-mb-[7%] sm:-ml-[52px] h-[350px] w-[350px]  -mt-[130px]"
                       src="images/img_group22258.svg"
                       onClick={openPopup}
                       alt="group22258"
@@ -665,10 +701,19 @@ function ScrollToCenterSection({ sectionId }) {
 const DesktopOnePage = () => {
   const [isOpen, setIsOpen] = React.useState(false);
   const [email, setEmail] = React.useState("");
+  const [isNavOpen, setIsNavOpen] = React.useState(false);
 
   const openPopup = () => {
     setIsOpen(true);
   };
+
+  const openToggle = () => {
+    setIsNavOpen(!isNavOpen);
+  };
+
+  const navbarClasses = `flex sm:flex flex-col items-center gap-[42px] ${
+    isNavOpen ? "block" : "hidden sm:block"
+  } justify-end md:ml-[0] mt-[2%] ml-[596px] pl-2.5 w-full sm:w-full common-row-list sticky top-0`;
 
   const closePopup = () => {
     setIsOpen(false);
@@ -837,12 +882,14 @@ const DesktopOnePage = () => {
                     src="images/img_logo.png"
                   />
                 </div>
-                {/* <div className="h-[59px] relative w-[24%] md:w-full">
+                <div className="h-[59px] relative w-[14%] md:w-full">
                   <Img
-                    className="absolute flex flex-row gap-[34px] inset-y-[0] left-[17%] md:left-[44%] sm:-right-[10%] sm:w-[150px] sm:h-[150px] my-auto w-[830px] h-[250px]"
-                    src="images/navbar.png"
+                    className="absolute hidden sm:block flex flex-row gap-[34px] inset-y-[0] left-[81%] -top-[255%] md:left-[88%] sm:-right-[10%] sm:w-[45px] sm:h-[47px] my-auto w-[830px] h-[250px]"
+                    src="images/menu1.png"
+                    onClick={openToggle}
                   />
-                </div> */}
+                </div>
+
                 <ul className="flex sm:flex-1 sm:flex-col flex-row gap-[42px] sm:hidden justify-end md:ml-[0] mt-[2%] ml-[596px] pl-2.5 w-full sm:w-full common-row-list">
                   <li>
                     <a href="#store" className="text-gray-400 text-lg">
@@ -873,6 +920,39 @@ const DesktopOnePage = () => {
                     </a>
                   </li>
                 </ul>
+
+                {isNavOpen && (
+                  <ul className="flex sm:flex flex-col items-center gap-[42px] hidden sm:block justify-end md:ml-[0] mt-[2%] ml-[596px] pl-2.5 w-full sm:w-full common-row-list">
+                    <li>
+                    <a href="#store" className="text-gray-400 text-lg">
+                      <Text size="txtInterMedium18">Store App</Text>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#consumer"
+                      className="text-center text-gray-400 text-lg"
+                    >
+                      <Text size="txtInterMedium18">Consumer App</Text>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#pricing"
+                      className="text-center text-gray-400 text-lg"
+                    >
+                      <Text size="txtInterMedium18">Pricing</Text>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#contact">
+                      <Button className="bg-red-800 cursor-pointer font-medium -mt-[10px] px-[15px] py-[5px] rounded-[46px] text-center text-gray-100 text-xl">
+                        Contact Us
+                      </Button>
+                    </a>
+                  </li>
+                  </ul>
+                )}
               </header>
               <Text
                 className="mt-[74px] text-3xl sm:text-[26px] md:text-[28px] text-blue_gray-100 text-center"
@@ -1277,7 +1357,7 @@ const DesktopOnePage = () => {
                   src="images/img_rectangle119.png"
                   alt="rectangle119_Four"
                 />
-                <div className="absolute flex flex-col md:gap-10 sm:gap-[90px] gap-[134px] h-screen md:h-auto justify-start left-[5%] top-[10%] w-[859px] sm:w-[859px]">
+                <div className="absolute flex flex-col md:gap-10 sm:gap-[90px] gap-[134px] h-screen md:h-auto justify-start left-[5%] top-[10%] w-[859px] sm:w-screen">
                   <div className="flex flex-row sm:flex-row justify-start sm:items-start items-start gap-[25px]">
                     <div className="h-[130px] relative w-[23%] sm:w-[23%] sm:mt-0 -mt-[43px] md:w-screen">
                       <Img
@@ -1316,7 +1396,7 @@ const DesktopOnePage = () => {
                       </span>
                     </Text>
                     <br /> <br />
-                    <div className="flex flex-col items-start justify-start sm:-ml-[30px] mt-[120px]">
+                    <div className="flex flex-col items-start justify-start sm:-ml-[30px] mt-[120px] sm:w-[80%]">
                       <Text
                         className="text-2xl sm:text-[28px] sm:-mt-[52px] md:text-[34px] mt-[5px] text-red-A400"
                         size="txtInterSemiBold36"
@@ -1336,7 +1416,7 @@ const DesktopOnePage = () => {
                         Stock Control
                       </Text> */}
                       <Text
-                        className="leading-[48.00px] mt-4 md:text-3xl sm:text-[28px] text-[28px] text-blue_gray-100_e5"
+                        className="leading-[48.00px] mt-4 md:text-3xl sm:text-[28px] sm:w-[80%] text-[28px] text-blue_gray-100_e5"
                         size="txtInterMedium32"
                       >
                         <>
@@ -1347,7 +1427,7 @@ const DesktopOnePage = () => {
                       </Text>
                     </div>
                     <Img
-                      className="cursor-pointer sm:h-[350px] sm:-mb-[7%] h-[350px] w-[350px]  -mt-[130px]"
+                      className="cursor-pointer sm:h-[350px] sm:-mb-[7%] sm:-ml-[52px] h-[350px] w-[350px]  -mt-[130px]"
                       src="images/img_group22258.svg"
                       onClick={openPopup}
                       alt="group22258"
@@ -1358,6 +1438,15 @@ const DesktopOnePage = () => {
             </div>
             <Img
               className="absolute sm:hidden sm:block h-[90%] inset-y-[0] right-[8%] my-auto sm:my-3 w-[25%] md:w-[25%] md:h-[740px] sm:w-[75%] sm:h-[75%] sm:top-[50%]"
+              src="images/homepage_consumer.png"
+            />
+          </div>
+        </div>
+
+        <div className="flex hidden sm:block flex-col h-screen items-center justify-start w-screen">
+          <div className="h-screen hidden sm:block overflow-y-visible md:px-5 relative w-screen">
+            <Img
+              className="absolute hidden sm:block sm:w-[95%] sm:h-full"
               src="images/homepage_consumer.png"
             />
           </div>
@@ -1713,159 +1802,161 @@ const DesktopOnePage = () => {
           </footer>
           <div className="absolute backdrop-opacity-[0.5] bg-black-900 blur-[50.00px] h-[76px] inset-x-[0] mx-auto top-[0] w-full"></div>
         </div> */}
-        <div id="contact" className="h-[678px] md:h-[717px] mt-[77px] md:px-5 relative w-full">
-  <footer className="absolute bg-black-900 bottom-[0] flex inset-x-[0] items-center justify-center mx-auto shadow-bs w-full">
-    <div className="flex flex-col items-center justify-center mb-[42px] mt-[72px] w-full">
-      <div className="flex flex-col items-center justify-center w-full">
-        <div className="flex md:flex-col flex-row md:gap-10 items-start justify-between w-[86%] md:w-full">
-          <div className="flex flex-col gap-[51px] items-start justify-start w-[49%] md:w-full">
-            <div className="flex flex-col gap-[26px] items-start justify-start w-[29%] md:w-full">
-              <div className="h-[109px] -mt-[10px] relative w-[95%] md:w-full">
-                <Img
-                  className="absolute flex flex-row gap-[34px] h-full inset-y-[0] items-end justify-between md:left-[44%] sm:left-[0%] my-auto w-[1000px] h-[260px] sm:w-[200px] sm:h-[300px]"
-                  src="images/img_logo.png"
-                />
-              </div>
-              <a
-                href="www.scankart.ai"
-                className="text-white-A700 text-xl"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <Text size="txtInterMedium20">www.scankart.ai</Text>
-              </a>
-            </div>
-            <Text
-              className="bg-clip-text bg-gradient4 leading-[64.00px] md:text-5xl text-[64px] text-transparent w-full"
-              size="txtInterSemiBold64"
-            >
-              <span className="text-white-A700 font-inter text-left font-semibold">
-                Made with{" "}
-              </span>
-              <span className="text-red-A400 font-inter text-left font-semibold">
-                ❤
-              </span>
-              <span className="text-white-A700 font-inter text-left font-semibold">
-                <>
-                  ️<br />
-                </>
-              </span>
-              <span className="text-blue_gray-100_59 md:text-[44px] sm:text-[38px] font-inter text-left text-5xl bg-gradient-to-b font-semibold">
-                By Team Scankart
-              </span>
-            </Text>
-          </div>
-          <div className="flex flex-col md:gap-10 gap-[120px] items-start justify-start md:mt-0 mt-[3px] w-[39%] md:w-full">
-            <div className="flex sm:flex-col flex-row sm:gap-10 items-start justify-between w-full">
-              <div className="flex sm:flex-1 flex-col gap-[37px] items-start justify-start w-[44%] sm:w-full">
-                <Text
-                  className="text-2xl md:text-[22px] text-blue_gray-100_99 sm:text-xl"
-                  size="txtInterMedium24Bluegray10099"
-                >
-                  QUICK LINKS
-                </Text>
-                <ul className="flex flex-col gap-[15px] items-start justify-start w-full common-column-list">
-                  <li>
-                    <a
-                      href="javascript:"
-                      className="text-white-A700 text-xl"
-                    >
-                      <Text size="txtInterMedium20">
-                        Features Comparison
-                      </Text>
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="javascript:"
-                      className="text-white-A700 text-xl"
-                    >
-                      <Text size="txtInterMedium20">
-                        Privacy Policy
-                      </Text>
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="javascript:"
-                      className="text-white-A700 text-xl"
-                    >
-                      <Text size="txtInterMedium20">Partnerships</Text>
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="javascript:"
-                      className="text-white-A700 text-xl"
-                    >
-                      <Text size="txtInterMedium20">
-                        Terms & Conditions
-                      </Text>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <div className="flex sm:flex-1 flex-col gap-[21px] sm:-ml-[28%] items-center justify-start w-[37%] sm:w-full">
-                <Text
-                  className="text-2xl md:text-[22px] text-blue_gray-100_99 sm:text-xl"
-                  size="txtInterMedium24Bluegray10099"
-                >
-                  GET IN TOUCH
-                </Text>
-                <div className="flex flex-col gap-[13px] items-start justify-start">
-                  <a
-                    className="text-white-A700 text-xl"
-                    size="txtInterMedium20"
-                    href="mailto:ceo@scankart.ai"
-                  >
-                    ceo@scankart.ai
-                  </a>
-                  <Text
-                    className="text-white-A700 text-xl"
-                    size="txtInterMedium20"
-                  >
-                    +91 8638440694
-                  </Text>
-                </div>
-              </div>
-            </div>
-            <div className="flex flex-row gap-6 items-center justify-start w-[57%] md:w-full sm:w-[100%]">
-              <Img
-                className="h-12 w-12"
-                src="images/img_play.svg"
-                alt="play"
-              />
-              <Img
-                className="h-12 w-12"
-                src="images/img_info.svg"
-                alt="info"
-              />
-              <Img
-                className="h-12 w-12"
-                src="images/img_vector.svg"
-                alt="vector"
-              />
-              <Img
-                className="h-12 w-12"
-                src="images/img_eye.svg"
-                alt="eye"
-              />
-            </div>
-          </div>
-        </div>
-        <Line className="bg-gray-600_3f h-px mt-[84px] w-full" />
-        <Text
-          className="mt-[33px] text-blue_gray-100_a5 text-center text-xl"
-          size="txtInterMedium20Bluegray100a5"
+        <div
+          id="contact"
+          className="h-[678px] md:h-[717px] mt-[77px] md:px-5 relative w-full"
         >
-          © 2023, Scankart Innovations Pvt. Ltd. All Rights Reserved.
-        </Text>
-      </div>
-    </div>
-  </footer>
-  <div className="absolute backdrop-opacity-[0.5] bg-black-900 blur-[50.00px] h-[76px] inset-x-[0] mx-auto top-[0] w-full"></div>
-</div>
-
+          <footer className="absolute bg-black-900 bottom-[0] flex inset-x-[0] items-center justify-center mx-auto shadow-bs w-full">
+            <div className="flex flex-col items-center justify-center mb-[42px] mt-[72px] w-full">
+              <div className="flex flex-col items-center justify-center w-full">
+                <div className="flex md:flex-col flex-row md:gap-10 items-start justify-between w-[86%] md:w-full">
+                  <div className="flex flex-col gap-[51px] items-start justify-start w-[49%] md:w-full">
+                    <div className="flex flex-col gap-[26px] items-start justify-start w-[29%] md:w-full">
+                      <div className="h-[109px] -mt-[10px] relative w-[95%] md:w-full">
+                        <Img
+                          className="absolute flex flex-row gap-[34px] h-full inset-y-[0] items-end justify-between md:left-[44%] sm:left-[0%] my-auto w-[1000px] h-[260px] sm:w-[200px] sm:h-[300px]"
+                          src="images/img_logo.png"
+                        />
+                      </div>
+                      <a
+                        href="www.scankart.ai"
+                        className="text-white-A700 text-xl"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        <Text size="txtInterMedium20">www.scankart.ai</Text>
+                      </a>
+                    </div>
+                    <Text
+                      className="bg-clip-text bg-gradient4 leading-[64.00px] md:text-5xl text-[64px] text-transparent w-full"
+                      size="txtInterSemiBold64"
+                    >
+                      <span className="text-white-A700 font-inter text-left font-semibold">
+                        Made with{" "}
+                      </span>
+                      <span className="text-red-A400 font-inter text-left font-semibold">
+                        ❤
+                      </span>
+                      <span className="text-white-A700 font-inter text-left font-semibold">
+                        <>
+                          ️<br />
+                        </>
+                      </span>
+                      <span className="text-blue_gray-100_59 md:text-[44px] sm:text-[38px] font-inter text-left text-5xl bg-gradient-to-b font-semibold">
+                        By Team Scankart
+                      </span>
+                    </Text>
+                  </div>
+                  <div className="flex flex-col md:gap-10 gap-[120px] items-start justify-start md:mt-0 mt-[3px] w-[39%] md:w-full">
+                    <div className="flex sm:flex-col flex-row sm:gap-10 items-start justify-between w-full">
+                      <div className="flex sm:flex-1 flex-col gap-[37px] items-start justify-start w-[44%] sm:w-full">
+                        <Text
+                          className="text-2xl md:text-[22px] text-blue_gray-100_99 sm:text-xl"
+                          size="txtInterMedium24Bluegray10099"
+                        >
+                          QUICK LINKS
+                        </Text>
+                        <ul className="flex flex-col gap-[15px] items-start justify-start w-full common-column-list">
+                          <li>
+                            <a
+                              href="javascript:"
+                              className="text-white-A700 text-xl"
+                            >
+                              <Text size="txtInterMedium20">
+                                Features Comparison
+                              </Text>
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              href="javascript:"
+                              className="text-white-A700 text-xl"
+                            >
+                              <Text size="txtInterMedium20">
+                                Privacy Policy
+                              </Text>
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              href="javascript:"
+                              className="text-white-A700 text-xl"
+                            >
+                              <Text size="txtInterMedium20">Partnerships</Text>
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              href="javascript:"
+                              className="text-white-A700 text-xl"
+                            >
+                              <Text size="txtInterMedium20">
+                                Terms & Conditions
+                              </Text>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                      <div className="flex sm:flex-1 flex-col gap-[21px] sm:-ml-[28%] items-center justify-start w-[37%] sm:w-full">
+                        <Text
+                          className="text-2xl md:text-[22px] text-blue_gray-100_99 sm:text-xl"
+                          size="txtInterMedium24Bluegray10099"
+                        >
+                          GET IN TOUCH
+                        </Text>
+                        <div className="flex flex-col gap-[13px] items-start justify-start">
+                          <a
+                            className="text-white-A700 text-xl"
+                            size="txtInterMedium20"
+                            href="mailto:ceo@scankart.ai"
+                          >
+                            ceo@scankart.ai
+                          </a>
+                          <Text
+                            className="text-white-A700 text-xl"
+                            size="txtInterMedium20"
+                          >
+                            +91 8638440694
+                          </Text>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="flex flex-row gap-6 items-center justify-start w-[57%] md:w-full sm:w-[100%]">
+                      <Img
+                        className="h-12 w-12"
+                        src="images/img_play.svg"
+                        alt="play"
+                      />
+                      <Img
+                        className="h-12 w-12"
+                        src="images/img_info.svg"
+                        alt="info"
+                      />
+                      <Img
+                        className="h-12 w-12"
+                        src="images/img_vector.svg"
+                        alt="vector"
+                      />
+                      <Img
+                        className="h-12 w-12"
+                        src="images/img_eye.svg"
+                        alt="eye"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <Line className="bg-gray-600_3f h-px mt-[84px] w-full" />
+                <Text
+                  className="mt-[33px] text-blue_gray-100_a5 text-center text-xl"
+                  size="txtInterMedium20Bluegray100a5"
+                >
+                  © 2023, Scankart Innovations Pvt. Ltd. All Rights Reserved.
+                </Text>
+              </div>
+            </div>
+          </footer>
+          <div className="absolute backdrop-opacity-[0.5] bg-black-900 blur-[50.00px] h-[76px] inset-x-[0] mx-auto top-[0] w-full"></div>
+        </div>
       </div>
     </>
   );
