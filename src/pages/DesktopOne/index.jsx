@@ -222,16 +222,16 @@ function ScrollToCenterSection({ sectionId }) {
         <div
           ref={myRef}
           id={sectionId}
-          className="scrollTo container-snap flex flex-col items-center justify-start overflow-y-scroll h-screen w-screen"
+          className="scrollTo container-snap flex flex-col items-center justify-start overflow-y-scroll sm:max-h-screen sm:overflow-y-auto h-screen w-screen"
         >
           <div
             id="store"
             className="flex flex-col h-screen items-center justify-start w-screen"
           >
             <div className="h-screen overflow-y-visible md:px-5 relative w-screen">
-              <div className="h-screen overflow-y-visible m-auto w-screen">
-                <div className="absolute bg-red-800 h-screen inset-y-[0] my-auto right-[0] w-screen"></div>
-                <div className="absolute h-screen inset-y-[0] left-[0] my-auto w-[79%] sm:w-[79%] md:w-screen">
+              <div className="h-screen overflow-y-visible m-auto w-screen sm:w-full">
+                <div className="absolute bg-red-800 h-screen inset-y-[0] my-auto right-[0] sm:hidden w-screen"></div>
+                <div className="absolute h-screen inset-y-[0] left-[0] my-auto w-[79%] sm:w-full md:w-screen">
                   <Img
                     className="h-screen m-auto object-cover w-screen sm:hidden"
                     src="images/img_rectangle119.png"
@@ -242,7 +242,7 @@ function ScrollToCenterSection({ sectionId }) {
                     src="images/img_rectangle119.png"
                     alt="rectangle119_Four"
                   />
-                  <div className="absolute flex flex-col md:gap-10 sm:gap-[90px] gap-[134px] h-screen md:h-auto justify-start left-[5%] top-[10%] w-[859px] sm:w-screen">
+                  <div className="absolute flex flex-col md:gap-10 sm:gap-[55px] gap-[134px] h-screen md:h-auto justify-start left-[5%] sm:-left-[3%] top-[10%] w-[859px] sm:w-full">
                     <div className="flex flex-row sm:flex-row justify-start sm:items-start items-start gap-[25px]">
                       <div className="h-[130px] relative w-[23%] sm:w-[23%] sm:mt-0 -mt-[43px] md:w-screen">
                         <Img
@@ -257,7 +257,7 @@ function ScrollToCenterSection({ sectionId }) {
                         Store App
                       </Text>
                     </div>
-                    <div className="flex flex-col items-start justify-start md:ml-[0] sm:ml-[0] -mt-[10px] top-[5%] sm:top-[5%] ml-[65px] h-[770px] md:w-full sm:ml-[65px] sm:h-[770px] sm:w-[93%] md:w-full">
+                    <div className="flex flex-col items-start justify-start md:ml-[0] sm:ml-[0] -mt-[10px] top-[5%] sm:top-[5%] ml-[65px] h-[770px] md:w-full sm:ml-[65px] sm:h-screen sm:w-[93%] md:w-full">
                       <Text
                         className="leading-[76.00px] sm:text-3xl text-left text-5xl top-[1%] sm:-ml-[30px] -mt-[120px] text-white-A700 h-[10px] w-full"
                         size="txtInterBold60"
@@ -312,7 +312,7 @@ function ScrollToCenterSection({ sectionId }) {
                         </Text>
                       </div>
                       <Img
-                        className="cursor-pointer sm:h-[350px] sm:-mb-[7%] sm:-ml-[52px] h-[350px] w-[350px]  -mt-[130px]"
+                        className="cursor-pointer sm:h-screen sm:mb-[40%] sm:-ml-[52px] h-[350px] w-[350px]  -mt-[130px]"
                         src="images/img_group22258.svg"
                         onClick={openPopup}
                         alt="group22258"
@@ -349,7 +349,7 @@ function ScrollToCenterSection({ sectionId }) {
                   />
                   <div className="absolute flex flex-col inset-y-[0] items-start justify-start left-[11%] my-auto w-[70%]">
                     <Text
-                      className="leading-[76.00px] md:text-5xl text-5xl text-white-A700"
+                      className="leading-[76.00px] md:text-5xl sm:text-4xl text-5xl text-white-A700"
                       size="txtInterBold60"
                     >
                       <span className="text-red-A400 font-inter text-left font-bold">
@@ -375,7 +375,7 @@ function ScrollToCenterSection({ sectionId }) {
                         PAPERLESS RETAIL
                       </Text>
                       <Text
-                        className="leading-[64.00px] md:text-5xl sm:text-[42px] text-5xl text-white-A700 w-full"
+                        className="leading-[64.00px] md:text-5xl sm:text-3xl text-5xl text-white-A700 w-full"
                         size="txtInterBold56"
                       >
                         <>
@@ -433,7 +433,7 @@ function ScrollToCenterSection({ sectionId }) {
                   />
                   <div className="absolute flex flex-col inset-y-[0] items-start justify-start left-[11%] my-auto w-[70%]">
                     <Text
-                      className="leading-[76.00px] md:text-5xl text-5xl text-white-A700"
+                      className="leading-[76.00px] md:text-5xl sm:text-4xl text-5xl text-white-A700"
                       size="txtInterBold60"
                     >
                       <span className="text-red-A400 font-inter text-left font-bold">
@@ -459,7 +459,7 @@ function ScrollToCenterSection({ sectionId }) {
                         VENDOR MANAGEMENT
                       </Text>
                       <Text
-                        className="leading-[64.00px] md:text-5xl sm:text-[42px] text-5xl text-white-A700 w-full"
+                        className="leading-[64.00px] md:text-5xl sm:text-4xl text-5xl text-white-A700 w-full"
                         size="txtInterBold56"
                       >
                         <>
@@ -517,7 +517,7 @@ function ScrollToCenterSection({ sectionId }) {
                   />
                   <div className="absolute flex flex-col inset-y-[0] items-start justify-start left-[11%] my-auto w-[70%]">
                     <Text
-                      className="leading-[76.00px] md:text-5xl text-5xl text-white-A700"
+                      className="leading-[76.00px] md:text-5xl sm:text-4xl text-5xl text-white-A700"
                       size="txtInterBold60"
                     >
                       <span className="text-red-A400 font-inter text-left font-bold">
@@ -543,7 +543,7 @@ function ScrollToCenterSection({ sectionId }) {
                         STORE ANALYTICS
                       </Text>
                       <Text
-                        className="leading-[64.00px] md:text-5xl sm:text-[42px] text-5xl text-white-A700 w-full"
+                        className="leading-[64.00px] md:text-5xl sm:text-4xl text-5xl text-white-A700 w-full"
                         size="txtInterBold56"
                       >
                         <>
@@ -595,9 +595,9 @@ function ScrollToCenterSection({ sectionId }) {
           className="flex flex-col h-screen items-center justify-start w-screen"
         >
           <div className="h-screen overflow-y-visible md:px-5 relative w-screen">
-            <div className="h-screen overflow-y-visible m-auto w-screen">
-              <div className="absolute bg-red-800 h-screen inset-y-[0] my-auto right-[0] w-screen"></div>
-              <div className="absolute h-screen inset-y-[0] left-[0] my-auto w-[79%] sm:w-[79%] md:w-screen">
+            <div className="h-screen overflow-y-visible m-auto w-screen sm:w-full">
+              <div className="absolute bg-red-800 h-screen inset-y-[0] my-auto right-[0] sm:hidden w-screen"></div>
+              <div className="absolute h-screen inset-y-[0] left-[0] my-auto w-[79%] sm:w-full md:w-screen">
                 <Img
                   className="h-screen m-auto object-cover w-screen sm:hidden"
                   src="images/img_rectangle119.png"
@@ -608,7 +608,7 @@ function ScrollToCenterSection({ sectionId }) {
                   src="images/img_rectangle119.png"
                   alt="rectangle119_Four"
                 />
-                <div className="absolute flex flex-col md:gap-10 sm:gap-[90px] gap-[134px] h-screen md:h-auto justify-start left-[5%] top-[10%] w-[859px] sm:w-screen">
+                <div className="absolute flex flex-col md:gap-10 sm:gap-[55px] gap-[134px] h-screen md:h-auto justify-start left-[5%] sm:-left-[3%] top-[10%] w-[859px] sm:w-full">
                   <div className="flex flex-row sm:flex-row justify-start sm:items-start items-start gap-[25px]">
                     <div className="h-[130px] relative w-[23%] sm:w-[23%] sm:mt-0 -mt-[43px] md:w-screen">
                       <Img
@@ -623,7 +623,7 @@ function ScrollToCenterSection({ sectionId }) {
                       Store App
                     </Text>
                   </div>
-                  <div className="flex flex-col items-start justify-start md:ml-[0] sm:ml-[0] -mt-[10px] top-[5%] sm:top-[5%] ml-[65px] h-[770px] md:w-full sm:ml-[65px] sm:h-[770px] sm:w-[93%] md:w-full">
+                  <div className="flex flex-col items-start justify-start md:ml-[0] sm:ml-[0] -mt-[10px] top-[5%] sm:top-[5%] ml-[65px] h-[770px] md:w-full sm:ml-[65px] sm:h-screen sm:w-[93%] md:w-full">
                     <Text
                       className="leading-[76.00px] sm:text-3xl text-left text-5xl top-[1%] sm:-ml-[30px] -mt-[120px] text-white-A700 h-[10px] w-full"
                       size="txtInterBold60"
@@ -678,7 +678,7 @@ function ScrollToCenterSection({ sectionId }) {
                       </Text>
                     </div>
                     <Img
-                      className="cursor-pointer sm:h-[350px] sm:-mb-[7%] sm:-ml-[52px] h-[350px] w-[350px]  -mt-[130px]"
+                      className="cursor-pointer sm:h-screen sm:mb-[40%] sm:-ml-[52px] h-[350px] w-[350px]  -mt-[130px]"
                       src="images/img_group22258.svg"
                       onClick={openPopup}
                       alt="group22258"
@@ -713,7 +713,7 @@ const DesktopOnePage = () => {
 
   const navbarClasses = `flex sm:flex flex-col items-center gap-[42px] ${
     isNavOpen ? "block" : "hidden sm:block"
-  } justify-end md:ml-[0] mt-[2%] ml-[596px] pl-2.5 w-full sm:w-full common-row-list sticky top-0`;
+  } justify-end md:ml-[0] mt-[2%] ml-[596px] pl-2.5 w-full sm:w-full common-row-list top-0`;
 
   const closePopup = () => {
     setIsOpen(false);
@@ -868,14 +868,14 @@ const DesktopOnePage = () => {
         </div>
       )}
 
-      <div className="bg-black-900 flex flex-col font-inter items-center justify-start mx-auto overflow-hidden w-screen">
+      <div className="bg-black-900 flex flex-col font-inter items-center justify-start mx-auto overflow-hidden sm:h-full w-screen">
         <div
           id="hero"
-          className="flex flex-col items-center justify-start w-full h-full"
+          className="flex flex-col items-center justify-start w-full h-full sm:h-screen"
         >
           <div className="bg-black-900 flex flex-col items-center justify-start pt-12 w-full h-screen">
             <div className="flex flex-col items-center justify-start w-full">
-              <header className="flex md:flex-col flex-row md:gap-5 md:px-5 sm:-mt-400 w-full">
+              <header className="flex md:flex-col flex-row md:gap-5 md:px-5 sm:-mt-400 sm:h-auto w-full">
                 <div className="h-[59px] relative w-[24%] md:w-full">
                   <Img
                     className="absolute flex flex-row gap-[34px] inset-y-[0] left-[17%] md:left-[44%] sm:-left-[10%] sm:w-[150px] sm:h-[150px] my-auto w-[830px] h-[250px]"
@@ -922,40 +922,40 @@ const DesktopOnePage = () => {
                 </ul>
 
                 {isNavOpen && (
-                  <ul className="flex sm:flex flex-col items-center gap-[42px] hidden sm:block justify-end md:ml-[0] mt-[2%] ml-[596px] pl-2.5 w-full sm:w-full common-row-list">
+                  <ul className="sm:flex flex-col items-center gap-[22px] hidden sm:block justify-end md:ml-[0] -mt-[25%] ml-[596px] pl-2.5 w-full sm:w-full common-row-list">
                     <li>
-                    <a href="#store" className="text-gray-400 text-lg">
-                      <Text size="txtInterMedium18">Store App</Text>
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#consumer"
-                      className="text-center text-gray-400 text-lg"
-                    >
-                      <Text size="txtInterMedium18">Consumer App</Text>
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#pricing"
-                      className="text-center text-gray-400 text-lg"
-                    >
-                      <Text size="txtInterMedium18">Pricing</Text>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#contact">
-                      <Button className="bg-red-800 cursor-pointer font-medium -mt-[10px] px-[15px] py-[5px] rounded-[46px] text-center text-gray-100 text-xl">
-                        Contact Us
-                      </Button>
-                    </a>
-                  </li>
+                      <a href="#store" className="text-gray-400 text-lg">
+                        <Text size="txtInterMedium18">Store App</Text>
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#consumer"
+                        className="text-center text-gray-400 text-lg"
+                      >
+                        <Text size="txtInterMedium18">Consumer App</Text>
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#pricing"
+                        className="text-center text-gray-400 text-lg"
+                      >
+                        <Text size="txtInterMedium18">Pricing</Text>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#contact">
+                        <Button className="bg-red-800 cursor-pointer font-medium -mt-[10px] px-[15px] py-[5px] rounded-[46px] text-center text-gray-100 text-xl">
+                          Contact Us
+                        </Button>
+                      </a>
+                    </li>
                   </ul>
                 )}
               </header>
               <Text
-                className="mt-[74px] text-3xl sm:text-[26px] md:text-[28px] text-blue_gray-100 text-center"
+                className="mt-[74px] text-3xl sm:-mt-[30px] sm:text-[26px] md:text-[28px] text-blue_gray-100 text-center"
                 size="txtInterMedium30"
               >
                 Welcome to Scankart
@@ -1012,7 +1012,6 @@ const DesktopOnePage = () => {
           {/* Inventory Management */}
           {/* <div className="container-snap flex flex-col items-center justify-start overflow-visible transform -rotate-90 h-screen w-screen"> */}
           {/* <div className="flex-none w-full overflow-y-scroll flex-shrink-0 md:w-full md:h-full"> */}
-          <ScrollToCenterSection sectionId="store" />
 
           {/* <div
             id="store"
@@ -1339,14 +1338,16 @@ const DesktopOnePage = () => {
             </div>
           </div> */}
         </div>
+        <ScrollToCenterSection sectionId="store" />
+
         <div
           id="consumer"
           className="flex flex-col h-screen items-center justify-start w-screen"
         >
           <div className="h-screen overflow-y-visible md:px-5 relative w-screen">
             <div className="h-screen overflow-y-visible m-auto w-screen">
-              <div className="absolute bg-red-800 h-screen inset-y-[0] my-auto right-[0] w-screen"></div>
-              <div className="absolute h-screen inset-y-[0] left-[0] my-auto w-[79%] sm:w-[79%] md:w-screen">
+              <div className="absolute bg-red-800 h-screen inset-y-[0] my-auto right-[0] sm:hidden w-screen"></div>
+              <div className="absolute h-screen inset-y-[0] left-[0] my-auto w-[79%] sm:w-full md:w-screen">
                 <Img
                   className="h-screen m-auto object-cover w-screen sm:hidden"
                   src="images/img_rectangle119.png"
@@ -1475,7 +1476,9 @@ const DesktopOnePage = () => {
                 className="sm:flex-col flex-row md:gap-10 gap-[124px] grid md:grid-cols-1 grid-cols-2"
                 orientation="horizontal"
               >
-                <div className="flex flex-col items-center justify-start sm:ml-[25%] sm:-mt-[700px] w-full">
+                {/* <div className="flex flex-col items-center justify-center w-full h-screen">
+  <div className="bg-white-A700 flex flex-col items-center justify-end p-14 sm:px-5 rounded-[24px] w-full max-w-[400px]"> */}
+                <div className="flex flex-col items-center justify-center sm:ml-[1%] sm:mr-[0%] sm:-mt-[700px] w-full">
                   <div className="bg-white-A700 flex flex-col items-center justify-end p-14 sm:px-5 rounded-[24px] w-full">
                     <div className="flex flex-row items-start justify-center mt-[21px] w-full md:w-full">
                       <Text
@@ -1502,7 +1505,7 @@ const DesktopOnePage = () => {
                     <div className="flex flex-col gap-6 items-center justify-start mt-8 w-[92%] md:w-full">
                       <div className="flex flex-col items-center justify-start w-full">
                         <Text
-                          className="bg-clip-text bg-gradient2  sm:text-2xl md:text-[26px] text-[28px] text-center text-transparent"
+                          className="bg-clip-text bg-gradient2 sm:text-2xl md:text-[26px] text-[28px] text-center text-transparent"
                           size="txtInterRegular28"
                         >
                           Standard
@@ -1548,7 +1551,10 @@ const DesktopOnePage = () => {
                     />
                   </div>
                 </div>
-                <div className="flex flex-col items-center justify-start sm:ml-[25%] w-full">
+
+                {/* <div className="flex flex-col items-center justify-start sm:ml-[25%] w-full">
+                  <div className="bg-white-A700 flex flex-col items-center justify-end p-14 sm:px-5 rounded-[24px] w-full"> */}
+                <div className="flex flex-col items-center justify-center sm:ml-[1%] sm:mr-[0%] w-full">
                   <div className="bg-white-A700 flex flex-col items-center justify-end p-14 sm:px-5 rounded-[24px] w-full">
                     <div className="flex flex-row items-start justify-center mt-[21px] w-full md:w-full">
                       <Text
@@ -1584,7 +1590,7 @@ const DesktopOnePage = () => {
                           <div className="absolute flex flex-col inset-x-[0] items-center justify-start mx-auto top-[0] w-[65%]">
                             <div className="flex flex-row items-start justify-evenly w-full">
                               <Text
-                                className="mt-[50px] md:text-3xl sm:text-[28px] text-[32px] text-center text-gray-600"
+                                className="mt-[50px] md:text-3xl sm:text-[28px] sm:mt-[28px] text-[32px] text-center text-gray-600"
                                 size="txtInterSemiBold32"
                               >
                                 ₹799
@@ -1602,7 +1608,7 @@ const DesktopOnePage = () => {
                               </Text>
                             </div>
                           </div>
-                          <Line className="absolute bg-gray-600 h-0.5 left-[4%] top-[44%] w-[43%]" />
+                          <Line className="absolute bg-gray-600 h-0.5 left-[4%] sm:w-[20%] sm:left-[25%] top-[44%] w-[43%]" />
                           <Text
                             className="absolute bottom-[0] inset-x-[0] mx-auto text-2xl top-[56%] md:text-[22px] text-center text-gray-900 sm:text-xl w-full"
                             size="txtInterRegular24"
